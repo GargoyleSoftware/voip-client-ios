@@ -1,0 +1,91 @@
+.TH "_LinphoneVTable" 3 "Mon Feb 6 2012" "Version 3.5.0" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+_LinphoneVTable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <linphonecore\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "\fBLinphoneGlobalStateCb\fP \fBglobal_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneRegistrationStateCb\fP \fBregistration_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBLinphoneCallStateCb\fP \fBcall_state_changed\fP"
+.br
+.ti -1c
+.RI "\fBNotifyPresenceReceivedCb\fP \fBnotify_presence_recv\fP"
+.br
+.ti -1c
+.RI "\fBNewSubscribtionRequestCb\fP \fBnew_subscription_request\fP"
+.br
+.ti -1c
+.RI "\fBAuthInfoRequested\fP \fBauth_info_requested\fP"
+.br
+.ti -1c
+.RI "\fBCallLogUpdated\fP \fBcall_log_updated\fP"
+.br
+.ti -1c
+.RI "\fBTextMessageReceived\fP \fBtext_received\fP"
+.br
+.ti -1c
+.RI "\fBDtmfReceived\fP \fBdtmf_received\fP"
+.br
+.ti -1c
+.RI "\fBReferReceived\fP \fBrefer_received\fP"
+.br
+.ti -1c
+.RI "\fBBuddyInfoUpdated\fP \fBbuddy_info_updated\fP"
+.br
+.ti -1c
+.RI "\fBNotifyReceivedCb\fP \fBnotify_recv\fP"
+.br
+.ti -1c
+.RI "\fBDisplayStatusCb\fP \fBdisplay_status\fP"
+.br
+.ti -1c
+.RI "\fBDisplayMessageCb\fP \fBdisplay_message\fP"
+.br
+.ti -1c
+.RI "\fBDisplayUrlCb\fP \fBdisplay_url\fP"
+.br
+.ti -1c
+.RI "\fBShowInterfaceCb\fP \fBshow\fP"
+.br
+.ti -1c
+.RI "\fBCallEncryptionChangedCb\fP \fBcall_encryption_changed\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This structure holds all callbacks that the application should implement'\&. None is mandatory'\&. 
+.SH "Field Documentation"
+.PP 
+.SS "\fBLinphoneGlobalStateCb\fP \fB_LinphoneVTable::global_state_changed\fP"Notifies globlal state changes 
+.SS "\fBLinphoneRegistrationStateCb\fP \fB_LinphoneVTable::registration_state_changed\fP"Notifies registration state changes 
+.SS "\fBLinphoneCallStateCb\fP \fB_LinphoneVTable::call_state_changed\fP"Notifies call state changes 
+.SS "\fBNotifyPresenceReceivedCb\fP \fB_LinphoneVTable::notify_presence_recv\fP"Notify received presence events 
+.SS "\fBNewSubscribtionRequestCb\fP \fB_LinphoneVTable::new_subscription_request\fP"Notify about pending subscription request 
+.SS "\fBAuthInfoRequested\fP \fB_LinphoneVTable::auth_info_requested\fP"Ask the application some authentication information 
+.SS "\fBCallLogUpdated\fP \fB_LinphoneVTable::call_log_updated\fP"Notifies that call log list has been updated 
+.SS "\fBTextMessageReceived\fP \fB_LinphoneVTable::text_received\fP"A text message has been received 
+.SS "\fBDtmfReceived\fP \fB_LinphoneVTable::dtmf_received\fP"A dtmf has been received received 
+.SS "\fBReferReceived\fP \fB_LinphoneVTable::refer_received\fP"An out of call refer was received 
+.SS "\fBBuddyInfoUpdated\fP \fB_LinphoneVTable::buddy_info_updated\fP"a LinphoneFriend's BuddyInfo has changed 
+.SS "\fBNotifyReceivedCb\fP \fB_LinphoneVTable::notify_recv\fP"Other notifications 
+.SS "\fBDisplayStatusCb\fP \fB_LinphoneVTable::display_status\fP"Callback that notifies various events with human readable text'\&. 
+.SS "\fBDisplayMessageCb\fP \fB_LinphoneVTable::display_message\fP"Callback to display a message to the user 
+.SS "\fBDisplayUrlCb\fP \fB_LinphoneVTable::display_url\fP"Callback to display a warning to the user 
+.SS "\fBShowInterfaceCb\fP \fB_LinphoneVTable::show\fP"Notifies the application that it should show up 
+.SS "\fBCallEncryptionChangedCb\fP \fB_LinphoneVTable::call_encryption_changed\fP"Notifies on change in the encryption of call streams 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code'\&.

@@ -1,0 +1,409 @@
+\hypertarget{vpx__image_8h}{
+\subsection{vpx/vpx\-\_\-image.h \-File \-Reference}
+\label{vpx__image_8h}\index{vpx/vpx\-\_\-image.\-h@{vpx/vpx\-\_\-image.\-h}}
+}
+
+
+\-Describes the vpx image descriptor and associated operations.  
+
+
+\subsubsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvpx__image}{vpx\-\_\-image}
+\begin{DoxyCompactList}\small\item\em \-Image \-Descriptor. \end{DoxyCompactList}\item 
+struct \hyperlink{structvpx__image__rect}{vpx\-\_\-image\-\_\-rect}
+\begin{DoxyCompactList}\small\item\em \-Representation of a rectangle on a surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{vpx__image_8h_a27ebbdf8031cc70b73d31825ba0d43b3}{
+\#define {\bfseries \-V\-P\-X\-\_\-\-I\-M\-A\-G\-E\-\_\-\-H}}
+\label{vpx__image_8h_a27ebbdf8031cc70b73d31825ba0d43b3}
+
+\item 
+\hypertarget{vpx__image_8h_a2bbca4a324bbc83eb49e50b6b1b7b00d}{
+\#define \hyperlink{vpx__image_8h_a2bbca4a324bbc83eb49e50b6b1b7b00d}{\-V\-P\-X\-\_\-\-I\-M\-A\-G\-E\-\_\-\-A\-B\-I\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\label{vpx__image_8h_a2bbca4a324bbc83eb49e50b6b1b7b00d}
+
+\begin{DoxyCompactList}\small\item\em \-Current \-A\-B\-I version number. \end{DoxyCompactList}\item 
+\#define \hyperlink{vpx__image_8h_aba054d28e7205f3cbd260c8b1e741bca}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-P\-L\-A\-N\-A\-R}~0x100
+\item 
+\#define \hyperlink{vpx__image_8h_a52193af375ccdbe6b1fc2c706e308b4e}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-V\-\_\-\-F\-L\-I\-P}~0x200
+\item 
+\#define \hyperlink{vpx__image_8h_adceef04930837f46dad16d648cb152f9}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-H\-A\-S\-\_\-\-A\-L\-P\-H\-A}~0x400
+\item 
+\#define \hyperlink{vpx__image_8h_aed2dfee103bf123bad08ceefdba21301}{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-C\-K\-E\-D}~0
+\item 
+\#define \hyperlink{vpx__image_8h_a08171c4636c655e1ab0b76e06219f9e2}{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-Y}~0
+\item 
+\#define \hyperlink{vpx__image_8h_a4770fc8fa60021a2229f25553152cf81}{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-U}~1
+\item 
+\#define \hyperlink{vpx__image_8h_aca9436ec761457cc6d2e356e0ac2fd23}{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-V}~2
+\item 
+\#define \hyperlink{vpx__image_8h_ac7a57e3c466f599abbcbd655db92c24d}{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-A\-L\-P\-H\-A}~3
+\end{DoxyCompactItemize}
+\subsubsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193}{vpx\-\_\-img\-\_\-fmt} \hyperlink{vpx__image_8h_acb76f0439d5d186256371aadf3beeee4}{vpx\-\_\-img\-\_\-fmt\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-List of supported image formats. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structvpx__image}{vpx\-\_\-image} \hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-Image \-Descriptor. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structvpx__image__rect}{vpx\-\_\-image\-\_\-rect} \hyperlink{vpx__image_8h_aba8af9e601eb9c3c41431d0f4fef65a6}{vpx\-\_\-image\-\_\-rect\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-Representation of a rectangle on a surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193}{vpx\-\_\-img\-\_\-fmt} \{ \*
+{\bfseries \-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a768c82ecfd7f7de4095ba587185cacc3}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B24}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6a4b7c1ab7811898df2c433168f8cad7}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a0e0df90f12025dffb425ab586bc190b8}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565}, 
+\*
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a7801d709598e8aa57a811ef008389fac}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193aaac20056f1282ec3e23b2f3df5197ebd}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-Y\-V\-Y}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a54251eea14c31a916a9181d8e38bcc2e}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-U\-Y2}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6982ba2da461ca8d7b7a8a2efd018dea}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V\-Y\-U}, 
+\*
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a5c585a577f88505845496cba7054a412}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-B\-G\-R24}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a289f1c915217fd690228890db7033303}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32\-\_\-\-L\-E}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a62257fab5e53c2c1b589e4befbaa4643}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a933ca0d3511dccb7128a010c9443f13b}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B\-\_\-\-L\-E}, 
+\*
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193ae1040770cb4f2b60931e1b0d31c39c8a}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565\-\_\-\-L\-E}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193ac79b2394abe0cc6c9068b7ef0007d74e}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555\-\_\-\-L\-E}, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6e4e8961bbcf96478c300dc4c3e1dc18}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V12} =  0x100 $|$ 0x200 $|$ 1, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193af17ce49c9a6efd7c8c8ea8928d4ce26c}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-I420} =  0x100 $|$ 2, 
+\*
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a63e1daa51719dc6129881abe81a016fc}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-Y\-V12} =  0x100 $|$ 0x200 $|$ 3, 
+\hyperlink{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a42d26966faf7079e80cbbfee1d698493}{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-I420} =  0x100 $|$ 4
+ \}
+\begin{DoxyCompactList}\small\item\em \-List of supported image formats. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$ \hyperlink{vpx__image_8h_ab80398f28ca880368a922fa979eb66c1}{vpx\-\_\-img\-\_\-alloc} (\hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$img, \hyperlink{vpx__image_8h_acb76f0439d5d186256371aadf3beeee4}{vpx\-\_\-img\-\_\-fmt\-\_\-t} fmt, unsigned int d\-\_\-w, unsigned int d\-\_\-h, unsigned int align)
+\begin{DoxyCompactList}\small\item\em \-Open a descriptor, allocating storage for the underlying image. \end{DoxyCompactList}\item 
+\hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$ \hyperlink{vpx__image_8h_afaf35f1f2f2f634de394faf7d6aeeeb9}{vpx\-\_\-img\-\_\-wrap} (\hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$img, \hyperlink{vpx__image_8h_acb76f0439d5d186256371aadf3beeee4}{vpx\-\_\-img\-\_\-fmt\-\_\-t} fmt, unsigned int d\-\_\-w, unsigned int d\-\_\-h, unsigned int align, unsigned char $\ast$img\-\_\-data)
+\begin{DoxyCompactList}\small\item\em \-Open a descriptor, using existing storage for the underlying image. \end{DoxyCompactList}\item 
+int \hyperlink{vpx__image_8h_ab5c1d1a5548752f7cd5047f43d5f25c4}{vpx\-\_\-img\-\_\-set\-\_\-rect} (\hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$img, unsigned int x, unsigned int y, unsigned int w, unsigned int h)
+\begin{DoxyCompactList}\small\item\em \-Set the rectangle identifying the displayed portion of the image. \end{DoxyCompactList}\item 
+void \hyperlink{vpx__image_8h_a01201327328c1cdd365632e5056b1850}{vpx\-\_\-img\-\_\-flip} (\hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$img)
+\begin{DoxyCompactList}\small\item\em \-Flip the image vertically (top for bottom) \end{DoxyCompactList}\item 
+void \hyperlink{vpx__image_8h_af47ebaf286812d037425d41990d48a17}{vpx\-\_\-img\-\_\-free} (\hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$img)
+\begin{DoxyCompactList}\small\item\em \-Close an image descriptor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{\-Detailed \-Description}
+\-Describes the vpx image descriptor and associated operations. 
+
+\subsubsection{\-Define \-Documentation}
+\hypertarget{vpx__image_8h_aba054d28e7205f3cbd260c8b1e741bca}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-P\-L\-A\-N\-A\-R@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-P\-L\-A\-N\-A\-R}}
+\index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-P\-L\-A\-N\-A\-R@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-P\-L\-A\-N\-A\-R}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-P\-L\-A\-N\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-P\-L\-A\-N\-A\-R~0x100}}
+\label{vpx__image_8h_aba054d28e7205f3cbd260c8b1e741bca}
+\-Image is a planar format \hypertarget{vpx__image_8h_a52193af375ccdbe6b1fc2c706e308b4e}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-V\-\_\-\-F\-L\-I\-P@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-V\-\_\-\-F\-L\-I\-P}}
+\index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-V\-\_\-\-F\-L\-I\-P@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-V\-\_\-\-F\-L\-I\-P}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-V\-\_\-\-F\-L\-I\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-V\-\_\-\-F\-L\-I\-P~0x200}}
+\label{vpx__image_8h_a52193af375ccdbe6b1fc2c706e308b4e}
+\-V plane precedes \-U plane in memory \hypertarget{vpx__image_8h_adceef04930837f46dad16d648cb152f9}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-H\-A\-S\-\_\-\-A\-L\-P\-H\-A@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-H\-A\-S\-\_\-\-A\-L\-P\-H\-A}}
+\index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-H\-A\-S\-\_\-\-A\-L\-P\-H\-A@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-H\-A\-S\-\_\-\-A\-L\-P\-H\-A}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-H\-A\-S\-\_\-\-A\-L\-P\-H\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-H\-A\-S\-\_\-\-A\-L\-P\-H\-A~0x400}}
+\label{vpx__image_8h_adceef04930837f46dad16d648cb152f9}
+\-Image has an alpha channel component \hypertarget{vpx__image_8h_aed2dfee103bf123bad08ceefdba21301}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-C\-K\-E\-D@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-C\-K\-E\-D}}
+\index{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-C\-K\-E\-D@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-C\-K\-E\-D}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-C\-K\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-P\-A\-C\-K\-E\-D~0}}
+\label{vpx__image_8h_aed2dfee103bf123bad08ceefdba21301}
+\-To be used for all packed formats \hypertarget{vpx__image_8h_a08171c4636c655e1ab0b76e06219f9e2}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-Y@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-Y}}
+\index{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-Y@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-Y}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-Y~0}}
+\label{vpx__image_8h_a08171c4636c655e1ab0b76e06219f9e2}
+\-Y (\-Luminance) plane \hypertarget{vpx__image_8h_a4770fc8fa60021a2229f25553152cf81}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-U@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-U}}
+\index{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-U@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-U}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-U~1}}
+\label{vpx__image_8h_a4770fc8fa60021a2229f25553152cf81}
+\-U (\-Chroma) plane \hypertarget{vpx__image_8h_aca9436ec761457cc6d2e356e0ac2fd23}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-V@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-V}}
+\index{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-V@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-V}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-V~2}}
+\label{vpx__image_8h_aca9436ec761457cc6d2e356e0ac2fd23}
+\-V (\-Chroma) plane \hypertarget{vpx__image_8h_ac7a57e3c466f599abbcbd655db92c24d}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-A\-L\-P\-H\-A@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-A\-L\-P\-H\-A}}
+\index{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-A\-L\-P\-H\-A@{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-A\-L\-P\-H\-A}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{\-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-A\-L\-P\-H\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-V\-P\-X\-\_\-\-P\-L\-A\-N\-E\-\_\-\-A\-L\-P\-H\-A~3}}
+\label{vpx__image_8h_ac7a57e3c466f599abbcbd655db92c24d}
+\-A (\-Transparency) plane 
+
+\subsubsection{\-Typedef \-Documentation}
+\hypertarget{vpx__image_8h_acb76f0439d5d186256371aadf3beeee4}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-img\-\_\-fmt\-\_\-t@{vpx\-\_\-img\-\_\-fmt\-\_\-t}}
+\index{vpx\-\_\-img\-\_\-fmt\-\_\-t@{vpx\-\_\-img\-\_\-fmt\-\_\-t}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-img\-\_\-fmt\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf vpx\-\_\-img\-\_\-fmt}
+     {\bf vpx\-\_\-img\-\_\-fmt\-\_\-t}}}
+\label{vpx__image_8h_acb76f0439d5d186256371aadf3beeee4}
+
+
+\-List of supported image formats. 
+
+alias for enum vpx\-\_\-img\-\_\-fmt \hypertarget{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-image\-\_\-t@{vpx\-\_\-image\-\_\-t}}
+\index{vpx\-\_\-image\-\_\-t@{vpx\-\_\-image\-\_\-t}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-image\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf vpx\-\_\-image}  {\bf vpx\-\_\-image\-\_\-t}}}
+\label{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}
+
+
+\-Image \-Descriptor. 
+
+alias for struct \hyperlink{structvpx__image}{vpx\-\_\-image} \hypertarget{vpx__image_8h_aba8af9e601eb9c3c41431d0f4fef65a6}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-image\-\_\-rect\-\_\-t@{vpx\-\_\-image\-\_\-rect\-\_\-t}}
+\index{vpx\-\_\-image\-\_\-rect\-\_\-t@{vpx\-\_\-image\-\_\-rect\-\_\-t}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-image\-\_\-rect\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf vpx\-\_\-image\-\_\-rect}  {\bf vpx\-\_\-image\-\_\-rect\-\_\-t}}}
+\label{vpx__image_8h_aba8af9e601eb9c3c41431d0f4fef65a6}
+
+
+\-Representation of a rectangle on a surface. 
+
+alias for struct \hyperlink{structvpx__image__rect}{vpx\-\_\-image\-\_\-rect} 
+
+\subsubsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-img\-\_\-fmt@{vpx\-\_\-img\-\_\-fmt}}
+\index{vpx\-\_\-img\-\_\-fmt@{vpx\-\_\-img\-\_\-fmt}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-img\-\_\-fmt}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf vpx\-\_\-img\-\_\-fmt}}}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193}
+
+
+\-List of supported image formats. 
+
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B24@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B24}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B24@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B24}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a768c82ecfd7f7de4095ba587185cacc3}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B24}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a768c82ecfd7f7de4095ba587185cacc3}
+}]24 bit per pixel packed \-R\-G\-B \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6a4b7c1ab7811898df2c433168f8cad7}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6a4b7c1ab7811898df2c433168f8cad7}
+}]32 bit per pixel packed 0\-R\-G\-B \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a0e0df90f12025dffb425ab586bc190b8}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a0e0df90f12025dffb425ab586bc190b8}
+}]16 bit per pixel, 565 \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a7801d709598e8aa57a811ef008389fac}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a7801d709598e8aa57a811ef008389fac}
+}]16 bit per pixel, 555 \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-Y\-V\-Y@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-Y\-V\-Y}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-Y\-V\-Y@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-Y\-V\-Y}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193aaac20056f1282ec3e23b2f3df5197ebd}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-U\-Y\-V\-Y}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193aaac20056f1282ec3e23b2f3df5197ebd}
+}]\-U\-Y\-V\-Y packed \-Y\-U\-V \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-U\-Y2@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-U\-Y2}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-U\-Y2@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-U\-Y2}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a54251eea14c31a916a9181d8e38bcc2e}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-U\-Y2}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a54251eea14c31a916a9181d8e38bcc2e}
+}]\-Y\-U\-Y\-V packed \-Y\-U\-V \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V\-Y\-U@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V\-Y\-U}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V\-Y\-U@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V\-Y\-U}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6982ba2da461ca8d7b7a8a2efd018dea}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V\-Y\-U}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6982ba2da461ca8d7b7a8a2efd018dea}
+}]\-Y\-V\-Y\-U packed \-Y\-U\-V \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-B\-G\-R24@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-B\-G\-R24}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-B\-G\-R24@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-B\-G\-R24}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a5c585a577f88505845496cba7054a412}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-B\-G\-R24}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a5c585a577f88505845496cba7054a412}
+}]24 bit per pixel packed \-B\-G\-R \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32\-\_\-\-L\-E}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32\-\_\-\-L\-E}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a289f1c915217fd690228890db7033303}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B32\-\_\-\-L\-E}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a289f1c915217fd690228890db7033303}
+}]32 bit packed \-B\-G\-R0 \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a62257fab5e53c2c1b589e4befbaa4643}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a62257fab5e53c2c1b589e4befbaa4643}
+}]32 bit packed \-A\-R\-G\-B, alpha=255 \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B\-\_\-\-L\-E}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B\-\_\-\-L\-E}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a933ca0d3511dccb7128a010c9443f13b}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-A\-R\-G\-B\-\_\-\-L\-E}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a933ca0d3511dccb7128a010c9443f13b}
+}]32 bit packed \-B\-G\-R\-A, alpha=255 \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565\-\_\-\-L\-E}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565\-\_\-\-L\-E}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193ae1040770cb4f2b60931e1b0d31c39c8a}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B565\-\_\-\-L\-E}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193ae1040770cb4f2b60931e1b0d31c39c8a}
+}]16 bit per pixel, gggbbbbb rrrrrggg \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555\-\_\-\-L\-E}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555\-\_\-\-L\-E@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555\-\_\-\-L\-E}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193ac79b2394abe0cc6c9068b7ef0007d74e}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-R\-G\-B555\-\_\-\-L\-E}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193ac79b2394abe0cc6c9068b7ef0007d74e}
+}]16 bit per pixel, gggbbbbb 0rrrrrgg \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V12@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V12}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V12@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V12}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6e4e8961bbcf96478c300dc4c3e1dc18}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-Y\-V12}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a6e4e8961bbcf96478c300dc4c3e1dc18}
+}]\-Image is a planar format \-V plane precedes \-U plane in memory planar \-Y\-V\-U \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-I420@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-I420}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-I420@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-I420}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193af17ce49c9a6efd7c8c8ea8928d4ce26c}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-I420}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193af17ce49c9a6efd7c8c8ea8928d4ce26c}
+}]\-Image is a planar format \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-Y\-V12@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-Y\-V12}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-Y\-V12@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-Y\-V12}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a63e1daa51719dc6129881abe81a016fc}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-Y\-V12}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a63e1daa51719dc6129881abe81a016fc}
+}]\-Image is a planar format \-V plane precedes \-U plane in memory \index{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-I420@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-I420}!vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}}\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-I420@{\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-I420}}\item[{\em 
+\hypertarget{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a42d26966faf7079e80cbbfee1d698493}{
+\-V\-P\-X\-\_\-\-I\-M\-G\-\_\-\-F\-M\-T\-\_\-\-V\-P\-X\-I420}
+\label{vpx__image_8h_a7a30a7bff7400fb83ad45fede5077193a42d26966faf7079e80cbbfee1d698493}
+}]$<$ planar 4\-:2\-:0 format with vpx color space \-Image is a planar format \end{description}
+\end{Desc}
+
+
+
+\subsubsection{\-Function \-Documentation}
+\hypertarget{vpx__image_8h_ab80398f28ca880368a922fa979eb66c1}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-img\-\_\-alloc@{vpx\-\_\-img\-\_\-alloc}}
+\index{vpx\-\_\-img\-\_\-alloc@{vpx\-\_\-img\-\_\-alloc}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-img\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vpx\-\_\-image\-\_\-t}$\ast$ vpx\-\_\-img\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf vpx\-\_\-image\-\_\-t} $\ast$}]{img, }
+\item[{{\bf vpx\-\_\-img\-\_\-fmt\-\_\-t}}]{fmt, }
+\item[{unsigned int}]{d\-\_\-w, }
+\item[{unsigned int}]{d\-\_\-h, }
+\item[{unsigned int}]{align}
+\end{DoxyParamCaption}
+)}}
+\label{vpx__image_8h_ab80398f28ca880368a922fa979eb66c1}
+
+
+\-Open a descriptor, allocating storage for the underlying image. 
+
+\-Returns a descriptor for storing an image of the given format. \-The storage for the descriptor is allocated on the heap.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em img} & \-Pointer to storage for descriptor. \-If this parameter is \-N\-U\-L\-L, the storage for the descriptor will be allocated on the heap. \\
+\hline
+\mbox{\tt in}  & {\em fmt} & \-Format for the image \\
+\hline
+\mbox{\tt in}  & {\em d\-\_\-w} & \-Width of the image \\
+\hline
+\mbox{\tt in}  & {\em d\-\_\-h} & \-Height of the image \\
+\hline
+\mbox{\tt in}  & {\em align} & \-Alignment, in bytes, of the image buffer and each row in the image(stride).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns a pointer to the initialized image descriptor. \-If the img parameter is non-\/null, the value of the img parameter will be returned. 
+\end{DoxyReturn}
+\hypertarget{vpx__image_8h_afaf35f1f2f2f634de394faf7d6aeeeb9}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-img\-\_\-wrap@{vpx\-\_\-img\-\_\-wrap}}
+\index{vpx\-\_\-img\-\_\-wrap@{vpx\-\_\-img\-\_\-wrap}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-img\-\_\-wrap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vpx\-\_\-image\-\_\-t}$\ast$ vpx\-\_\-img\-\_\-wrap (
+\begin{DoxyParamCaption}
+\item[{{\bf vpx\-\_\-image\-\_\-t} $\ast$}]{img, }
+\item[{{\bf vpx\-\_\-img\-\_\-fmt\-\_\-t}}]{fmt, }
+\item[{unsigned int}]{d\-\_\-w, }
+\item[{unsigned int}]{d\-\_\-h, }
+\item[{unsigned int}]{align, }
+\item[{unsigned char $\ast$}]{img\-\_\-data}
+\end{DoxyParamCaption}
+)}}
+\label{vpx__image_8h_afaf35f1f2f2f634de394faf7d6aeeeb9}
+
+
+\-Open a descriptor, using existing storage for the underlying image. 
+
+\-Returns a descriptor for storing an image of the given format. \-The storage for descriptor has been allocated elsewhere, and a descriptor is desired to \char`\"{}wrap\char`\"{} that storage.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em img} & \-Pointer to storage for descriptor. \-If this parameter is \-N\-U\-L\-L, the storage for the descriptor will be allocated on the heap. \\
+\hline
+\mbox{\tt in}  & {\em fmt} & \-Format for the image \\
+\hline
+\mbox{\tt in}  & {\em d\-\_\-w} & \-Width of the image \\
+\hline
+\mbox{\tt in}  & {\em d\-\_\-h} & \-Height of the image \\
+\hline
+\mbox{\tt in}  & {\em align} & \-Alignment, in bytes, of each row in the image. \\
+\hline
+\mbox{\tt in}  & {\em img\-\_\-data} & \-Storage to use for the image\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-Returns a pointer to the initialized image descriptor. \-If the img parameter is non-\/null, the value of the img parameter will be returned. 
+\end{DoxyReturn}
+\hypertarget{vpx__image_8h_ab5c1d1a5548752f7cd5047f43d5f25c4}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-img\-\_\-set\-\_\-rect@{vpx\-\_\-img\-\_\-set\-\_\-rect}}
+\index{vpx\-\_\-img\-\_\-set\-\_\-rect@{vpx\-\_\-img\-\_\-set\-\_\-rect}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-img\-\_\-set\-\_\-rect}]{\setlength{\rightskip}{0pt plus 5cm}int vpx\-\_\-img\-\_\-set\-\_\-rect (
+\begin{DoxyParamCaption}
+\item[{{\bf vpx\-\_\-image\-\_\-t} $\ast$}]{img, }
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y, }
+\item[{unsigned int}]{w, }
+\item[{unsigned int}]{h}
+\end{DoxyParamCaption}
+)}}
+\label{vpx__image_8h_ab5c1d1a5548752f7cd5047f43d5f25c4}
+
+
+\-Set the rectangle identifying the displayed portion of the image. 
+
+\-Updates the displayed rectangle (aka viewport) on the image surface to match the specified coordinates and size.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em img} & \-Image descriptor \\
+\hline
+\mbox{\tt in}  & {\em x} & leftmost column \\
+\hline
+\mbox{\tt in}  & {\em y} & topmost row \\
+\hline
+\mbox{\tt in}  & {\em w} & width \\
+\hline
+\mbox{\tt in}  & {\em h} & height\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+0 if the requested rectangle is valid, nonzero otherwise. 
+\end{DoxyReturn}
+\hypertarget{vpx__image_8h_a01201327328c1cdd365632e5056b1850}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-img\-\_\-flip@{vpx\-\_\-img\-\_\-flip}}
+\index{vpx\-\_\-img\-\_\-flip@{vpx\-\_\-img\-\_\-flip}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-img\-\_\-flip}]{\setlength{\rightskip}{0pt plus 5cm}void vpx\-\_\-img\-\_\-flip (
+\begin{DoxyParamCaption}
+\item[{{\bf vpx\-\_\-image\-\_\-t} $\ast$}]{img}
+\end{DoxyParamCaption}
+)}}
+\label{vpx__image_8h_a01201327328c1cdd365632e5056b1850}
+
+
+\-Flip the image vertically (top for bottom) 
+
+\-Adjusts the image descriptor's pointers and strides to make the image be referenced upside-\/down.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em img} & \-Image descriptor \\
+\hline
+\end{DoxyParams}
+\hypertarget{vpx__image_8h_af47ebaf286812d037425d41990d48a17}{
+\index{vpx\-\_\-image.\-h@{vpx\-\_\-image.\-h}!vpx\-\_\-img\-\_\-free@{vpx\-\_\-img\-\_\-free}}
+\index{vpx\-\_\-img\-\_\-free@{vpx\-\_\-img\-\_\-free}!vpx_image.h@{vpx\-\_\-image.\-h}}
+\paragraph[{vpx\-\_\-img\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void vpx\-\_\-img\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf vpx\-\_\-image\-\_\-t} $\ast$}]{img}
+\end{DoxyParamCaption}
+)}}
+\label{vpx__image_8h_af47ebaf286812d037425d41990d48a17}
+
+
+\-Close an image descriptor. 
+
+\-Frees all allocated storage associated with an image descriptor.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em img} & \-Image descriptor \\
+\hline
+\end{DoxyParams}

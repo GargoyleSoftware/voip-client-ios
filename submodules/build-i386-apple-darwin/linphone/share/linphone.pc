@@ -1,0 +1,11 @@
+prefix=/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//../liblinphone-sdk/i386-apple-darwin
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Requires: mediastreamer ortp
+Name: liblinphone
+Description: All in one linphone libs.
+Version: 3.5.0
+Libs: -L${exec_prefix}/lib -llinphone
+Cflags: -I${prefix}/include -I${prefix}/include/linphone

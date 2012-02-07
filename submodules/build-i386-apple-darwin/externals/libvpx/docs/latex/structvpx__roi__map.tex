@@ -1,0 +1,71 @@
+\hypertarget{structvpx__roi__map}{
+\subsection{vpx\-\_\-roi\-\_\-map \-Struct \-Reference}
+\label{structvpx__roi__map}\index{vpx\-\_\-roi\-\_\-map@{vpx\-\_\-roi\-\_\-map}}
+}
+
+
+vpx region of interest map  
+
+
+
+
+{\ttfamily \#include $<$vp8cx.\-h$>$}
+
+\subsubsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \hyperlink{structvpx__roi__map_aba69e211b81d622977ba07ac47b61075}{roi\-\_\-map}
+\item 
+unsigned int \hyperlink{structvpx__roi__map_a3fdcecd472553d08a99ced02cda5c9a6}{rows}
+\item 
+unsigned int \hyperlink{structvpx__roi__map_a5458459aaf16b14b86fb0adef32757c8}{cols}
+\item 
+int \hyperlink{structvpx__roi__map_a6e7aecf1d31c329f43dcb36717b3999b}{delta\-\_\-q} \mbox{[}4\mbox{]}
+\item 
+int \hyperlink{structvpx__roi__map_a5164be48a612bf872b81e0a86726fbed}{delta\-\_\-lf} \mbox{[}4\mbox{]}
+\item 
+unsigned int \hyperlink{structvpx__roi__map_a3354ff458e229361b53a0b2d1bf68cfb}{static\-\_\-threshold} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{\-Detailed \-Description}
+vpx region of interest map 
+
+\-These defines the data structures for the region of interest map 
+
+\subsubsection{\-Field \-Documentation}
+\hypertarget{structvpx__roi__map_aba69e211b81d622977ba07ac47b61075}{
+\index{vpx\-\_\-roi\-\_\-map@{vpx\-\_\-roi\-\_\-map}!roi\-\_\-map@{roi\-\_\-map}}
+\index{roi\-\_\-map@{roi\-\_\-map}!vpx_roi_map@{vpx\-\_\-roi\-\_\-map}}
+\paragraph[{roi\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ {\bf vpx\-\_\-roi\-\_\-map\-::roi\-\_\-map}}}
+\label{structvpx__roi__map_aba69e211b81d622977ba07ac47b61075}
+specify an id between 0 and 3 for each 16x16 region within a frame \hypertarget{structvpx__roi__map_a3fdcecd472553d08a99ced02cda5c9a6}{
+\index{vpx\-\_\-roi\-\_\-map@{vpx\-\_\-roi\-\_\-map}!rows@{rows}}
+\index{rows@{rows}!vpx_roi_map@{vpx\-\_\-roi\-\_\-map}}
+\paragraph[{rows}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-roi\-\_\-map\-::rows}}}
+\label{structvpx__roi__map_a3fdcecd472553d08a99ced02cda5c9a6}
+number of rows \hypertarget{structvpx__roi__map_a5458459aaf16b14b86fb0adef32757c8}{
+\index{vpx\-\_\-roi\-\_\-map@{vpx\-\_\-roi\-\_\-map}!cols@{cols}}
+\index{cols@{cols}!vpx_roi_map@{vpx\-\_\-roi\-\_\-map}}
+\paragraph[{cols}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-roi\-\_\-map\-::cols}}}
+\label{structvpx__roi__map_a5458459aaf16b14b86fb0adef32757c8}
+number of cols \hypertarget{structvpx__roi__map_a6e7aecf1d31c329f43dcb36717b3999b}{
+\index{vpx\-\_\-roi\-\_\-map@{vpx\-\_\-roi\-\_\-map}!delta\-\_\-q@{delta\-\_\-q}}
+\index{delta\-\_\-q@{delta\-\_\-q}!vpx_roi_map@{vpx\-\_\-roi\-\_\-map}}
+\paragraph[{delta\-\_\-q}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf vpx\-\_\-roi\-\_\-map\-::delta\-\_\-q}\mbox{[}4\mbox{]}}}
+\label{structvpx__roi__map_a6e7aecf1d31c329f43dcb36717b3999b}
+quantizer delta \mbox{[}-\/64, 64\mbox{]} off baseline for regions with id between 0 and 3 \hypertarget{structvpx__roi__map_a5164be48a612bf872b81e0a86726fbed}{
+\index{vpx\-\_\-roi\-\_\-map@{vpx\-\_\-roi\-\_\-map}!delta\-\_\-lf@{delta\-\_\-lf}}
+\index{delta\-\_\-lf@{delta\-\_\-lf}!vpx_roi_map@{vpx\-\_\-roi\-\_\-map}}
+\paragraph[{delta\-\_\-lf}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf vpx\-\_\-roi\-\_\-map\-::delta\-\_\-lf}\mbox{[}4\mbox{]}}}
+\label{structvpx__roi__map_a5164be48a612bf872b81e0a86726fbed}
+loop filter strength delta \mbox{[}-\/32, 32\mbox{]} for regions with id between 0 and 3 \hypertarget{structvpx__roi__map_a3354ff458e229361b53a0b2d1bf68cfb}{
+\index{vpx\-\_\-roi\-\_\-map@{vpx\-\_\-roi\-\_\-map}!static\-\_\-threshold@{static\-\_\-threshold}}
+\index{static\-\_\-threshold@{static\-\_\-threshold}!vpx_roi_map@{vpx\-\_\-roi\-\_\-map}}
+\paragraph[{static\-\_\-threshold}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-roi\-\_\-map\-::static\-\_\-threshold}\mbox{[}4\mbox{]}}}
+\label{structvpx__roi__map_a3354ff458e229361b53a0b2d1bf68cfb}
+threshold for region to be treated as static 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+vpx/\hyperlink{vp8cx_8h}{vp8cx.\-h}\end{DoxyCompactItemize}

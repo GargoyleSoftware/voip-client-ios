@@ -1,0 +1,10 @@
+This includes the complied binaries for the liblinphone sdk and it's submodules, since these were a pain to compile. The original README is now README-linphone.
+
+I set up a sip2sip.info account with the following details
+username: gargoyle
+password: 98k41fh1hh
+domain: sip2sip.info
+
+and an ipkall account with the 
+phonenumber: 253-785-0986
+that forwards to the sip2sip account.

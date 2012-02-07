@@ -1,0 +1,127 @@
+\hypertarget{vp8cx_8h}{
+\subsection{vpx/vp8cx.h \-File \-Reference}
+\label{vp8cx_8h}\index{vpx/vp8cx.\-h@{vpx/vp8cx.\-h}}
+}
+
+
+\-Provides definitions for using the \-V\-P8 encoder algorithm within the vpx \-Codec \-Interface.  
+
+
+{\ttfamily \#include \char`\"{}vp8.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}vpx\-\_\-codec\-\_\-impl\-\_\-top.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}vpx\-\_\-codec\-\_\-impl\-\_\-bottom.\-h\char`\"{}}\*
+\subsubsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvpx__roi__map}{vpx\-\_\-roi\-\_\-map}
+\begin{DoxyCompactList}\small\item\em vpx region of interest map \end{DoxyCompactList}\item 
+struct \hyperlink{structvpx__active__map}{vpx\-\_\-active\-\_\-map}
+\begin{DoxyCompactList}\small\item\em vpx active region map \end{DoxyCompactList}\item 
+struct \hyperlink{structvpx__scaling__mode}{vpx\-\_\-scaling\-\_\-mode}
+\begin{DoxyCompactList}\small\item\em vpx image scaling mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__vp8__encoder_gae0ac779c2d78f39ad22df9f9f246d1fa}{
+\#define {\bfseries \-V\-P8\-C\-X\-\_\-\-H}}
+\label{group__vp8__encoder_gae0ac779c2d78f39ad22df9f9f246d1fa}
+
+\item 
+\#define \hyperlink{group__vp8__encoder_gafb51c67e5743275146bc1fc425727da3}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-N\-O\-\_\-\-R\-E\-F\-\_\-\-L\-A\-S\-T}~(1$<$$<$16)
+\begin{DoxyCompactList}\small\item\em \-Don't reference the last frame. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_gabb5e95343a2738abef44eca13059da33}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-N\-O\-\_\-\-R\-E\-F\-\_\-\-G\-F}~(1$<$$<$17)
+\begin{DoxyCompactList}\small\item\em \-Don't reference the golden frame. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_ga650ab0baea12be91082226a5cc18776a}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-N\-O\-\_\-\-R\-E\-F\-\_\-\-A\-R\-F}~(1$<$$<$21)
+\begin{DoxyCompactList}\small\item\em \-Don't reference the alternate reference frame. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_ga602edb6b02a89cb2db7a16d6dffba583}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-N\-O\-\_\-\-U\-P\-D\-\_\-\-L\-A\-S\-T}~(1$<$$<$18)
+\begin{DoxyCompactList}\small\item\em \-Don't update the last frame. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_gab01d066c5236457d345ce1cab4c41d6b}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-N\-O\-\_\-\-U\-P\-D\-\_\-\-G\-F}~(1$<$$<$22)
+\begin{DoxyCompactList}\small\item\em \-Don't update the golden frame. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_ga1cff46a5287e73a620660030d40b9e6c}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-N\-O\-\_\-\-U\-P\-D\-\_\-\-A\-R\-F}~(1$<$$<$23)
+\begin{DoxyCompactList}\small\item\em \-Don't update the alternate reference frame. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_gacb64c00adcb361f72a9a3028eb12f5ff}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-F\-O\-R\-C\-E\-\_\-\-G\-F}~(1$<$$<$19)
+\begin{DoxyCompactList}\small\item\em \-Force golden frame update. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_ga50584fe4bdb62ff935347576539650b7}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-F\-O\-R\-C\-E\-\_\-\-A\-R\-F}~(1$<$$<$24)
+\begin{DoxyCompactList}\small\item\em \-Force alternate reference frame update. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__vp8__encoder_ga5b91ad179910d4efc23aef66c7b2148b}{\-V\-P8\-\_\-\-E\-F\-L\-A\-G\-\_\-\-N\-O\-\_\-\-U\-P\-D\-\_\-\-E\-N\-T\-R\-O\-P\-Y}~(1$<$$<$20)
+\begin{DoxyCompactList}\small\item\em \-Disable entropy update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__vp8__encoder_ga70071b1bb6cac9a1ef0ea3d8362ff94f}{vpx\-\_\-scaling\-\_\-mode\-\_\-1d} \hyperlink{group__vp8__encoder_ga100ca891ad96995e61780ae777bf8663}{\-V\-P\-X\-\_\-\-S\-C\-A\-L\-I\-N\-G\-\_\-\-M\-O\-D\-E}
+\begin{DoxyCompactList}\small\item\em vpx 1-\/\-D scaling mode \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structvpx__roi__map}{vpx\-\_\-roi\-\_\-map} \hyperlink{group__vp8__encoder_ga5be1a94d436a5e9296f5be06f57ccbd1}{vpx\-\_\-roi\-\_\-map\-\_\-t}
+\begin{DoxyCompactList}\small\item\em vpx region of interest map \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structvpx__active__map}{vpx\-\_\-active\-\_\-map} \hyperlink{group__vp8__encoder_ga7b48f7962f5061979f0f8ece6fb1cba8}{vpx\-\_\-active\-\_\-map\-\_\-t}
+\begin{DoxyCompactList}\small\item\em vpx active region map \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structvpx__scaling__mode}{vpx\-\_\-scaling\-\_\-mode} \hyperlink{group__vp8__encoder_ga9600359ed9096cd96c621d9cf6c8df38}{vpx\-\_\-scaling\-\_\-mode\-\_\-t}
+\begin{DoxyCompactList}\small\item\em vpx image scaling mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__vp8__encoder_ga6deae3d561c838952552c3d3756322ec}{vp8e\-\_\-enc\-\_\-control\-\_\-id} \{ \*
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca79463ec67bb7c282ffd090622f2a46e4}{\-V\-P8\-E\-\_\-\-U\-P\-D\-\_\-\-E\-N\-T\-R\-O\-P\-Y} =  5, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca140d031294fb8c36252c802e8328c1f4}{\-V\-P8\-E\-\_\-\-U\-P\-D\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca5bb579ead6122fafbf4a8838aa5c221e}{\-V\-P8\-E\-\_\-\-U\-S\-E\-\_\-\-R\-E\-F\-E\-R\-E\-N\-C\-E}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca25a828dbab350f80db769a8f53e3940f}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-R\-O\-I\-\_\-\-M\-A\-P}, 
+\*
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca6c904eb7e9e4aa58052742b56f1b4497}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-A\-C\-T\-I\-V\-E\-M\-A\-P}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca7a6db9fd1c434d2e4d91b3935777ab9f}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-S\-C\-A\-L\-E\-M\-O\-D\-E} =  11, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca953ff0eaa2fcdc2ecd627e449b026853}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-C\-P\-U\-U\-S\-E\-D} =  13, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca24a5530efabb8b4949d01622b1d72cb0}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-E\-N\-A\-B\-L\-E\-A\-U\-T\-O\-A\-L\-T\-R\-E\-F}, 
+\*
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca3fa90cb70bade72af3c2d8d91471a36c}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-N\-O\-I\-S\-E\-\_\-\-S\-E\-N\-S\-I\-T\-I\-V\-I\-T\-Y}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca815930923fff388825ee3cc4ef69bb28}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-S\-H\-A\-R\-P\-N\-E\-S\-S}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322ecab34559df04d3d662616300ed0682dcfd}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca462a4f14f39a6eb5c4a4004fc8d0ad75}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-T\-O\-K\-E\-N\-\_\-\-P\-A\-R\-T\-I\-T\-I\-O\-N\-S}, 
+\*
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca5bb0569b813853e981a61c97697cbecd}{\-V\-P8\-E\-\_\-\-G\-E\-T\-\_\-\-L\-A\-S\-T\-\_\-\-Q\-U\-A\-N\-T\-I\-Z\-E\-R}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322ecad2cfc9712d2eab30b5a59a60d0daaade}{\-V\-P8\-E\-\_\-\-G\-E\-T\-\_\-\-L\-A\-S\-T\-\_\-\-Q\-U\-A\-N\-T\-I\-Z\-E\-R\-\_\-64}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca628d73f1a69fadd8aa57e0dfef578da8}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-A\-R\-N\-R\-\_\-\-M\-A\-X\-F\-R\-A\-M\-E\-S}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca0a8c40a768af935ae73faa53355c3244}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-A\-R\-N\-R\-\_\-\-S\-T\-R\-E\-N\-G\-T\-H}, 
+\*
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca4e0a0af58670012026c213083cd48f3a}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-A\-R\-N\-R\-\_\-\-T\-Y\-P\-E}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca126ccbe7bde63b59cec5ea68a82dd498}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-T\-U\-N\-I\-N\-G}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322ecacd4f5b730bddb9788c3d0b82218ec503}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-C\-Q\-\_\-\-L\-E\-V\-E\-L}, 
+\hyperlink{group__vp8__encoder_gga6deae3d561c838952552c3d3756322eca09c69ff4a3aabdb307d4f24027dfc4c1}{\-V\-P8\-E\-\_\-\-S\-E\-T\-\_\-\-M\-A\-X\-\_\-\-I\-N\-T\-R\-A\-\_\-\-B\-I\-T\-R\-A\-T\-E\-\_\-\-P\-C\-T}
+ \}
+\begin{DoxyCompactList}\small\item\em \-V\-P8 encoder control functions. \end{DoxyCompactList}\item 
+enum \hyperlink{group__vp8__encoder_ga70071b1bb6cac9a1ef0ea3d8362ff94f}{vpx\-\_\-scaling\-\_\-mode\-\_\-1d} \{ {\bfseries \-V\-P8\-E\-\_\-\-N\-O\-R\-M\-A\-L} =  0, 
+{\bfseries \-V\-P8\-E\-\_\-\-F\-O\-U\-R\-F\-I\-V\-E} =  1, 
+{\bfseries \-V\-P8\-E\-\_\-\-T\-H\-R\-E\-E\-F\-I\-V\-E} =  2, 
+{\bfseries \-V\-P8\-E\-\_\-\-O\-N\-E\-T\-W\-O} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em vpx 1-\/\-D scaling mode \end{DoxyCompactList}\item 
+enum \hyperlink{group__vp8__encoder_ga57a092f46c3afa879c237f775d4f51dd}{vp8e\-\_\-encoding\-\_\-mode} \{ {\bfseries \-V\-P8\-\_\-\-B\-E\-S\-T\-\_\-\-Q\-U\-A\-L\-I\-T\-Y\-\_\-\-E\-N\-C\-O\-D\-I\-N\-G}, 
+{\bfseries \-V\-P8\-\_\-\-G\-O\-O\-D\-\_\-\-Q\-U\-A\-L\-I\-T\-Y\-\_\-\-E\-N\-C\-O\-D\-I\-N\-G}, 
+{\bfseries \-V\-P8\-\_\-\-R\-E\-A\-L\-\_\-\-T\-I\-M\-E\-\_\-\-E\-N\-C\-O\-D\-I\-N\-G}
+ \}
+\begin{DoxyCompactList}\small\item\em \-V\-P8 encoding mode. \end{DoxyCompactList}\item 
+enum \hyperlink{group__vp8__encoder_ga5f7508ba3fb453b47f62313ed0b864d2}{vp8e\-\_\-token\-\_\-partitions} \{ {\bfseries \-V\-P8\-\_\-\-O\-N\-E\-\_\-\-T\-O\-K\-E\-N\-P\-A\-R\-T\-I\-T\-I\-O\-N} =  0, 
+{\bfseries \-V\-P8\-\_\-\-T\-W\-O\-\_\-\-T\-O\-K\-E\-N\-P\-A\-R\-T\-I\-T\-I\-O\-N} =  1, 
+{\bfseries \-V\-P8\-\_\-\-F\-O\-U\-R\-\_\-\-T\-O\-K\-E\-N\-P\-A\-R\-T\-I\-T\-I\-O\-N} =  2, 
+{\bfseries \-V\-P8\-\_\-\-E\-I\-G\-H\-T\-\_\-\-T\-O\-K\-E\-N\-P\-A\-R\-T\-I\-T\-I\-O\-N} =  3
+ \}
+\begin{DoxyCompactList}\small\item\em \-V\-P8 token partition mode. \end{DoxyCompactList}\item 
+enum \hyperlink{group__vp8__encoder_ga371dbc29054b3d46364af996ad42ab94}{vp8e\-\_\-tuning} \{ {\bfseries \-V\-P8\-\_\-\-T\-U\-N\-E\-\_\-\-P\-S\-N\-R}, 
+{\bfseries \-V\-P8\-\_\-\-T\-U\-N\-E\-\_\-\-S\-S\-I\-M}
+ \}
+\begin{DoxyCompactList}\small\item\em \-V\-P8 model tuning parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Algorithm interface for \-V\-P8}
+\label{_amgrp0b829b38ff2e659173b35cd78e0735bd}%
+ \-This interface provides the capability to encode raw \-V\-P8 streams, as would be found in \-A\-V\-I files. \begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__vp8__encoder_ga689ede372ab835c8e1c9631f17b47eb5}{
+\hyperlink{group__codec_gad654f3da60151f5dfef70aca00ef1e9e}{vpx\-\_\-codec\-\_\-iface\-\_\-t} {\bfseries vpx\-\_\-codec\-\_\-vp8\-\_\-cx\-\_\-algo}}
+\label{group__vp8__encoder_ga689ede372ab835c8e1c9631f17b47eb5}
+
+\item 
+\hypertarget{group__vp8__encoder_ga1b5362d0d5b5a2d50f173f9c160fad9f}{
+\hyperlink{group__codec_gad654f3da60151f5dfef70aca00ef1e9e}{vpx\-\_\-codec\-\_\-iface\-\_\-t} $\ast$ {\bfseries vpx\-\_\-codec\-\_\-vp8\-\_\-cx} (void)}
+\label{group__vp8__encoder_ga1b5362d0d5b5a2d50f173f9c160fad9f}
+
+\end{DoxyCompactItemize}
+
+
+\subsubsection{\-Detailed \-Description}
+\-Provides definitions for using the \-V\-P8 encoder algorithm within the vpx \-Codec \-Interface. 

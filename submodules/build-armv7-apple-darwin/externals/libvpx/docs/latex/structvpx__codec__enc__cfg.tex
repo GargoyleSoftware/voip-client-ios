@@ -1,0 +1,413 @@
+\hypertarget{structvpx__codec__enc__cfg}{
+\subsection{vpx\-\_\-codec\-\_\-enc\-\_\-cfg \-Struct \-Reference}
+\label{structvpx__codec__enc__cfg}\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+}
+
+
+\-Encoder configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$vpx\-\_\-encoder.\-h$>$}
+
+\subsubsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a5bcf7fc1efc4890de351e3c6fe252355}{g\-\_\-usage}
+\begin{DoxyCompactList}\small\item\em \-Algorithm specific \char`\"{}usage\char`\"{} value. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_aff9d8d458c45c95dd542603210ba2b8b}{g\-\_\-threads}
+\begin{DoxyCompactList}\small\item\em \-Maximum number of threads to use. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a3d7fe3a8b237338c094d5a956a41804d}{g\-\_\-profile}
+\begin{DoxyCompactList}\small\item\em \-Bitstream profile to use. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a5c165f5b41ca1158f2883983a2b7709c}{g\-\_\-w}
+\begin{DoxyCompactList}\small\item\em \-Width of the frame. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a4132bd89ce85bce7c08f2cc3b6f2b82e}{g\-\_\-h}
+\begin{DoxyCompactList}\small\item\em \-Height of the frame. \end{DoxyCompactList}\item 
+struct \hyperlink{structvpx__rational}{vpx\-\_\-rational} \hyperlink{structvpx__codec__enc__cfg_a6498d378e4c29ef3e22258289e481087}{g\-\_\-timebase}
+\begin{DoxyCompactList}\small\item\em \-Stream timebase units. \end{DoxyCompactList}\item 
+\hyperlink{group__encoder_ga77e0e1fff62556a4f4d54c84467a41f3}{vpx\-\_\-codec\-\_\-er\-\_\-flags\-\_\-t} \hyperlink{structvpx__codec__enc__cfg_a4e17173b66ca0d7dfba9978625d7ba76}{g\-\_\-error\-\_\-resilient}
+\begin{DoxyCompactList}\small\item\em \-Enable error resilient modes. \end{DoxyCompactList}\item 
+enum \hyperlink{group__encoder_ga476c5417f9c15a1dc5d3f68fa44c493f}{vpx\-\_\-enc\-\_\-pass} \hyperlink{structvpx__codec__enc__cfg_a70d62d87aae7d1168746577f14a6dccf}{g\-\_\-pass}
+\begin{DoxyCompactList}\small\item\em \-Multi-\/pass \-Encoding \-Mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a992668d9e30305f3f7ab2672ea31a890}{g\-\_\-lag\-\_\-in\-\_\-frames}
+\begin{DoxyCompactList}\small\item\em \-Allow lagged encoding. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a619269f9a6904de58c4790e6806a3905}{rc\-\_\-dropframe\-\_\-thresh}
+\begin{DoxyCompactList}\small\item\em \-Temporal resampling configuration, if supported by the codec. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a02a4e2f18fb0fdfff44df8b0d9a99d6c}{rc\-\_\-resize\-\_\-allowed}
+\begin{DoxyCompactList}\small\item\em \-Enable/disable spatial resampling, if supported by the codec. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a855599c0660f31dfcab4a64996b4f6ad}{rc\-\_\-resize\-\_\-up\-\_\-thresh}
+\begin{DoxyCompactList}\small\item\em \-Spatial resampling up watermark. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a1be7bd7b0eaf1e99b5e4028c37c65488}{rc\-\_\-resize\-\_\-down\-\_\-thresh}
+\begin{DoxyCompactList}\small\item\em \-Spatial resampling down watermark. \end{DoxyCompactList}\item 
+enum \hyperlink{group__encoder_gaf50e74d91be4cae6f70dfeba5b7410d2}{vpx\-\_\-rc\-\_\-mode} \hyperlink{structvpx__codec__enc__cfg_a99c415edb6c6f909a095a57c3430a116}{rc\-\_\-end\-\_\-usage}
+\begin{DoxyCompactList}\small\item\em \-Rate control algorithm to use. \end{DoxyCompactList}\item 
+struct \hyperlink{structvpx__fixed__buf}{vpx\-\_\-fixed\-\_\-buf} \hyperlink{structvpx__codec__enc__cfg_a618616a07d9d8883c544731957b56f3c}{rc\-\_\-twopass\-\_\-stats\-\_\-in}
+\begin{DoxyCompactList}\small\item\em \-Two-\/pass stats buffer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_ab8339685175d66710f482706cc9f0aed}{rc\-\_\-target\-\_\-bitrate}
+\begin{DoxyCompactList}\small\item\em \-Target data rate. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a1324600e3c63faaa7717e85cf6509dd9}{rc\-\_\-min\-\_\-quantizer}
+\begin{DoxyCompactList}\small\item\em \-Minimum (\-Best \-Quality) \-Quantizer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a8abdd985d317b720e142335887d737df}{rc\-\_\-max\-\_\-quantizer}
+\begin{DoxyCompactList}\small\item\em \-Maximum (\-Worst \-Quality) \-Quantizer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_ad279fbb0a9fe9395340913161e28651a}{rc\-\_\-undershoot\-\_\-pct}
+\begin{DoxyCompactList}\small\item\em \-Rate control adaptation undershoot control. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a4f2fbd015c1b1f395cc4a4b03d4ead5f}{rc\-\_\-overshoot\-\_\-pct}
+\begin{DoxyCompactList}\small\item\em \-Rate control adaptation overshoot control. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a61866272bb588cd86d28834f420430f0}{rc\-\_\-buf\-\_\-sz}
+\begin{DoxyCompactList}\small\item\em \-Decoder \-Buffer \-Size. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_aa9e4d6405994ef42d61d478cf6e0d5e0}{rc\-\_\-buf\-\_\-initial\-\_\-sz}
+\begin{DoxyCompactList}\small\item\em \-Decoder \-Buffer \-Initial \-Size. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_aafde485867e040a58504ad796e79e47f}{rc\-\_\-buf\-\_\-optimal\-\_\-sz}
+\begin{DoxyCompactList}\small\item\em \-Decoder \-Buffer \-Optimal \-Size. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a21c21ff097890dc3a450731c9b504cf4}{rc\-\_\-2pass\-\_\-vbr\-\_\-bias\-\_\-pct}
+\begin{DoxyCompactList}\small\item\em \-Two-\/pass mode \-C\-B\-R/\-V\-B\-R bias. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a21eb9fce0844ae07b617bf3f0a25f5a5}{rc\-\_\-2pass\-\_\-vbr\-\_\-minsection\-\_\-pct}
+\begin{DoxyCompactList}\small\item\em \-Two-\/pass mode per-\/\-G\-O\-P minimum bitrate. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_ab5212050b71b2d9f4dc663caa496949e}{rc\-\_\-2pass\-\_\-vbr\-\_\-maxsection\-\_\-pct}
+\begin{DoxyCompactList}\small\item\em \-Two-\/pass mode per-\/\-G\-O\-P maximum bitrate. \end{DoxyCompactList}\item 
+enum \hyperlink{group__encoder_ga9f461802aa4db35c04a8b23837987f40}{vpx\-\_\-kf\-\_\-mode} \hyperlink{structvpx__codec__enc__cfg_a491d67f061dcdb13f60c017563e9d788}{kf\-\_\-mode}
+\begin{DoxyCompactList}\small\item\em \-Keyframe placement mode. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a0a7b5444ecb09745cbe8d5af17553846}{kf\-\_\-min\-\_\-dist}
+\begin{DoxyCompactList}\small\item\em \-Keyframe minimum interval. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_ae018440136e271743376730413d25a9b}{kf\-\_\-max\-\_\-dist}
+\begin{DoxyCompactList}\small\item\em \-Keyframe maximum interval. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a16d4549a30cbd585e3c3056ef873d8c7}{ts\-\_\-number\-\_\-layers}
+\begin{DoxyCompactList}\small\item\em \-Number of coding layers. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_aba7ceb7a90500a8f76aff89575737f3a}{ts\-\_\-target\-\_\-bitrate} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em \-Target bitrate for each layer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_ad40c30846ef8ef1d8684f10a491ec535}{ts\-\_\-rate\-\_\-decimator} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em \-Frame rate decimation factor for each layer. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a4ec338780115dd270acf0dac24193474}{ts\-\_\-periodicity}
+\begin{DoxyCompactList}\small\item\em \-Length of the sequence defining frame layer membership. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{structvpx__codec__enc__cfg_a4d105d2470dbfb7210b33d298f1cf1f6}{ts\-\_\-layer\-\_\-id} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em \-Template defining the membership of frames to coding layers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{\-Detailed \-Description}
+\-Encoder configuration structure. 
+
+\-This structure contains the encoder settings that have common representations across all codecs. \-This doesn't imply that all codecs support all features, however. 
+
+\subsubsection{\-Field \-Documentation}
+\hypertarget{structvpx__codec__enc__cfg_a5bcf7fc1efc4890de351e3c6fe252355}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-usage@{g\-\_\-usage}}
+\index{g\-\_\-usage@{g\-\_\-usage}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-usage}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-usage}}}
+\label{structvpx__codec__enc__cfg_a5bcf7fc1efc4890de351e3c6fe252355}
+
+
+\-Algorithm specific \char`\"{}usage\char`\"{} value. 
+
+\-Algorithms may define multiple values for usage, which may convey the intent of how the application intends to use the stream. \-If this value is non-\/zero, consult the documentation for the codec to determine its meaning. \hypertarget{structvpx__codec__enc__cfg_aff9d8d458c45c95dd542603210ba2b8b}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-threads@{g\-\_\-threads}}
+\index{g\-\_\-threads@{g\-\_\-threads}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-threads}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-threads}}}
+\label{structvpx__codec__enc__cfg_aff9d8d458c45c95dd542603210ba2b8b}
+
+
+\-Maximum number of threads to use. 
+
+\-For multi-\/threaded implementations, use no more than this number of threads. \-The codec may use fewer threads than allowed. \-The value 0 is equivalent to the value 1. \hypertarget{structvpx__codec__enc__cfg_a3d7fe3a8b237338c094d5a956a41804d}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-profile@{g\-\_\-profile}}
+\index{g\-\_\-profile@{g\-\_\-profile}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-profile}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-profile}}}
+\label{structvpx__codec__enc__cfg_a3d7fe3a8b237338c094d5a956a41804d}
+
+
+\-Bitstream profile to use. 
+
+\-Some codecs support a notion of multiple bitstream profiles. \-Typically this maps to a set of features that are turned on or off. \-Often the profile to use is determined by the features of the intended decoder. \-Consult the documentation for the codec to determine the valid values for this parameter, or set to zero for a sane default. profile of bitstream to use \hypertarget{structvpx__codec__enc__cfg_a5c165f5b41ca1158f2883983a2b7709c}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-w@{g\-\_\-w}}
+\index{g\-\_\-w@{g\-\_\-w}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-w}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-w}}}
+\label{structvpx__codec__enc__cfg_a5c165f5b41ca1158f2883983a2b7709c}
+
+
+\-Width of the frame. 
+
+\-This value identifies the presentation resolution of the frame, in pixels. \-Note that the frames passed as input to the encoder must have this resolution. \-Frames will be presented by the decoder in this resolution, independent of any spatial resampling the encoder may do. \hypertarget{structvpx__codec__enc__cfg_a4132bd89ce85bce7c08f2cc3b6f2b82e}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-h@{g\-\_\-h}}
+\index{g\-\_\-h@{g\-\_\-h}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-h}}}
+\label{structvpx__codec__enc__cfg_a4132bd89ce85bce7c08f2cc3b6f2b82e}
+
+
+\-Height of the frame. 
+
+\-This value identifies the presentation resolution of the frame, in pixels. \-Note that the frames passed as input to the encoder must have this resolution. \-Frames will be presented by the decoder in this resolution, independent of any spatial resampling the encoder may do. \hypertarget{structvpx__codec__enc__cfg_a6498d378e4c29ef3e22258289e481087}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-timebase@{g\-\_\-timebase}}
+\index{g\-\_\-timebase@{g\-\_\-timebase}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-timebase}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf vpx\-\_\-rational} {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-timebase}}}
+\label{structvpx__codec__enc__cfg_a6498d378e4c29ef3e22258289e481087}
+
+
+\-Stream timebase units. 
+
+\-Indicates the smallest interval of time, in seconds, used by the stream. \-For fixed frame rate material, or variable frame rate material where frames are timed at a multiple of a given clock (ex\-: video capture), the \hyperlink{rfc2119_RECOMMENDED}{\-R\-E\-C\-O\-M\-M\-E\-N\-D\-E\-D} method is to set the timebase to the reciprocal of the frame rate (ex\-: 1001/30000 for 29.\-970 \-Hz \-N\-T\-S\-C). \-This allows the pts to correspond to the frame number, which can be handy. \-For re-\/encoding video from containers with absolute time timestamps, the \hyperlink{rfc2119_RECOMMENDED}{\-R\-E\-C\-O\-M\-M\-E\-N\-D\-E\-D} method is to set the timebase to that of the parent container or multimedia framework (ex\-: 1/1000 for ms, as in \-F\-L\-V). \hypertarget{structvpx__codec__enc__cfg_a4e17173b66ca0d7dfba9978625d7ba76}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-error\-\_\-resilient@{g\-\_\-error\-\_\-resilient}}
+\index{g\-\_\-error\-\_\-resilient@{g\-\_\-error\-\_\-resilient}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-error\-\_\-resilient}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vpx\-\_\-codec\-\_\-er\-\_\-flags\-\_\-t} {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-error\-\_\-resilient}}}
+\label{structvpx__codec__enc__cfg_a4e17173b66ca0d7dfba9978625d7ba76}
+
+
+\-Enable error resilient modes. 
+
+\-The error resilient bitfield indicates to the encoder which features it should enable to take measures for streaming over lossy or noisy links. \hypertarget{structvpx__codec__enc__cfg_a70d62d87aae7d1168746577f14a6dccf}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-pass@{g\-\_\-pass}}
+\index{g\-\_\-pass@{g\-\_\-pass}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-pass}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf vpx\-\_\-enc\-\_\-pass} {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-pass}}}
+\label{structvpx__codec__enc__cfg_a70d62d87aae7d1168746577f14a6dccf}
+
+
+\-Multi-\/pass \-Encoding \-Mode. 
+
+\-This value should be set to the current phase for multi-\/pass encoding. \-For single pass, set to \hyperlink{group__encoder_gga476c5417f9c15a1dc5d3f68fa44c493fa7b6943a41868e8e26a77e9500f139ca1}{\-V\-P\-X\-\_\-\-R\-C\-\_\-\-O\-N\-E\-\_\-\-P\-A\-S\-S}. \hypertarget{structvpx__codec__enc__cfg_a992668d9e30305f3f7ab2672ea31a890}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!g\-\_\-lag\-\_\-in\-\_\-frames@{g\-\_\-lag\-\_\-in\-\_\-frames}}
+\index{g\-\_\-lag\-\_\-in\-\_\-frames@{g\-\_\-lag\-\_\-in\-\_\-frames}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{g\-\_\-lag\-\_\-in\-\_\-frames}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::g\-\_\-lag\-\_\-in\-\_\-frames}}}
+\label{structvpx__codec__enc__cfg_a992668d9e30305f3f7ab2672ea31a890}
+
+
+\-Allow lagged encoding. 
+
+\-If set, this value allows the encoder to consume a number of input frames before producing output frames. \-This allows the encoder to base decisions for the current frame on future frames. \-This does increase the latency of the encoding pipeline, so it is not appropriate in all situations (ex\-: realtime encoding).
+
+\-Note that this is a maximum value -\/-\/ the encoder may produce frames sooner than the given limit. \-Set this value to 0 to disable this feature. \hypertarget{structvpx__codec__enc__cfg_a619269f9a6904de58c4790e6806a3905}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-dropframe\-\_\-thresh@{rc\-\_\-dropframe\-\_\-thresh}}
+\index{rc\-\_\-dropframe\-\_\-thresh@{rc\-\_\-dropframe\-\_\-thresh}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-dropframe\-\_\-thresh}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-dropframe\-\_\-thresh}}}
+\label{structvpx__codec__enc__cfg_a619269f9a6904de58c4790e6806a3905}
+
+
+\-Temporal resampling configuration, if supported by the codec. 
+
+\-Temporal resampling allows the codec to \char`\"{}drop\char`\"{} frames as a strategy to meet its target data rate. \-This can cause temporal discontinuities in the encoded video, which may appear as stuttering during playback. \-This trade-\/off is often acceptable, but for many applications is not. \-It can be disabled in these cases.
+
+\-Note that not all codecs support this feature. \-All vpx \-V\-Px codecs do. \-For other codecs, consult the documentation for that algorithm.
+
+\-This threshold is described as a percentage of the target data buffer. \-When the data buffer falls below this percentage of fullness, a dropped frame is indicated. \-Set the threshold to zero (0) to disable this feature. \hypertarget{structvpx__codec__enc__cfg_a02a4e2f18fb0fdfff44df8b0d9a99d6c}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-resize\-\_\-allowed@{rc\-\_\-resize\-\_\-allowed}}
+\index{rc\-\_\-resize\-\_\-allowed@{rc\-\_\-resize\-\_\-allowed}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-resize\-\_\-allowed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-resize\-\_\-allowed}}}
+\label{structvpx__codec__enc__cfg_a02a4e2f18fb0fdfff44df8b0d9a99d6c}
+
+
+\-Enable/disable spatial resampling, if supported by the codec. 
+
+\-Spatial resampling allows the codec to compress a lower resolution version of the frame, which is then upscaled by the encoder to the correct presentation resolution. \-This increases visual quality at low data rates, at the expense of \-C\-P\-U time on the encoder/decoder. \hypertarget{structvpx__codec__enc__cfg_a855599c0660f31dfcab4a64996b4f6ad}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-resize\-\_\-up\-\_\-thresh@{rc\-\_\-resize\-\_\-up\-\_\-thresh}}
+\index{rc\-\_\-resize\-\_\-up\-\_\-thresh@{rc\-\_\-resize\-\_\-up\-\_\-thresh}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-resize\-\_\-up\-\_\-thresh}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-resize\-\_\-up\-\_\-thresh}}}
+\label{structvpx__codec__enc__cfg_a855599c0660f31dfcab4a64996b4f6ad}
+
+
+\-Spatial resampling up watermark. 
+
+\-This threshold is described as a percentage of the target data buffer. \-When the data buffer rises above this percentage of fullness, the encoder will step up to a higher resolution version of the frame. \hypertarget{structvpx__codec__enc__cfg_a1be7bd7b0eaf1e99b5e4028c37c65488}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-resize\-\_\-down\-\_\-thresh@{rc\-\_\-resize\-\_\-down\-\_\-thresh}}
+\index{rc\-\_\-resize\-\_\-down\-\_\-thresh@{rc\-\_\-resize\-\_\-down\-\_\-thresh}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-resize\-\_\-down\-\_\-thresh}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-resize\-\_\-down\-\_\-thresh}}}
+\label{structvpx__codec__enc__cfg_a1be7bd7b0eaf1e99b5e4028c37c65488}
+
+
+\-Spatial resampling down watermark. 
+
+\-This threshold is described as a percentage of the target data buffer. \-When the data buffer falls below this percentage of fullness, the encoder will step down to a lower resolution version of the frame. \hypertarget{structvpx__codec__enc__cfg_a99c415edb6c6f909a095a57c3430a116}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-end\-\_\-usage@{rc\-\_\-end\-\_\-usage}}
+\index{rc\-\_\-end\-\_\-usage@{rc\-\_\-end\-\_\-usage}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-end\-\_\-usage}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf vpx\-\_\-rc\-\_\-mode} {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-end\-\_\-usage}}}
+\label{structvpx__codec__enc__cfg_a99c415edb6c6f909a095a57c3430a116}
+
+
+\-Rate control algorithm to use. 
+
+\-Indicates whether the end usage of this stream is to be streamed over a bandwidth constrained link, indicating that \-Constant \-Bit \-Rate (\-C\-B\-R) mode should be used, or whether it will be played back on a high bandwidth link, as from a local disk, where higher variations in bitrate are acceptable. \hypertarget{structvpx__codec__enc__cfg_a618616a07d9d8883c544731957b56f3c}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-twopass\-\_\-stats\-\_\-in@{rc\-\_\-twopass\-\_\-stats\-\_\-in}}
+\index{rc\-\_\-twopass\-\_\-stats\-\_\-in@{rc\-\_\-twopass\-\_\-stats\-\_\-in}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-twopass\-\_\-stats\-\_\-in}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf vpx\-\_\-fixed\-\_\-buf} {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-twopass\-\_\-stats\-\_\-in}}}
+\label{structvpx__codec__enc__cfg_a618616a07d9d8883c544731957b56f3c}
+
+
+\-Two-\/pass stats buffer. 
+
+\-A buffer containing all of the stats packets produced in the first pass, concatenated. \hypertarget{structvpx__codec__enc__cfg_ab8339685175d66710f482706cc9f0aed}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-target\-\_\-bitrate@{rc\-\_\-target\-\_\-bitrate}}
+\index{rc\-\_\-target\-\_\-bitrate@{rc\-\_\-target\-\_\-bitrate}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-target\-\_\-bitrate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-target\-\_\-bitrate}}}
+\label{structvpx__codec__enc__cfg_ab8339685175d66710f482706cc9f0aed}
+
+
+\-Target data rate. 
+
+\-Target bandwidth to use for this stream, in kilobits per second. \hypertarget{structvpx__codec__enc__cfg_a1324600e3c63faaa7717e85cf6509dd9}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-min\-\_\-quantizer@{rc\-\_\-min\-\_\-quantizer}}
+\index{rc\-\_\-min\-\_\-quantizer@{rc\-\_\-min\-\_\-quantizer}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-min\-\_\-quantizer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-min\-\_\-quantizer}}}
+\label{structvpx__codec__enc__cfg_a1324600e3c63faaa7717e85cf6509dd9}
+
+
+\-Minimum (\-Best \-Quality) \-Quantizer. 
+
+\-The quantizer is the most direct control over the quality of the encoded image. \-The range of valid values for the quantizer is codec specific. \-Consult the documentation for the codec to determine the values to use. \-To determine the range programmatically, call \hyperlink{group__encoder_ga9ab8c79623312e9c5d5405d66a788f59}{vpx\-\_\-codec\-\_\-enc\-\_\-config\-\_\-default()} with a usage value of 0. \hypertarget{structvpx__codec__enc__cfg_a8abdd985d317b720e142335887d737df}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-max\-\_\-quantizer@{rc\-\_\-max\-\_\-quantizer}}
+\index{rc\-\_\-max\-\_\-quantizer@{rc\-\_\-max\-\_\-quantizer}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-max\-\_\-quantizer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-max\-\_\-quantizer}}}
+\label{structvpx__codec__enc__cfg_a8abdd985d317b720e142335887d737df}
+
+
+\-Maximum (\-Worst \-Quality) \-Quantizer. 
+
+\-The quantizer is the most direct control over the quality of the encoded image. \-The range of valid values for the quantizer is codec specific. \-Consult the documentation for the codec to determine the values to use. \-To determine the range programmatically, call \hyperlink{group__encoder_ga9ab8c79623312e9c5d5405d66a788f59}{vpx\-\_\-codec\-\_\-enc\-\_\-config\-\_\-default()} with a usage value of 0. \hypertarget{structvpx__codec__enc__cfg_ad279fbb0a9fe9395340913161e28651a}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-undershoot\-\_\-pct@{rc\-\_\-undershoot\-\_\-pct}}
+\index{rc\-\_\-undershoot\-\_\-pct@{rc\-\_\-undershoot\-\_\-pct}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-undershoot\-\_\-pct}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-undershoot\-\_\-pct}}}
+\label{structvpx__codec__enc__cfg_ad279fbb0a9fe9395340913161e28651a}
+
+
+\-Rate control adaptation undershoot control. 
+
+\-This value, expressed as a percentage of the target bitrate, controls the maximum allowed adaptation speed of the codec. \-This factor controls the maximum amount of bits that can be subtracted from the target bitrate in order to compensate for prior overshoot.
+
+\-Valid values in the range 0-\/1000. \hypertarget{structvpx__codec__enc__cfg_a4f2fbd015c1b1f395cc4a4b03d4ead5f}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-overshoot\-\_\-pct@{rc\-\_\-overshoot\-\_\-pct}}
+\index{rc\-\_\-overshoot\-\_\-pct@{rc\-\_\-overshoot\-\_\-pct}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-overshoot\-\_\-pct}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-overshoot\-\_\-pct}}}
+\label{structvpx__codec__enc__cfg_a4f2fbd015c1b1f395cc4a4b03d4ead5f}
+
+
+\-Rate control adaptation overshoot control. 
+
+\-This value, expressed as a percentage of the target bitrate, controls the maximum allowed adaptation speed of the codec. \-This factor controls the maximum amount of bits that can be added to the target bitrate in order to compensate for prior undershoot.
+
+\-Valid values in the range 0-\/1000. \hypertarget{structvpx__codec__enc__cfg_a61866272bb588cd86d28834f420430f0}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-buf\-\_\-sz@{rc\-\_\-buf\-\_\-sz}}
+\index{rc\-\_\-buf\-\_\-sz@{rc\-\_\-buf\-\_\-sz}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-buf\-\_\-sz}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-buf\-\_\-sz}}}
+\label{structvpx__codec__enc__cfg_a61866272bb588cd86d28834f420430f0}
+
+
+\-Decoder \-Buffer \-Size. 
+
+\-This value indicates the amount of data that may be buffered by the decoding application. \-Note that this value is expressed in units of time (milliseconds). \-For example, a value of 5000 indicates that the client will buffer (at least) 5000ms worth of encoded data. \-Use the target bitrate (\hyperlink{structvpx__codec__enc__cfg_ab8339685175d66710f482706cc9f0aed}{rc\-\_\-target\-\_\-bitrate}) to convert to bits/bytes, if necessary. \hypertarget{structvpx__codec__enc__cfg_aa9e4d6405994ef42d61d478cf6e0d5e0}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-buf\-\_\-initial\-\_\-sz@{rc\-\_\-buf\-\_\-initial\-\_\-sz}}
+\index{rc\-\_\-buf\-\_\-initial\-\_\-sz@{rc\-\_\-buf\-\_\-initial\-\_\-sz}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-buf\-\_\-initial\-\_\-sz}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-buf\-\_\-initial\-\_\-sz}}}
+\label{structvpx__codec__enc__cfg_aa9e4d6405994ef42d61d478cf6e0d5e0}
+
+
+\-Decoder \-Buffer \-Initial \-Size. 
+
+\-This value indicates the amount of data that will be buffered by the decoding application prior to beginning playback. \-This value is expressed in units of time (milliseconds). \-Use the target bitrate (\hyperlink{structvpx__codec__enc__cfg_ab8339685175d66710f482706cc9f0aed}{rc\-\_\-target\-\_\-bitrate}) to convert to bits/bytes, if necessary. \hypertarget{structvpx__codec__enc__cfg_aafde485867e040a58504ad796e79e47f}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-buf\-\_\-optimal\-\_\-sz@{rc\-\_\-buf\-\_\-optimal\-\_\-sz}}
+\index{rc\-\_\-buf\-\_\-optimal\-\_\-sz@{rc\-\_\-buf\-\_\-optimal\-\_\-sz}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-buf\-\_\-optimal\-\_\-sz}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-buf\-\_\-optimal\-\_\-sz}}}
+\label{structvpx__codec__enc__cfg_aafde485867e040a58504ad796e79e47f}
+
+
+\-Decoder \-Buffer \-Optimal \-Size. 
+
+\-This value indicates the amount of data that the encoder should try to maintain in the decoder's buffer. \-This value is expressed in units of time (milliseconds). \-Use the target bitrate (\hyperlink{structvpx__codec__enc__cfg_ab8339685175d66710f482706cc9f0aed}{rc\-\_\-target\-\_\-bitrate}) to convert to bits/bytes, if necessary. \hypertarget{structvpx__codec__enc__cfg_a21c21ff097890dc3a450731c9b504cf4}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-2pass\-\_\-vbr\-\_\-bias\-\_\-pct@{rc\-\_\-2pass\-\_\-vbr\-\_\-bias\-\_\-pct}}
+\index{rc\-\_\-2pass\-\_\-vbr\-\_\-bias\-\_\-pct@{rc\-\_\-2pass\-\_\-vbr\-\_\-bias\-\_\-pct}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-2pass\-\_\-vbr\-\_\-bias\-\_\-pct}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-2pass\-\_\-vbr\-\_\-bias\-\_\-pct}}}
+\label{structvpx__codec__enc__cfg_a21c21ff097890dc3a450731c9b504cf4}
+
+
+\-Two-\/pass mode \-C\-B\-R/\-V\-B\-R bias. 
+
+\-Bias, expressed on a scale of 0 to 100, for determining target size for the current frame. \-The value 0 indicates the optimal \-C\-B\-R mode value should be used. \-The value 100 indicates the optimal \-V\-B\-R mode value should be used. \-Values in between indicate which way the encoder should \char`\"{}lean.\char`\"{} \-R\-C mode bias between \-C\-B\-R and \-V\-B\-R(0-\/100\-: 0-\/$>$\-C\-B\-R, 100-\/$>$\-V\-B\-R) \hypertarget{structvpx__codec__enc__cfg_a21eb9fce0844ae07b617bf3f0a25f5a5}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-2pass\-\_\-vbr\-\_\-minsection\-\_\-pct@{rc\-\_\-2pass\-\_\-vbr\-\_\-minsection\-\_\-pct}}
+\index{rc\-\_\-2pass\-\_\-vbr\-\_\-minsection\-\_\-pct@{rc\-\_\-2pass\-\_\-vbr\-\_\-minsection\-\_\-pct}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-2pass\-\_\-vbr\-\_\-minsection\-\_\-pct}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-2pass\-\_\-vbr\-\_\-minsection\-\_\-pct}}}
+\label{structvpx__codec__enc__cfg_a21eb9fce0844ae07b617bf3f0a25f5a5}
+
+
+\-Two-\/pass mode per-\/\-G\-O\-P minimum bitrate. 
+
+\-This value, expressed as a percentage of the target bitrate, indicates the minimum bitrate to be used for a single \-G\-O\-P (aka \char`\"{}section\char`\"{}) \hypertarget{structvpx__codec__enc__cfg_ab5212050b71b2d9f4dc663caa496949e}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!rc\-\_\-2pass\-\_\-vbr\-\_\-maxsection\-\_\-pct@{rc\-\_\-2pass\-\_\-vbr\-\_\-maxsection\-\_\-pct}}
+\index{rc\-\_\-2pass\-\_\-vbr\-\_\-maxsection\-\_\-pct@{rc\-\_\-2pass\-\_\-vbr\-\_\-maxsection\-\_\-pct}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{rc\-\_\-2pass\-\_\-vbr\-\_\-maxsection\-\_\-pct}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::rc\-\_\-2pass\-\_\-vbr\-\_\-maxsection\-\_\-pct}}}
+\label{structvpx__codec__enc__cfg_ab5212050b71b2d9f4dc663caa496949e}
+
+
+\-Two-\/pass mode per-\/\-G\-O\-P maximum bitrate. 
+
+\-This value, expressed as a percentage of the target bitrate, indicates the maximum bitrate to be used for a single \-G\-O\-P (aka \char`\"{}section\char`\"{}) \hypertarget{structvpx__codec__enc__cfg_a491d67f061dcdb13f60c017563e9d788}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!kf\-\_\-mode@{kf\-\_\-mode}}
+\index{kf\-\_\-mode@{kf\-\_\-mode}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{kf\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf vpx\-\_\-kf\-\_\-mode} {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::kf\-\_\-mode}}}
+\label{structvpx__codec__enc__cfg_a491d67f061dcdb13f60c017563e9d788}
+
+
+\-Keyframe placement mode. 
+
+\-This value indicates whether the encoder should place keyframes at a fixed interval, or determine the optimal placement automatically (as governed by the \hyperlink{structvpx__codec__enc__cfg_a0a7b5444ecb09745cbe8d5af17553846}{kf\-\_\-min\-\_\-dist} and \hyperlink{structvpx__codec__enc__cfg_ae018440136e271743376730413d25a9b}{kf\-\_\-max\-\_\-dist} parameters) \hypertarget{structvpx__codec__enc__cfg_a0a7b5444ecb09745cbe8d5af17553846}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!kf\-\_\-min\-\_\-dist@{kf\-\_\-min\-\_\-dist}}
+\index{kf\-\_\-min\-\_\-dist@{kf\-\_\-min\-\_\-dist}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{kf\-\_\-min\-\_\-dist}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::kf\-\_\-min\-\_\-dist}}}
+\label{structvpx__codec__enc__cfg_a0a7b5444ecb09745cbe8d5af17553846}
+
+
+\-Keyframe minimum interval. 
+
+\-This value, expressed as a number of frames, prevents the encoder from placing a keyframe nearer than kf\-\_\-min\-\_\-dist to the previous keyframe. \-At least kf\-\_\-min\-\_\-dist frames non-\/keyframes will be coded before the next keyframe. \-Set kf\-\_\-min\-\_\-dist equal to kf\-\_\-max\-\_\-dist for a fixed interval. \hypertarget{structvpx__codec__enc__cfg_ae018440136e271743376730413d25a9b}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!kf\-\_\-max\-\_\-dist@{kf\-\_\-max\-\_\-dist}}
+\index{kf\-\_\-max\-\_\-dist@{kf\-\_\-max\-\_\-dist}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{kf\-\_\-max\-\_\-dist}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::kf\-\_\-max\-\_\-dist}}}
+\label{structvpx__codec__enc__cfg_ae018440136e271743376730413d25a9b}
+
+
+\-Keyframe maximum interval. 
+
+\-This value, expressed as a number of frames, forces the encoder to code a keyframe if one has not been coded in the last kf\-\_\-max\-\_\-dist frames. \-A value of 0 implies all frames will be keyframes. \-Set kf\-\_\-min\-\_\-dist equal to kf\-\_\-max\-\_\-dist for a fixed interval. \hypertarget{structvpx__codec__enc__cfg_a16d4549a30cbd585e3c3056ef873d8c7}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!ts\-\_\-number\-\_\-layers@{ts\-\_\-number\-\_\-layers}}
+\index{ts\-\_\-number\-\_\-layers@{ts\-\_\-number\-\_\-layers}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{ts\-\_\-number\-\_\-layers}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::ts\-\_\-number\-\_\-layers}}}
+\label{structvpx__codec__enc__cfg_a16d4549a30cbd585e3c3056ef873d8c7}
+
+
+\-Number of coding layers. 
+
+\-This value specifies the number of coding layers to be used. \hypertarget{structvpx__codec__enc__cfg_aba7ceb7a90500a8f76aff89575737f3a}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!ts\-\_\-target\-\_\-bitrate@{ts\-\_\-target\-\_\-bitrate}}
+\index{ts\-\_\-target\-\_\-bitrate@{ts\-\_\-target\-\_\-bitrate}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{ts\-\_\-target\-\_\-bitrate}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::ts\-\_\-target\-\_\-bitrate}\mbox{[}5\mbox{]}}}
+\label{structvpx__codec__enc__cfg_aba7ceb7a90500a8f76aff89575737f3a}
+
+
+\-Target bitrate for each layer. 
+
+\-These values specify the target coding bitrate for each coding layer. \hypertarget{structvpx__codec__enc__cfg_ad40c30846ef8ef1d8684f10a491ec535}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!ts\-\_\-rate\-\_\-decimator@{ts\-\_\-rate\-\_\-decimator}}
+\index{ts\-\_\-rate\-\_\-decimator@{ts\-\_\-rate\-\_\-decimator}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{ts\-\_\-rate\-\_\-decimator}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::ts\-\_\-rate\-\_\-decimator}\mbox{[}5\mbox{]}}}
+\label{structvpx__codec__enc__cfg_ad40c30846ef8ef1d8684f10a491ec535}
+
+
+\-Frame rate decimation factor for each layer. 
+
+\-These values specify the frame rate decimation factors to apply to each layer. \hypertarget{structvpx__codec__enc__cfg_a4ec338780115dd270acf0dac24193474}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!ts\-\_\-periodicity@{ts\-\_\-periodicity}}
+\index{ts\-\_\-periodicity@{ts\-\_\-periodicity}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{ts\-\_\-periodicity}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::ts\-\_\-periodicity}}}
+\label{structvpx__codec__enc__cfg_a4ec338780115dd270acf0dac24193474}
+
+
+\-Length of the sequence defining frame layer membership. 
+
+\-This value specifies the length of the sequence that defines the membership of frames to layers. \-For example, if ts\-\_\-periodicity=8 then frames are assigned to coding layers with a repeated sequence of length 8. \hypertarget{structvpx__codec__enc__cfg_a4d105d2470dbfb7210b33d298f1cf1f6}{
+\index{vpx\-\_\-codec\-\_\-enc\-\_\-cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}!ts\-\_\-layer\-\_\-id@{ts\-\_\-layer\-\_\-id}}
+\index{ts\-\_\-layer\-\_\-id@{ts\-\_\-layer\-\_\-id}!vpx_codec_enc_cfg@{vpx\-\_\-codec\-\_\-enc\-\_\-cfg}}
+\paragraph[{ts\-\_\-layer\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-enc\-\_\-cfg\-::ts\-\_\-layer\-\_\-id}\mbox{[}16\mbox{]}}}
+\label{structvpx__codec__enc__cfg_a4d105d2470dbfb7210b33d298f1cf1f6}
+
+
+\-Template defining the membership of frames to coding layers. 
+
+\-This array defines the membership of frames to coding layers. \-For a 2-\/layer encoding that assigns even numbered frames to one layer (0) and odd numbered frames to a second layer (1) with ts\-\_\-periodicity=8, then ts\-\_\-layer\-\_\-id = (0,1,0,1,0,1,0,1). 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+vpx/\hyperlink{vpx__encoder_8h}{vpx\-\_\-encoder.\-h}\end{DoxyCompactItemize}

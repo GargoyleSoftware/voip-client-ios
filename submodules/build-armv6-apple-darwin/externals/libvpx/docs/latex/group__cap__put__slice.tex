@@ -1,0 +1,65 @@
+\hypertarget{group__cap__put__slice}{
+\subsection{\-Slice-\/\-Based \-Decoding \-Functions}
+\label{group__cap__put__slice}\index{\-Slice-\/\-Based Decoding Functions@{\-Slice-\/\-Based Decoding Functions}}
+}
+\subsubsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__cap__put__slice_ga344dbbf130aa9632aee94cee1f3cef44}{vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t} )(void $\ast$user\-\_\-priv, const \hyperlink{vpx__image_8h_abf5ac962cc6d71b4f0e39b1b0d033e55}{vpx\-\_\-image\-\_\-t} $\ast$img, const \hyperlink{vpx__image_8h_aba8af9e601eb9c3c41431d0f4fef65a6}{vpx\-\_\-image\-\_\-rect\-\_\-t} $\ast$valid, const \hyperlink{vpx__image_8h_aba8af9e601eb9c3c41431d0f4fef65a6}{vpx\-\_\-image\-\_\-rect\-\_\-t} $\ast$update)
+\begin{DoxyCompactList}\small\item\em put slice callback prototype \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__codec_gada1084710837ad363b92f2379dd2b8d2}{vpx\-\_\-codec\-\_\-err\-\_\-t} \hyperlink{group__cap__put__slice_gaffcc69a8134406fc653500759b696b8e}{vpx\-\_\-codec\-\_\-register\-\_\-put\-\_\-slice\-\_\-cb} (\hyperlink{group__codec_gad03e2dfa6ae511db7d25be6bbb336233}{vpx\-\_\-codec\-\_\-ctx\-\_\-t} $\ast$ctx, \hyperlink{group__cap__put__slice_ga344dbbf130aa9632aee94cee1f3cef44}{vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t} cb, void $\ast$user\-\_\-priv)
+\begin{DoxyCompactList}\small\item\em \-Register for notification of slice completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{\-Detailed \-Description}
+\-The following functions are required to be implemented for all decoders that advertise the \-V\-P\-X\-\_\-\-C\-O\-D\-E\-C\-\_\-\-C\-A\-P\-\_\-\-P\-U\-T\-\_\-\-S\-L\-I\-C\-E capability. \-Calling these functions for codecs that don't advertise this capability will result in an error code being returned, usually \-V\-P\-X\-\_\-\-C\-O\-D\-E\-C\-\_\-\-E\-R\-R\-O\-R 
+
+\subsubsection{\-Typedef \-Documentation}
+\hypertarget{group__cap__put__slice_ga344dbbf130aa9632aee94cee1f3cef44}{
+\index{\-Slice-\/\-Based Decoding Functions@{\-Slice-\/\-Based Decoding Functions}!vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t@{vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t}}
+\index{vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t@{vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t}!Slice-Based Decoding Functions@{\-Slice-\/\-Based Decoding Functions}}
+\paragraph[{vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ {\bf vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t})(void $\ast$user\-\_\-priv, const {\bf vpx\-\_\-image\-\_\-t} $\ast$img, const {\bf vpx\-\_\-image\-\_\-rect\-\_\-t} $\ast$valid, const {\bf vpx\-\_\-image\-\_\-rect\-\_\-t} $\ast$update)}}
+\label{group__cap__put__slice_ga344dbbf130aa9632aee94cee1f3cef44}
+
+
+put slice callback prototype 
+
+\-This callback is invoked by the decoder to notify the application of the availability of partially decoded image data. \-The 
+
+\subsubsection{\-Function \-Documentation}
+\hypertarget{group__cap__put__slice_gaffcc69a8134406fc653500759b696b8e}{
+\index{\-Slice-\/\-Based Decoding Functions@{\-Slice-\/\-Based Decoding Functions}!vpx\-\_\-codec\-\_\-register\-\_\-put\-\_\-slice\-\_\-cb@{vpx\-\_\-codec\-\_\-register\-\_\-put\-\_\-slice\-\_\-cb}}
+\index{vpx\-\_\-codec\-\_\-register\-\_\-put\-\_\-slice\-\_\-cb@{vpx\-\_\-codec\-\_\-register\-\_\-put\-\_\-slice\-\_\-cb}!Slice-Based Decoding Functions@{\-Slice-\/\-Based Decoding Functions}}
+\paragraph[{vpx\-\_\-codec\-\_\-register\-\_\-put\-\_\-slice\-\_\-cb}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vpx\-\_\-codec\-\_\-err\-\_\-t} vpx\-\_\-codec\-\_\-register\-\_\-put\-\_\-slice\-\_\-cb (
+\begin{DoxyParamCaption}
+\item[{{\bf vpx\-\_\-codec\-\_\-ctx\-\_\-t} $\ast$}]{ctx, }
+\item[{{\bf vpx\-\_\-codec\-\_\-put\-\_\-slice\-\_\-cb\-\_\-fn\-\_\-t}}]{cb, }
+\item[{void $\ast$}]{user\-\_\-priv}
+\end{DoxyParamCaption}
+)}}
+\label{group__cap__put__slice_gaffcc69a8134406fc653500759b696b8e}
+
+
+\-Register for notification of slice completion. 
+
+\-Registers a given function to be called when a decoded slice is available.
+
+
+\begin{DoxyParams}[1]{\-Parameters}
+\mbox{\tt in}  & {\em ctx} & \-Pointer to this instance's context \\
+\hline
+\mbox{\tt in}  & {\em cb} & \-Pointer to the callback function \\
+\hline
+\mbox{\tt in}  & {\em user\-\_\-priv} & \-User's private data\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{\-Return values}
+{\em \hyperlink{group__codec_ggada1084710837ad363b92f2379dd2b8d2af1dcde74b1c5ff7b29f31246dfd90986}{\-V\-P\-X\-\_\-\-C\-O\-D\-E\-C\-\_\-\-O\-K}} & \-Callback successfully registered. \\
+\hline
+{\em \hyperlink{group__codec_ggada1084710837ad363b92f2379dd2b8d2abd8a8f9c2588adab5d764d957e265135}{\-V\-P\-X\-\_\-\-C\-O\-D\-E\-C\-\_\-\-E\-R\-R\-O\-R}} & \-Decoder context not initialized, or algorithm not capable of posting slice completion. \\
+\hline
+\end{DoxyRetVals}

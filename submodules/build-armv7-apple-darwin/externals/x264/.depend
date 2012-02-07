@@ -1,0 +1,280 @@
+common/mc.o: common/mc.c common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h common/arm/mc.h
+common/predict.o: common/predict.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h common/arm/predict.h
+common/pixel.o: common/pixel.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h common/arm/pixel.h
+common/macroblock.o: common/macroblock.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h encoder/me.h
+common/frame.o: common/frame.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/dct.o: common/dct.c common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h common/arm/dct.h
+common/cpu.o: common/cpu.c common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/cabac.o: common/cabac.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/common.o: common/common.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/osdep.o: common/osdep.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/rectangle.o: common/rectangle.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h
+common/set.o: common/set.c common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/quant.o: common/quant.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h common/arm/quant.h
+common/deblock.o: common/deblock.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h
+common/vlc.o: common/vlc.c common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/mvpred.o: common/mvpred.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h
+common/bitstream.o: common/bitstream.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h
+encoder/analyse.o: encoder/analyse.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h encoder/macroblock.h \
+  common/macroblock.h encoder/me.h encoder/ratecontrol.h \
+  encoder/analyse.h encoder/rdo.c encoder/cavlc.c encoder/cabac.c \
+  encoder/slicetype.c
+encoder/me.o: encoder/me.c common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h encoder/macroblock.h common/macroblock.h \
+  encoder/me.h
+encoder/ratecontrol.o: encoder/ratecontrol.c common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h \
+  encoder/ratecontrol.h encoder/me.h
+encoder/set.o: encoder/set.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h encoder/set.h
+encoder/macroblock.o: encoder/macroblock.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h encoder/macroblock.h \
+  common/macroblock.h
+encoder/cabac.o: encoder/cabac.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h encoder/macroblock.h common/macroblock.h
+encoder/cavlc.o: encoder/cavlc.c common/common.h common/osdep.h config.h \
+  x264.h x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h encoder/macroblock.h common/macroblock.h
+encoder/encoder.o: encoder/encoder.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h encoder/set.h encoder/analyse.h \
+  encoder/ratecontrol.h encoder/macroblock.h common/macroblock.h \
+  encoder/me.h
+encoder/lookahead.o: encoder/lookahead.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h encoder/analyse.h
+common/threadpool.o: common/threadpool.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h
+common/arm/mc-c.o: common/arm/mc-c.c common/common.h common/osdep.h \
+  config.h x264.h x264_config.h common/bitstream.h common/set.h \
+  common/predict.h common/pixel.h common/mc.h common/frame.h common/dct.h \
+  common/cabac.h common/quant.h common/cpu.h common/threadpool.h \
+  common/macroblock.h common/rectangle.h common/arm/mc.h
+common/arm/predict-c.o: common/arm/predict-c.c common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h \
+  common/arm/predict.h common/arm/pixel.h
+x264.o: x264.c common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h x264cli.h input/input.h x264cli.h output/output.h \
+  x264cli.h filters/filters.h x264cli.h filters/video/video.h \
+  input/input.h filters/filters.h
+input/input.o: input/input.c input/input.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h
+input/timecode.o: input/timecode.c input/input.h x264cli.h \
+  common/common.h common/osdep.h config.h x264.h x264_config.h \
+  common/bitstream.h common/set.h common/predict.h common/pixel.h \
+  common/mc.h common/frame.h common/dct.h common/cabac.h common/quant.h \
+  common/cpu.h common/threadpool.h common/macroblock.h common/rectangle.h
+input/raw.o: input/raw.c input/input.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h
+input/y4m.o: input/y4m.c input/input.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h
+output/raw.o: output/raw.c output/output.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h
+output/matroska.o: output/matroska.c output/output.h x264cli.h \
+  common/common.h common/osdep.h config.h x264.h x264_config.h \
+  common/bitstream.h common/set.h common/predict.h common/pixel.h \
+  common/mc.h common/frame.h common/dct.h common/cabac.h common/quant.h \
+  common/cpu.h common/threadpool.h common/macroblock.h common/rectangle.h \
+  output/matroska_ebml.h
+output/matroska_ebml.o: output/matroska_ebml.c output/output.h x264cli.h \
+  common/common.h common/osdep.h config.h x264.h x264_config.h \
+  common/bitstream.h common/set.h common/predict.h common/pixel.h \
+  common/mc.h common/frame.h common/dct.h common/cabac.h common/quant.h \
+  common/cpu.h common/threadpool.h common/macroblock.h common/rectangle.h \
+  output/matroska_ebml.h
+output/flv.o: output/flv.c output/output.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h \
+  output/flv_bytestream.h
+output/flv_bytestream.o: output/flv_bytestream.c output/output.h \
+  x264cli.h common/common.h common/osdep.h config.h x264.h x264_config.h \
+  common/bitstream.h common/set.h common/predict.h common/pixel.h \
+  common/mc.h common/frame.h common/dct.h common/cabac.h common/quant.h \
+  common/cpu.h common/threadpool.h common/macroblock.h common/rectangle.h \
+  output/flv_bytestream.h
+filters/filters.o: filters/filters.c filters/filters.h x264cli.h \
+  common/common.h common/osdep.h config.h x264.h x264_config.h \
+  common/bitstream.h common/set.h common/predict.h common/pixel.h \
+  common/mc.h common/frame.h common/dct.h common/cabac.h common/quant.h \
+  common/cpu.h common/threadpool.h common/macroblock.h common/rectangle.h \
+  filters/video/video.h input/input.h x264cli.h filters/filters.h
+filters/video/video.o: filters/video/video.c filters/video/video.h \
+  input/input.h x264cli.h common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h filters/filters.h x264cli.h filters/video/video.h
+filters/video/source.o: filters/video/source.c filters/video/video.h \
+  input/input.h x264cli.h common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h filters/filters.h x264cli.h filters/video/video.h
+filters/video/internal.o: filters/video/internal.c \
+  filters/video/internal.h filters/video/video.h input/input.h x264cli.h \
+  common/common.h common/osdep.h config.h x264.h x264_config.h \
+  common/bitstream.h common/set.h common/predict.h common/pixel.h \
+  common/mc.h common/frame.h common/dct.h common/cabac.h common/quant.h \
+  common/cpu.h common/threadpool.h common/macroblock.h common/rectangle.h \
+  filters/filters.h x264cli.h filters/video/video.h
+filters/video/resize.o: filters/video/resize.c filters/video/video.h \
+  input/input.h x264cli.h common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h filters/filters.h x264cli.h filters/video/video.h
+filters/video/cache.o: filters/video/cache.c filters/video/video.h \
+  input/input.h x264cli.h common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h filters/filters.h x264cli.h filters/video/video.h \
+  filters/video/internal.h
+filters/video/fix_vfr_pts.o: filters/video/fix_vfr_pts.c \
+  filters/video/video.h input/input.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h \
+  filters/filters.h x264cli.h filters/video/video.h \
+  filters/video/internal.h
+filters/video/select_every.o: filters/video/select_every.c \
+  filters/video/video.h input/input.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h \
+  filters/filters.h x264cli.h filters/video/video.h
+filters/video/crop.o: filters/video/crop.c filters/video/video.h \
+  input/input.h x264cli.h common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h filters/filters.h x264cli.h filters/video/video.h
+filters/video/depth.o: filters/video/depth.c filters/video/video.h \
+  input/input.h x264cli.h common/common.h common/osdep.h config.h x264.h \
+  x264_config.h common/bitstream.h common/set.h common/predict.h \
+  common/pixel.h common/mc.h common/frame.h common/dct.h common/cabac.h \
+  common/quant.h common/cpu.h common/threadpool.h common/macroblock.h \
+  common/rectangle.h filters/filters.h x264cli.h filters/video/video.h
+input/thread.o: input/thread.c input/input.h x264cli.h common/common.h \
+  common/osdep.h config.h x264.h x264_config.h common/bitstream.h \
+  common/set.h common/predict.h common/pixel.h common/mc.h common/frame.h \
+  common/dct.h common/cabac.h common/quant.h common/cpu.h \
+  common/threadpool.h common/macroblock.h common/rectangle.h

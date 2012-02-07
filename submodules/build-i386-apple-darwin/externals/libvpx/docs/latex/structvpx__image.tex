@@ -1,0 +1,125 @@
+\hypertarget{structvpx__image}{
+\subsection{vpx\-\_\-image \-Struct \-Reference}
+\label{structvpx__image}\index{vpx\-\_\-image@{vpx\-\_\-image}}
+}
+
+
+\-Image \-Descriptor.  
+
+
+
+
+{\ttfamily \#include $<$vpx\-\_\-image.\-h$>$}
+
+\subsubsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vpx__image_8h_acb76f0439d5d186256371aadf3beeee4}{vpx\-\_\-img\-\_\-fmt\-\_\-t} \hyperlink{structvpx__image_a1d734f8afa9200a21c2d9f6bcf8c04d8}{fmt}
+\item 
+unsigned int \hyperlink{structvpx__image_ac7b7d569142f878155b28141653adcd6}{w}
+\item 
+unsigned int \hyperlink{structvpx__image_a9d1070804dfe08cd5becd68d597fee69}{h}
+\item 
+unsigned int \hyperlink{structvpx__image_a806bf23143bf00a0b3fdbd6ba030c483}{d\-\_\-w}
+\item 
+unsigned int \hyperlink{structvpx__image_a31bc5f045d4f3c2b6bb0f57bb53078e7}{d\-\_\-h}
+\item 
+unsigned int \hyperlink{structvpx__image_affaf210489dcefebd90b87fd5f12dc0b}{x\-\_\-chroma\-\_\-shift}
+\item 
+unsigned int \hyperlink{structvpx__image_a1e3d9b699d46ca32e3916d1ac635a4a2}{y\-\_\-chroma\-\_\-shift}
+\item 
+unsigned char $\ast$ \hyperlink{structvpx__image_ab6258308ba7a5f4a113348120e20e2ce}{planes} \mbox{[}4\mbox{]}
+\item 
+int \hyperlink{structvpx__image_ac9c7b83e3eea44cb680956f90dc789cf}{stride} \mbox{[}4\mbox{]}
+\item 
+int \hyperlink{structvpx__image_a53a02fad822151eb8eeb2f64f195e1f6}{bps}
+\item 
+void $\ast$ \hyperlink{structvpx__image_a28ae6c046dfca87de4fca4e67cab563d}{user\-\_\-priv}
+\item 
+unsigned char $\ast$ \hyperlink{structvpx__image_a3c9b7a7a68e4a9665b47433a1e96d78b}{img\-\_\-data}
+\item 
+int \hyperlink{structvpx__image_a4d2c8d41b67f7d3f3114212a8d8afdce}{img\-\_\-data\-\_\-owner}
+\item 
+int \hyperlink{structvpx__image_a33e8c75d8efc5d4f389e8fc09283a4cc}{self\-\_\-allocd}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{\-Detailed \-Description}
+\-Image \-Descriptor. 
+
+\subsubsection{\-Field \-Documentation}
+\hypertarget{structvpx__image_a1d734f8afa9200a21c2d9f6bcf8c04d8}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!fmt@{fmt}}
+\index{fmt@{fmt}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{fmt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vpx\-\_\-img\-\_\-fmt\-\_\-t} {\bf vpx\-\_\-image\-::fmt}}}
+\label{structvpx__image_a1d734f8afa9200a21c2d9f6bcf8c04d8}
+\-Image \-Format \hypertarget{structvpx__image_ac7b7d569142f878155b28141653adcd6}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!w@{w}}
+\index{w@{w}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{w}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-image\-::w}}}
+\label{structvpx__image_ac7b7d569142f878155b28141653adcd6}
+\-Stored image width \hypertarget{structvpx__image_a9d1070804dfe08cd5becd68d597fee69}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!h@{h}}
+\index{h@{h}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{h}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-image\-::h}}}
+\label{structvpx__image_a9d1070804dfe08cd5becd68d597fee69}
+\-Stored image height \hypertarget{structvpx__image_a806bf23143bf00a0b3fdbd6ba030c483}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!d\-\_\-w@{d\-\_\-w}}
+\index{d\-\_\-w@{d\-\_\-w}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{d\-\_\-w}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-image\-::d\-\_\-w}}}
+\label{structvpx__image_a806bf23143bf00a0b3fdbd6ba030c483}
+\-Displayed image width \hypertarget{structvpx__image_a31bc5f045d4f3c2b6bb0f57bb53078e7}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!d\-\_\-h@{d\-\_\-h}}
+\index{d\-\_\-h@{d\-\_\-h}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{d\-\_\-h}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-image\-::d\-\_\-h}}}
+\label{structvpx__image_a31bc5f045d4f3c2b6bb0f57bb53078e7}
+\-Displayed image height \hypertarget{structvpx__image_affaf210489dcefebd90b87fd5f12dc0b}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!x\-\_\-chroma\-\_\-shift@{x\-\_\-chroma\-\_\-shift}}
+\index{x\-\_\-chroma\-\_\-shift@{x\-\_\-chroma\-\_\-shift}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{x\-\_\-chroma\-\_\-shift}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-image\-::x\-\_\-chroma\-\_\-shift}}}
+\label{structvpx__image_affaf210489dcefebd90b87fd5f12dc0b}
+subsampling order, \-X \hypertarget{structvpx__image_a1e3d9b699d46ca32e3916d1ac635a4a2}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!y\-\_\-chroma\-\_\-shift@{y\-\_\-chroma\-\_\-shift}}
+\index{y\-\_\-chroma\-\_\-shift@{y\-\_\-chroma\-\_\-shift}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{y\-\_\-chroma\-\_\-shift}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-image\-::y\-\_\-chroma\-\_\-shift}}}
+\label{structvpx__image_a1e3d9b699d46ca32e3916d1ac635a4a2}
+subsampling order, \-Y \hypertarget{structvpx__image_ab6258308ba7a5f4a113348120e20e2ce}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!planes@{planes}}
+\index{planes@{planes}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{planes}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ {\bf vpx\-\_\-image\-::planes}\mbox{[}4\mbox{]}}}
+\label{structvpx__image_ab6258308ba7a5f4a113348120e20e2ce}
+pointer to the top left pixel for each plane \hypertarget{structvpx__image_ac9c7b83e3eea44cb680956f90dc789cf}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!stride@{stride}}
+\index{stride@{stride}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{stride}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf vpx\-\_\-image\-::stride}\mbox{[}4\mbox{]}}}
+\label{structvpx__image_ac9c7b83e3eea44cb680956f90dc789cf}
+stride between rows for each plane \hypertarget{structvpx__image_a53a02fad822151eb8eeb2f64f195e1f6}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!bps@{bps}}
+\index{bps@{bps}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{bps}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf vpx\-\_\-image\-::bps}}}
+\label{structvpx__image_a53a02fad822151eb8eeb2f64f195e1f6}
+bits per sample (for packed formats) \hypertarget{structvpx__image_a28ae6c046dfca87de4fca4e67cab563d}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!user\-\_\-priv@{user\-\_\-priv}}
+\index{user\-\_\-priv@{user\-\_\-priv}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{user\-\_\-priv}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf vpx\-\_\-image\-::user\-\_\-priv}}}
+\label{structvpx__image_a28ae6c046dfca87de4fca4e67cab563d}
+may be set by the application to associate data with this image. \hypertarget{structvpx__image_a3c9b7a7a68e4a9665b47433a1e96d78b}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!img\-\_\-data@{img\-\_\-data}}
+\index{img\-\_\-data@{img\-\_\-data}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{img\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char$\ast$ {\bf vpx\-\_\-image\-::img\-\_\-data}}}
+\label{structvpx__image_a3c9b7a7a68e4a9665b47433a1e96d78b}
+private \hypertarget{structvpx__image_a4d2c8d41b67f7d3f3114212a8d8afdce}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!img\-\_\-data\-\_\-owner@{img\-\_\-data\-\_\-owner}}
+\index{img\-\_\-data\-\_\-owner@{img\-\_\-data\-\_\-owner}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{img\-\_\-data\-\_\-owner}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf vpx\-\_\-image\-::img\-\_\-data\-\_\-owner}}}
+\label{structvpx__image_a4d2c8d41b67f7d3f3114212a8d8afdce}
+private \hypertarget{structvpx__image_a33e8c75d8efc5d4f389e8fc09283a4cc}{
+\index{vpx\-\_\-image@{vpx\-\_\-image}!self\-\_\-allocd@{self\-\_\-allocd}}
+\index{self\-\_\-allocd@{self\-\_\-allocd}!vpx_image@{vpx\-\_\-image}}
+\paragraph[{self\-\_\-allocd}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf vpx\-\_\-image\-::self\-\_\-allocd}}}
+\label{structvpx__image_a33e8c75d8efc5d4f389e8fc09283a4cc}
+private 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+vpx/\hyperlink{vpx__image_8h}{vpx\-\_\-image.\-h}\end{DoxyCompactItemize}
