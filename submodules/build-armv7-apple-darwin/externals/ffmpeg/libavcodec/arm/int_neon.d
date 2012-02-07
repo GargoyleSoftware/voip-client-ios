@@ -1,4 +1,0 @@
--:  \
- /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/ffmpeg/libavcodec/arm/int_neon.S \
-  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/ffmpeg/libavcodec/arm/asm.S \
-  config.h
