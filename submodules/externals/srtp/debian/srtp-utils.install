@@ -1,0 +1,15 @@
+test/rtpw	usr/bin/
+
+test/rdbx_driver	usr/lib/srtp/bin/
+test/replay_driver	usr/lib/srtp/bin/
+test/roc_driver		usr/lib/srtp/bin/
+test/srtp_driver	usr/lib/srtp/bin/
+
+crypto/test/aes_calc		usr/lib/srtp/bin/
+crypto/test/cipher_driver	usr/lib/srtp/bin/
+crypto/test/datatypes_driver	usr/lib/srtp/bin/
+crypto/test/env			usr/lib/srtp/bin/
+crypto/test/kernel_driver	usr/lib/srtp/bin/
+crypto/test/rand_gen		usr/lib/srtp/bin/
+crypto/test/sha1_driver		usr/lib/srtp/bin/
+crypto/test/stat_driver		usr/lib/srtp/bin/

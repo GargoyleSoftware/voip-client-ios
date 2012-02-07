@@ -1,0 +1,43 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/zrtpcpp.dir/ZrtpCallbackWrapper.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZIDFile.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZIDRecord.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZRtp.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpCrc32.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketCommit.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketConf2Ack.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketConfirm.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketDHPart.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketGoClear.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketClearAck.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketHelloAck.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketHello.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketError.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketErrorAck.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketPingAck.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketPing.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketSASrelay.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpPacketRelayAck.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpStateClass.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpTextData.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpConfigure.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/ZrtpCWrapper.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/Base32.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/openssl/ZrtpDH.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/openssl/hmac256.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/openssl/sha256.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/openssl/hmac384.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/openssl/sha384.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/openssl/AesCFB.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/openssl/InitializeOpenSSL.cpp.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/twofish.c.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/twofish_cfb.c.obj"
+  "CMakeFiles/zrtpcpp.dir/libzrtpcpp/crypto/TwoCFB.cpp.obj"
+  "libzrtpcpp.pdb"
+  "libzrtpcpp.a"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang C CXX)
+  INCLUDE(CMakeFiles/zrtpcpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

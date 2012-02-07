@@ -1,0 +1,14 @@
+TODO LIST
+
+- Include AWK script for extraction of sources into this package.
+
+Should the script for extracting the sources ever disappear from its
+current location, it would best include it with this package.
+
+At that point, Wenyu Jiang at Columbia University should be contacted
+for his permission.  His email address is wenyu@cs.columbia.edu.
+
+To Include the script would also eliminate a potential security concern
+about executing third-party software.  The package currently checks the
+pertinent files for their known MD5 checksums before executing or
+compiling.

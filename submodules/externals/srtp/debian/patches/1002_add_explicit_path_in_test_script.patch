@@ -1,0 +1,14 @@
+Description: Use explicit path to rtpw binary in test script
+Author: Jonas Smedegaard <dr@jones.dk>
+Last-Update: 2010-02-28
+--- a/test/rtpw_test.sh
++++ b/test/rtpw_test.sh
+@@ -4,7 +4,7 @@
+ # 
+ # tests the rtpw sender and receiver functions
+ 
+-RTPW=rtpw
++RTPW=./rtpw
+ DEST_PORT=9999
+ DURATION=3
+ 

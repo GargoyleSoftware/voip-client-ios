@@ -1,0 +1,8 @@
+#1001_negative_valued_char_must_be_signed.patch
+1002_add_explicit_path_in_test_script.patch
+1003_fix_mips_namespace_collision.patch
+1004_make_runtest_more_verbose.patch
+1005_fix_32bit_alignment.patch
+1006_fix_unsigned_char.patch
+1007_updated_Doxyfile.patch
+1008_shared-lib.patch

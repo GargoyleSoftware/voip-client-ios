@@ -1,0 +1,631 @@
+\section{\-Placing and receiving calls}
+\label{group__call__control}\index{\-Placing and receiving calls@{\-Placing and receiving calls}}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum {\bf \-\_\-\-Linphone\-Call\-State} {\bf \-Linphone\-Call\-State}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf \-\_\-\-Linphone\-Call\-State} \{ \*
+{\bf \-Linphone\-Call\-Idle}, 
+\*
+{\bf \-Linphone\-Call\-Incoming\-Received}, 
+\*
+{\bf \-Linphone\-Call\-Outgoing\-Init}, 
+\*
+{\bf \-Linphone\-Call\-Outgoing\-Progress}, 
+\*
+{\bf \-Linphone\-Call\-Outgoing\-Ringing}, 
+\*
+{\bf \-Linphone\-Call\-Outgoing\-Early\-Media}, 
+\*
+{\bf \-Linphone\-Call\-Connected}, 
+\*
+{\bf \-Linphone\-Call\-Streams\-Running}, 
+\*
+{\bf \-Linphone\-Call\-Pausing}, 
+\*
+{\bf \-Linphone\-Call\-Paused}, 
+\*
+{\bf \-Linphone\-Call\-Resuming}, 
+\*
+{\bf \-Linphone\-Call\-Refered}, 
+\*
+{\bf \-Linphone\-Call\-Error}, 
+\*
+{\bf \-Linphone\-Call\-End}, 
+\*
+{\bf \-Linphone\-Call\-Paused\-By\-Remote}, 
+\*
+{\bf \-Linphone\-Call\-Updated\-By\-Remote}, 
+\*
+{\bf \-Linphone\-Call\-Incoming\-Early\-Media}, 
+\*
+{\bf \-Linphone\-Call\-Updated}, 
+\*
+{\bf \-Linphone\-Call\-Released}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-Linphone\-Call $\ast$ {\bf linphone\-\_\-call\-\_\-ref} (\-Linphone\-Call $\ast$obj)
+\item 
+void {\bf linphone\-\_\-call\-\_\-unref} (\-Linphone\-Call $\ast$obj)
+\item 
+const \-Linphone\-Call\-Params $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-params} (const \-Linphone\-Call $\ast$call)
+\item 
+const {\bf \-Linphone\-Address} $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address} (const \-Linphone\-Call $\ast$call)
+\item 
+char $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address\-\_\-as\-\_\-string} (const \-Linphone\-Call $\ast$call)
+\item 
+{\bf \-Linphone\-Call\-State} {\bf linphone\-\_\-call\-\_\-get\-\_\-state} (const \-Linphone\-Call $\ast$call)
+\item 
+\-Linphone\-Reason {\bf linphone\-\_\-call\-\_\-get\-\_\-reason} (const \-Linphone\-Call $\ast$call)
+\item 
+void $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-user\-\_\-pointer} (\-Linphone\-Call $\ast$call)
+\item 
+void {\bf linphone\-\_\-call\-\_\-set\-\_\-user\-\_\-pointer} (\-Linphone\-Call $\ast$call, void $\ast$user\-\_\-pointer)
+\item 
+{\bf \-Linphone\-Call\-Log} $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-call\-\_\-log} (const \-Linphone\-Call $\ast$call)
+\item 
+const char $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-refer\-\_\-to} (const \-Linphone\-Call $\ast$call)
+\item 
+{\bf \-Linphone\-Call\-Dir} {\bf linphone\-\_\-call\-\_\-get\-\_\-dir} (const \-Linphone\-Call $\ast$call)
+\item 
+const char $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-user\-\_\-agent} (\-Linphone\-Call $\ast$call)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-call\-\_\-has\-\_\-transfer\-\_\-pending} (const \-Linphone\-Call $\ast$call)
+\item 
+int {\bf linphone\-\_\-call\-\_\-get\-\_\-duration} (const \-Linphone\-Call $\ast$call)
+\item 
+\-Linphone\-Call $\ast$ {\bf linphone\-\_\-call\-\_\-get\-\_\-replaced\-\_\-call} (\-Linphone\-Call $\ast$call)
+\item 
+void {\bf linphone\-\_\-call\-\_\-enable\-\_\-camera} (\-Linphone\-Call $\ast$call, bool\-\_\-t enable)
+\item 
+int {\bf linphone\-\_\-call\-\_\-take\-\_\-video\-\_\-snapshot} (\-Linphone\-Call $\ast$call, const char $\ast$file)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-call\-\_\-camera\-\_\-enabled} (const \-Linphone\-Call $\ast$call)
+\item 
+void {\bf linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video} (\-Linphone\-Call\-Params $\ast$cp, bool\-\_\-t enabled)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-call\-\_\-params\-\_\-video\-\_\-enabled} (const \-Linphone\-Call\-Params $\ast$cp)
+\item 
+void {\bf linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-early\-\_\-media\-\_\-sending} (\-Linphone\-Call\-Params $\ast$cp, bool\-\_\-t enabled)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-call\-\_\-params\-\_\-local\-\_\-conference\-\_\-mode} (const \-Linphone\-Call\-Params $\ast$cp)
+\item 
+void {\bf linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-audio\-\_\-bandwidth\-\_\-limit} (\-Linphone\-Call\-Params $\ast$cp, int bandwidth)
+\item 
+\-Linphone\-Call $\ast$ {\bf linphone\-\_\-core\-\_\-invite} ({\bf \-Linphone\-Core} $\ast$lc, const char $\ast$url)
+\item 
+\-Linphone\-Call $\ast$ {\bf linphone\-\_\-core\-\_\-invite\-\_\-with\-\_\-params} ({\bf \-Linphone\-Core} $\ast$lc, const char $\ast$url, const \-Linphone\-Call\-Params $\ast$p)
+\item 
+\-Linphone\-Call $\ast$ {\bf linphone\-\_\-core\-\_\-invite\-\_\-address} ({\bf \-Linphone\-Core} $\ast$lc, const {\bf \-Linphone\-Address} $\ast$addr)
+\item 
+\-Linphone\-Call $\ast$ {\bf linphone\-\_\-core\-\_\-invite\-\_\-address\-\_\-with\-\_\-params} ({\bf \-Linphone\-Core} $\ast$lc, const {\bf \-Linphone\-Address} $\ast$addr, const \-Linphone\-Call\-Params $\ast$params)
+\item 
+int {\bf linphone\-\_\-core\-\_\-update\-\_\-call} ({\bf \-Linphone\-Core} $\ast$lc, \-Linphone\-Call $\ast$call, const \-Linphone\-Call\-Params $\ast$params)
+\item 
+int {\bf linphone\-\_\-core\-\_\-accept\-\_\-call} ({\bf \-Linphone\-Core} $\ast$lc, \-Linphone\-Call $\ast$call)
+\item 
+int {\bf linphone\-\_\-core\-\_\-terminate\-\_\-call} ({\bf \-Linphone\-Core} $\ast$lc, \-Linphone\-Call $\ast$the\-\_\-call)
+\item 
+int {\bf linphone\-\_\-core\-\_\-terminate\-\_\-all\-\_\-calls} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+const \-M\-S\-List $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-calls} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-core\-\_\-in\-\_\-call} (const {\bf \-Linphone\-Core} $\ast$lc)
+\item 
+\-Linphone\-Call $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-current\-\_\-call} (const {\bf \-Linphone\-Core} $\ast$lc)
+\item 
+int {\bf linphone\-\_\-core\-\_\-pause\-\_\-call} ({\bf \-Linphone\-Core} $\ast$lc, \-Linphone\-Call $\ast$call)
+\item 
+int {\bf linphone\-\_\-core\-\_\-resume\-\_\-call} ({\bf \-Linphone\-Core} $\ast$lc, \-Linphone\-Call $\ast$the\-\_\-call)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout} ({\bf \-Linphone\-Core} $\ast$lc, int seconds)
+\item 
+int {\bf linphone\-\_\-core\-\_\-get\-\_\-inc\-\_\-timeout} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+int {\bf linphone\-\_\-core\-\_\-get\-\_\-calls\-\_\-nb} (const {\bf \-Linphone\-Core} $\ast$lc)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-core\-\_\-can\-\_\-we\-\_\-add\-\_\-call} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-core\-\_\-sound\-\_\-resources\-\_\-locked} ({\bf \-Linphone\-Core} $\ast$lc)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-The \#\-Linphone\-Call object represents an incoming or outgoing call managed by the \doxyref{\-Linphone\-Core}{p.}{group__initializing_gaa5cf635b82dd338e7ee2dd3599d05f0a}. \-Outgoing calls can be created using \doxyref{linphone\-\_\-core\-\_\-invite()}{p.}{group__call__control_gaaea662739cc3825eaa80d8ac264a883c} or \doxyref{linphone\-\_\-core\-\_\-invite\-\_\-address()}{p.}{group__call__control_gaac6720bef666db932ae77e07c2201b4c}, while incoming calls are notified to the application through the \doxyref{\-Linphone\-Core\-V\-Table\-::call\-\_\-state\-\_\-changed}{p.}{struct__LinphoneVTable_aeceb506ab2f449d04705d7289b067ced} callback.
+
+\-See the basic call \doxyref{tutorial}{p.}{group__basic__call__tutorials}. 
+
+\subsection{\-Typedef \-Documentation}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-State@{\-Linphone\-Call\-State}}
+\index{\-Linphone\-Call\-State@{\-Linphone\-Call\-State}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{\-Linphone\-Call\-State}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Call\-State}  {\bf \-Linphone\-Call\-State}}\label{group__call__control_ga37dad1a4f935d9cc26ec1f9d2b23691a}
+\-Linphone\-Call\-State enum represents the different state a call can reach into. \-The application is notified of state changes through the \doxyref{\-Linphone\-Core\-V\-Table\-::call\-\_\-state\-\_\-changed}{p.}{struct__LinphoneVTable_aeceb506ab2f449d04705d7289b067ced} callback. 
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-\_\-\-Linphone\-Call\-State@{\-\_\-\-Linphone\-Call\-State}}
+\index{\-\_\-\-Linphone\-Call\-State@{\-\_\-\-Linphone\-Call\-State}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{\-\_\-\-Linphone\-Call\-State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Call\-State}}\label{group__call__control_gafc310fd9ba742f7730c632fd72b875ea}
+\-Linphone\-Call\-State enum represents the different state a call can reach into. \-The application is notified of state changes through the \doxyref{\-Linphone\-Core\-V\-Table\-::call\-\_\-state\-\_\-changed}{p.}{struct__LinphoneVTable_aeceb506ab2f449d04705d7289b067ced} callback. \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-Linphone\-Call\-Idle@{\-Linphone\-Call\-Idle}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Idle@{\-Linphone\-Call\-Idle}}\item[{\em 
+\-Linphone\-Call\-Idle\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa0148699614584db8dbbd7f2af177af39}
+}]\-Initial call state \index{\-Linphone\-Call\-Incoming\-Received@{\-Linphone\-Call\-Incoming\-Received}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Incoming\-Received@{\-Linphone\-Call\-Incoming\-Received}}\item[{\em 
+\-Linphone\-Call\-Incoming\-Received\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa0998d4c2bce14ae88b0ae84fbef5c33a}
+}]\-This is a new incoming call \index{\-Linphone\-Call\-Outgoing\-Init@{\-Linphone\-Call\-Outgoing\-Init}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Outgoing\-Init@{\-Linphone\-Call\-Outgoing\-Init}}\item[{\em 
+\-Linphone\-Call\-Outgoing\-Init\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaae99727dfb0a8e30ef04ff96ce3bf7e36}
+}]\-An outgoing call is started \index{\-Linphone\-Call\-Outgoing\-Progress@{\-Linphone\-Call\-Outgoing\-Progress}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Outgoing\-Progress@{\-Linphone\-Call\-Outgoing\-Progress}}\item[{\em 
+\-Linphone\-Call\-Outgoing\-Progress\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa4f6c8b38f68a9bdfdd6d59cc904f924c}
+}]\-An outgoing call is in progress \index{\-Linphone\-Call\-Outgoing\-Ringing@{\-Linphone\-Call\-Outgoing\-Ringing}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Outgoing\-Ringing@{\-Linphone\-Call\-Outgoing\-Ringing}}\item[{\em 
+\-Linphone\-Call\-Outgoing\-Ringing\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa229cfe72a8dfee15bdae9f2125b43c67}
+}]\-An outgoing call is ringing at remote end \index{\-Linphone\-Call\-Outgoing\-Early\-Media@{\-Linphone\-Call\-Outgoing\-Early\-Media}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Outgoing\-Early\-Media@{\-Linphone\-Call\-Outgoing\-Early\-Media}}\item[{\em 
+\-Linphone\-Call\-Outgoing\-Early\-Media\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa7a8cd38252c1a9d8c0ecbdec1aef899d}
+}]\-An outgoing call is proposed early media \index{\-Linphone\-Call\-Connected@{\-Linphone\-Call\-Connected}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Connected@{\-Linphone\-Call\-Connected}}\item[{\em 
+\-Linphone\-Call\-Connected\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa1a32cc3919ca3658eed7deebadbe13b9}
+}]\-Connected, the call is answered \index{\-Linphone\-Call\-Streams\-Running@{\-Linphone\-Call\-Streams\-Running}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Streams\-Running@{\-Linphone\-Call\-Streams\-Running}}\item[{\em 
+\-Linphone\-Call\-Streams\-Running\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaacebe90cc045331e513d069872f9c84d3}
+}]\-The media streams are established and running \index{\-Linphone\-Call\-Pausing@{\-Linphone\-Call\-Pausing}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Pausing@{\-Linphone\-Call\-Pausing}}\item[{\em 
+\-Linphone\-Call\-Pausing\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaaaa35a1564a5ce1bcc4719ab523edec98}
+}]\-The call is pausing at the initiative of local end \index{\-Linphone\-Call\-Paused@{\-Linphone\-Call\-Paused}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Paused@{\-Linphone\-Call\-Paused}}\item[{\em 
+\-Linphone\-Call\-Paused\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa59c57a8b9a7a0086a79c85028bb4cefc}
+}]\-The call is paused, remote end has accepted the pause \index{\-Linphone\-Call\-Resuming@{\-Linphone\-Call\-Resuming}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Resuming@{\-Linphone\-Call\-Resuming}}\item[{\em 
+\-Linphone\-Call\-Resuming\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaad3afb2410b6a08ea7eeb3739fe862453}
+}]\-The call is being resumed by local end \index{\-Linphone\-Call\-Refered@{\-Linphone\-Call\-Refered}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Refered@{\-Linphone\-Call\-Refered}}\item[{\em 
+\-Linphone\-Call\-Refered\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa8b98118762b6f2093f5492da6991fbd8}
+}]\-The call is being transfered to another party, resulting in a new outgoing call to follow immediately \index{\-Linphone\-Call\-Error@{\-Linphone\-Call\-Error}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Error@{\-Linphone\-Call\-Error}}\item[{\em 
+\-Linphone\-Call\-Error\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa1214ea33f3ff7fd8aa0ce8922dda5170}
+}]\-The call encountered an error \index{\-Linphone\-Call\-End@{\-Linphone\-Call\-End}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-End@{\-Linphone\-Call\-End}}\item[{\em 
+\-Linphone\-Call\-End\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaafbeebb1285a2aab5d34e99d2e695e5be}
+}]\-The call ended normally \index{\-Linphone\-Call\-Paused\-By\-Remote@{\-Linphone\-Call\-Paused\-By\-Remote}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Paused\-By\-Remote@{\-Linphone\-Call\-Paused\-By\-Remote}}\item[{\em 
+\-Linphone\-Call\-Paused\-By\-Remote\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaaacf737ce5572c4e0e9f28993dcbadf00}
+}]\-The call is paused by remote end \index{\-Linphone\-Call\-Updated\-By\-Remote@{\-Linphone\-Call\-Updated\-By\-Remote}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Updated\-By\-Remote@{\-Linphone\-Call\-Updated\-By\-Remote}}\item[{\em 
+\-Linphone\-Call\-Updated\-By\-Remote\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaad51ee049c7dee729776ef5bc76ddb2c2}
+}]\-The call's parameters are updated, used for example when video is asked by remote \index{\-Linphone\-Call\-Incoming\-Early\-Media@{\-Linphone\-Call\-Incoming\-Early\-Media}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Incoming\-Early\-Media@{\-Linphone\-Call\-Incoming\-Early\-Media}}\item[{\em 
+\-Linphone\-Call\-Incoming\-Early\-Media\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaab8684757f565989d4212026f755762ed}
+}]\-We are proposing early media to an incoming call \index{\-Linphone\-Call\-Updated@{\-Linphone\-Call\-Updated}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Updated@{\-Linphone\-Call\-Updated}}\item[{\em 
+\-Linphone\-Call\-Updated\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaa2747f9b9cd793b3149ee1c650a2c9de1}
+}]\-The remote accepted the call update initiated by us \index{\-Linphone\-Call\-Released@{\-Linphone\-Call\-Released}!\-Placing and receiving calls@{\-Placing and receiving calls}}\index{\-Placing and receiving calls@{\-Placing and receiving calls}!\-Linphone\-Call\-Released@{\-Linphone\-Call\-Released}}\item[{\em 
+\-Linphone\-Call\-Released\label{group__call__control_ggafc310fd9ba742f7730c632fd72b875eaac4a81296a6835482e65d51174eb16de4}
+}]\-The call object is no more retained by the core \end{description}
+\end{Desc}
+
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-ref@{linphone\-\_\-call\-\_\-ref}}
+\index{linphone\-\_\-call\-\_\-ref@{linphone\-\_\-call\-\_\-ref}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-ref}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Call$\ast$ linphone\-\_\-call\-\_\-ref (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gae89a66b64e8767ef72d3691743e35c43}
+\-Increments the call 's reference count. \-An application that wishes to retain a pointer to call object must use this function to unsure the pointer remains valid. \-Once the application no more needs this pointer, it must call \doxyref{linphone\-\_\-call\-\_\-unref()}{p.}{group__call__control_gae69d2d9891695c07fca0637ef7fd7df6}. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-unref@{linphone\-\_\-call\-\_\-unref}}
+\index{linphone\-\_\-call\-\_\-unref@{linphone\-\_\-call\-\_\-unref}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-unref}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-unref (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{obj}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gae69d2d9891695c07fca0637ef7fd7df6}
+\-Decrements the call object reference count. \-See \doxyref{linphone\-\_\-call\-\_\-ref()}{p.}{group__call__control_gae89a66b64e8767ef72d3691743e35c43}. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-params@{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-params}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-params@{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-params}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-params}]{\setlength{\rightskip}{0pt plus 5cm}const \-Linphone\-Call\-Params$\ast$ linphone\-\_\-call\-\_\-get\-\_\-current\-\_\-params (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga4a821286f931a1afcedfae7332b6188f}
+\-Returns current parameters associated to the call. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address@{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address@{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf \-Linphone\-Address}$\ast$ linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga7c43232df9cd89feb0c68b68c34e6ace}
+\-Returns the remote address associated to this call \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address\-\_\-as\-\_\-string@{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address\-\_\-as\-\_\-string}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address\-\_\-as\-\_\-string@{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address\-\_\-as\-\_\-string}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address\-\_\-as\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-address\-\_\-as\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga89252821dcaee90338937c7adb28db09}
+\-Returns the remote address associated to this call as a string.
+
+\-The result string must be freed by user using ms\-\_\-free(). \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-state@{linphone\-\_\-call\-\_\-get\-\_\-state}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-state@{linphone\-\_\-call\-\_\-get\-\_\-state}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linphone\-Call\-State} linphone\-\_\-call\-\_\-get\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga4e66e41e6557ea35a07f266918741ffc}
+\-Retrieves the call's current state. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-reason@{linphone\-\_\-call\-\_\-get\-\_\-reason}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-reason@{linphone\-\_\-call\-\_\-get\-\_\-reason}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-reason}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Reason linphone\-\_\-call\-\_\-get\-\_\-reason (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga312c73999c94f7e59f307423d40d16b2}
+\-Returns the reason for a call termination (either error or normal termination) \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-user\-\_\-pointer@{linphone\-\_\-call\-\_\-get\-\_\-user\-\_\-pointer}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-user\-\_\-pointer@{linphone\-\_\-call\-\_\-get\-\_\-user\-\_\-pointer}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-user\-\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ linphone\-\_\-call\-\_\-get\-\_\-user\-\_\-pointer (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga32cf747ec9d030777718192ef9e82ffb}
+\-Get the user\-\_\-pointer in the \-Linphone\-Call
+
+return user\-\_\-pointer an opaque user pointer that can be retrieved at any time \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-set\-\_\-user\-\_\-pointer@{linphone\-\_\-call\-\_\-set\-\_\-user\-\_\-pointer}}
+\index{linphone\-\_\-call\-\_\-set\-\_\-user\-\_\-pointer@{linphone\-\_\-call\-\_\-set\-\_\-user\-\_\-pointer}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-set\-\_\-user\-\_\-pointer}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-set\-\_\-user\-\_\-pointer (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{call, }
+\item[{void $\ast$}]{user\-\_\-pointer}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga047981ee1bcaefb3706a492510c9fe78}
+\-Set the user\-\_\-pointer in the \-Linphone\-Call
+
+the user\-\_\-pointer is an opaque user pointer that can be retrieved at any time in the \-Linphone\-Call \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-call\-\_\-log@{linphone\-\_\-call\-\_\-get\-\_\-call\-\_\-log}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-call\-\_\-log@{linphone\-\_\-call\-\_\-get\-\_\-call\-\_\-log}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-call\-\_\-log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linphone\-Call\-Log}$\ast$ linphone\-\_\-call\-\_\-get\-\_\-call\-\_\-log (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gab090be4c386d3131ecaea751ff76cd85}
+\-Returns the call log associated to this call. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-refer\-\_\-to@{linphone\-\_\-call\-\_\-get\-\_\-refer\-\_\-to}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-refer\-\_\-to@{linphone\-\_\-call\-\_\-get\-\_\-refer\-\_\-to}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-refer\-\_\-to}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-call\-\_\-get\-\_\-refer\-\_\-to (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga155679984062a8e08b5f0e447784e6a0}
+\-Returns the refer-\/to uri (if the call was transfered). \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-dir@{linphone\-\_\-call\-\_\-get\-\_\-dir}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-dir@{linphone\-\_\-call\-\_\-get\-\_\-dir}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-dir}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linphone\-Call\-Dir} linphone\-\_\-call\-\_\-get\-\_\-dir (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga9ba9ecf7390779c1fea3438e8dfad3af}
+\-Returns direction of the call (incoming or outgoing). \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-user\-\_\-agent@{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-user\-\_\-agent}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-user\-\_\-agent@{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-user\-\_\-agent}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-user\-\_\-agent}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-call\-\_\-get\-\_\-remote\-\_\-user\-\_\-agent (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga33969d008c7faf43c9a38348f559269e}
+\-Returns the far end's user agent description string, if available. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-has\-\_\-transfer\-\_\-pending@{linphone\-\_\-call\-\_\-has\-\_\-transfer\-\_\-pending}}
+\index{linphone\-\_\-call\-\_\-has\-\_\-transfer\-\_\-pending@{linphone\-\_\-call\-\_\-has\-\_\-transfer\-\_\-pending}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-has\-\_\-transfer\-\_\-pending}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-call\-\_\-has\-\_\-transfer\-\_\-pending (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga43844da0d22ffe05c99476cae741fa50}
+\-Returns true if this calls has received a transfer that has not been executed yet. \-Pending transfers are executed when this call is being paused or closed, locally or by remote endpoint. \-If the call is already paused while receiving the transfer request, the transfer immediately occurs. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-duration@{linphone\-\_\-call\-\_\-get\-\_\-duration}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-duration@{linphone\-\_\-call\-\_\-get\-\_\-duration}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-duration}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-call\-\_\-get\-\_\-duration (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga0ad1da7a56b11f5e0b2fe6f91d3d6bb5}
+\-Returns call's duration in seconds. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-get\-\_\-replaced\-\_\-call@{linphone\-\_\-call\-\_\-get\-\_\-replaced\-\_\-call}}
+\index{linphone\-\_\-call\-\_\-get\-\_\-replaced\-\_\-call@{linphone\-\_\-call\-\_\-get\-\_\-replaced\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-get\-\_\-replaced\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Call$\ast$ linphone\-\_\-call\-\_\-get\-\_\-replaced\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga9baae328206769b75aa8a3af9057d8a9}
+\-Returns the call object this call is replacing, if any. \-Call replacement can occur during call transfers. \-By default, the core automatically terminates the replaced call and accept the new one. \-This function allows the application to know whether a new incoming call is a one that replaces another one. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-enable\-\_\-camera@{linphone\-\_\-call\-\_\-enable\-\_\-camera}}
+\index{linphone\-\_\-call\-\_\-enable\-\_\-camera@{linphone\-\_\-call\-\_\-enable\-\_\-camera}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-enable\-\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-enable\-\_\-camera (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{call, }
+\item[{bool\-\_\-t}]{enable}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gae51907817a70dd89d9f67aff13bf2eab}
+\-Indicate whether camera input should be sent to remote end. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-take\-\_\-video\-\_\-snapshot@{linphone\-\_\-call\-\_\-take\-\_\-video\-\_\-snapshot}}
+\index{linphone\-\_\-call\-\_\-take\-\_\-video\-\_\-snapshot@{linphone\-\_\-call\-\_\-take\-\_\-video\-\_\-snapshot}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-take\-\_\-video\-\_\-snapshot}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-call\-\_\-take\-\_\-video\-\_\-snapshot (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call $\ast$}]{call, }
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga8a386f2d8bece0d3fe7d51a0de31741e}
+\-Take a photo of currently received video and write it into a jpeg file. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-camera\-\_\-enabled@{linphone\-\_\-call\-\_\-camera\-\_\-enabled}}
+\index{linphone\-\_\-call\-\_\-camera\-\_\-enabled@{linphone\-\_\-call\-\_\-camera\-\_\-enabled}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-camera\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-call\-\_\-camera\-\_\-enabled (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga6a5a1d9f49aee0666c137ce246bc85f6}
+\-Returns \-T\-R\-U\-E if camera pictures are sent to the remote party. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video@{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video}}
+\index{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video@{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call\-Params $\ast$}]{cp, }
+\item[{bool\-\_\-t}]{enabled}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga195ed008fbb19ded55070bb149e72ec5}
+\-Enable video stream. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-params\-\_\-video\-\_\-enabled@{linphone\-\_\-call\-\_\-params\-\_\-video\-\_\-enabled}}
+\index{linphone\-\_\-call\-\_\-params\-\_\-video\-\_\-enabled@{linphone\-\_\-call\-\_\-params\-\_\-video\-\_\-enabled}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-params\-\_\-video\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-call\-\_\-params\-\_\-video\-\_\-enabled (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call\-Params $\ast$}]{cp}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga76c45eb46038b54a05325a61ca5908f4}
+\-Returns whether video is enabled. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-early\-\_\-media\-\_\-sending@{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-early\-\_\-media\-\_\-sending}}
+\index{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-early\-\_\-media\-\_\-sending@{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-early\-\_\-media\-\_\-sending}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-early\-\_\-media\-\_\-sending}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-early\-\_\-media\-\_\-sending (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call\-Params $\ast$}]{cp, }
+\item[{bool\-\_\-t}]{enabled}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga6501c3b5987ff4e00bf59573cc8b404d}
+\-Enable sending of real early media (during outgoing calls). \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-params\-\_\-local\-\_\-conference\-\_\-mode@{linphone\-\_\-call\-\_\-params\-\_\-local\-\_\-conference\-\_\-mode}}
+\index{linphone\-\_\-call\-\_\-params\-\_\-local\-\_\-conference\-\_\-mode@{linphone\-\_\-call\-\_\-params\-\_\-local\-\_\-conference\-\_\-mode}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-params\-\_\-local\-\_\-conference\-\_\-mode}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-call\-\_\-params\-\_\-local\-\_\-conference\-\_\-mode (
+\begin{DoxyParamCaption}
+\item[{const \-Linphone\-Call\-Params $\ast$}]{cp}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga589e7477ba8b5bb534f42bb2bb629d01}
+\-Returns true if the call is part of the locally managed conference. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-audio\-\_\-bandwidth\-\_\-limit@{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-audio\-\_\-bandwidth\-\_\-limit}}
+\index{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-audio\-\_\-bandwidth\-\_\-limit@{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-audio\-\_\-bandwidth\-\_\-limit}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-audio\-\_\-bandwidth\-\_\-limit}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-params\-\_\-set\-\_\-audio\-\_\-bandwidth\-\_\-limit (
+\begin{DoxyParamCaption}
+\item[{\-Linphone\-Call\-Params $\ast$}]{cp, }
+\item[{int}]{bandwidth}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gae6a3de871550eb996a6e9904f3f057fa}
+\-Refine bandwidth settings for this call by setting a bandwidth limit for audio streams. \-As a consequence, codecs whose bitrates are not compatible with this limit won't be used. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-invite@{linphone\-\_\-core\-\_\-invite}}
+\index{linphone\-\_\-core\-\_\-invite@{linphone\-\_\-core\-\_\-invite}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-invite}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Call$\ast$ linphone\-\_\-core\-\_\-invite (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{url}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gaaea662739cc3825eaa80d8ac264a883c}
+\-Initiates an outgoing call
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & the \-Linphone\-Core object \\
+\hline
+{\em url} & the destination of the call (sip address, or phone number).\\
+\hline
+\end{DoxyParams}
+\-The application doesn't own a reference to the returned \-Linphone\-Call object. \-Use \doxyref{linphone\-\_\-call\-\_\-ref()}{p.}{group__call__control_gae89a66b64e8767ef72d3691743e35c43} to safely keep the \-Linphone\-Call pointer valid within your application.
+
+\begin{DoxyReturn}{\-Returns}
+a \-Linphone\-Call object or \-N\-U\-L\-L in case of failure 
+\end{DoxyReturn}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-invite\-\_\-with\-\_\-params@{linphone\-\_\-core\-\_\-invite\-\_\-with\-\_\-params}}
+\index{linphone\-\_\-core\-\_\-invite\-\_\-with\-\_\-params@{linphone\-\_\-core\-\_\-invite\-\_\-with\-\_\-params}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-invite\-\_\-with\-\_\-params}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Call$\ast$ linphone\-\_\-core\-\_\-invite\-\_\-with\-\_\-params (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{const char $\ast$}]{url, }
+\item[{const \-Linphone\-Call\-Params $\ast$}]{p}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga48931b432fb6dbe6355985604d6b5de5}
+\-Initiates an outgoing call according to supplied call parameters
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & the \-Linphone\-Core object \\
+\hline
+{\em url} & the destination of the call (sip address, or phone number). \\
+\hline
+{\em p} & call parameters\\
+\hline
+\end{DoxyParams}
+\-The application doesn't own a reference to the returned \-Linphone\-Call object. \-Use \doxyref{linphone\-\_\-call\-\_\-ref()}{p.}{group__call__control_gae89a66b64e8767ef72d3691743e35c43} to safely keep the \-Linphone\-Call pointer valid within your application.
+
+\begin{DoxyReturn}{\-Returns}
+a \-Linphone\-Call object or \-N\-U\-L\-L in case of failure 
+\end{DoxyReturn}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-invite\-\_\-address@{linphone\-\_\-core\-\_\-invite\-\_\-address}}
+\index{linphone\-\_\-core\-\_\-invite\-\_\-address@{linphone\-\_\-core\-\_\-invite\-\_\-address}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-invite\-\_\-address}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Call$\ast$ linphone\-\_\-core\-\_\-invite\-\_\-address (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{const {\bf \-Linphone\-Address} $\ast$}]{addr}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gaac6720bef666db932ae77e07c2201b4c}
+\-Initiates an outgoing call given a destination \-Linphone\-Address
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & the \-Linphone\-Core object \\
+\hline
+{\em addr} & the destination of the call (sip address).\\
+\hline
+\end{DoxyParams}
+\-The \-Linphone\-Address can be constructed directly using \doxyref{linphone\-\_\-address\-\_\-new()}{p.}{group__linphone__address_ga301c9884c0bc8b1050fe790d424e0b49}, or created by linphone\-\_\-core\-\_\-interpret\-\_\-url(). \-The application doesn't own a reference to the returned \-Linphone\-Call object. \-Use \doxyref{linphone\-\_\-call\-\_\-ref()}{p.}{group__call__control_gae89a66b64e8767ef72d3691743e35c43} to safely keep the \-Linphone\-Call pointer valid within your application.
+
+\begin{DoxyReturn}{\-Returns}
+a \-Linphone\-Call object or \-N\-U\-L\-L in case of failure 
+\end{DoxyReturn}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-invite\-\_\-address\-\_\-with\-\_\-params@{linphone\-\_\-core\-\_\-invite\-\_\-address\-\_\-with\-\_\-params}}
+\index{linphone\-\_\-core\-\_\-invite\-\_\-address\-\_\-with\-\_\-params@{linphone\-\_\-core\-\_\-invite\-\_\-address\-\_\-with\-\_\-params}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-invite\-\_\-address\-\_\-with\-\_\-params}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Call$\ast$ linphone\-\_\-core\-\_\-invite\-\_\-address\-\_\-with\-\_\-params (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{const {\bf \-Linphone\-Address} $\ast$}]{addr, }
+\item[{const \-Linphone\-Call\-Params $\ast$}]{params}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gaf73435cd4252df9cf33af90cae68d813}
+\-Initiates an outgoing call given a destination \-Linphone\-Address
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & the \-Linphone\-Core object \\
+\hline
+{\em addr} & the destination of the call (sip address). \\
+\hline
+{\em params} & call parameters\\
+\hline
+\end{DoxyParams}
+\-The \-Linphone\-Address can be constructed directly using \doxyref{linphone\-\_\-address\-\_\-new()}{p.}{group__linphone__address_ga301c9884c0bc8b1050fe790d424e0b49}, or created by linphone\-\_\-core\-\_\-interpret\-\_\-url(). \-The application doesn't own a reference to the returned \-Linphone\-Call object. \-Use \doxyref{linphone\-\_\-call\-\_\-ref()}{p.}{group__call__control_gae89a66b64e8767ef72d3691743e35c43} to safely keep the \-Linphone\-Call pointer valid within your application.
+
+\begin{DoxyReturn}{\-Returns}
+a \-Linphone\-Call object or \-N\-U\-L\-L in case of failure 
+\end{DoxyReturn}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-update\-\_\-call@{linphone\-\_\-core\-\_\-update\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-update\-\_\-call@{linphone\-\_\-core\-\_\-update\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-update\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-update\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{\-Linphone\-Call $\ast$}]{call, }
+\item[{const \-Linphone\-Call\-Params $\ast$}]{params}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga1a7819d96573bb8dbcbf2a128145457e}
+\-Updates a running call according to supplied call parameters or parameters changed in the \-Linphone\-Core.
+
+\-In this version this is limited to the following use cases\-:
+\begin{DoxyItemize}
+\item setting up/down the video stream according to the video parameter of the \-Linphone\-Call\-Params (see \doxyref{linphone\-\_\-call\-\_\-params\-\_\-enable\-\_\-video()}{p.}{group__call__control_ga195ed008fbb19ded55070bb149e72ec5} ).
+\item changing the size of the transmitted video after calling \doxyref{linphone\-\_\-core\-\_\-set\-\_\-preferred\-\_\-video\-\_\-size()}{p.}{group__media__parameters_ga5580a04c427649fa2667e394cd383bbe}
+\end{DoxyItemize}
+
+\-In case no changes are requested through the \-Linphone\-Call\-Params argument, then this argument can be omitted and set to \-N\-U\-L\-L.
+
+\begin{DoxyReturn}{\-Returns}
+0 if successful, -\/1 otherwise. 
+\end{DoxyReturn}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-accept\-\_\-call@{linphone\-\_\-core\-\_\-accept\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-accept\-\_\-call@{linphone\-\_\-core\-\_\-accept\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-accept\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-accept\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{\-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga2813d4ece8097cef65d9e737305d7ca9}
+\-Accept an incoming call.
+
+\-Basically the application is notified of incoming calls within the call\-\_\-state\-\_\-changed callback of the \doxyref{\-Linphone\-Core\-V\-Table}{p.}{group__initializing_ga189ef1b7d6caff6493dfd8311ec3e378} structure, where it will receive a \-Linphone\-Call\-Incoming event with the associated \-Linphone\-Call object. \-The application can later accept the call using this method. 
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & the \-Linphone\-Core object \\
+\hline
+{\em call} & the \-Linphone\-Call object representing the call to be answered. \\
+\hline
+\end{DoxyParams}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-terminate\-\_\-call@{linphone\-\_\-core\-\_\-terminate\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-terminate\-\_\-call@{linphone\-\_\-core\-\_\-terminate\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-terminate\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-terminate\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{\-Linphone\-Call $\ast$}]{the\-\_\-call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga2dcc69dfc22e15d3cdadf8e688eedbfe}
+\-Terminates a call.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & the \-Linphone\-Core \\
+\hline
+{\em the\-\_\-call} & the \-Linphone\-Call object representing the call to be terminated. \\
+\hline
+\end{DoxyParams}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-terminate\-\_\-all\-\_\-calls@{linphone\-\_\-core\-\_\-terminate\-\_\-all\-\_\-calls}}
+\index{linphone\-\_\-core\-\_\-terminate\-\_\-all\-\_\-calls@{linphone\-\_\-core\-\_\-terminate\-\_\-all\-\_\-calls}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-terminate\-\_\-all\-\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-terminate\-\_\-all\-\_\-calls (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga0a72056123e0562108f19a6dcf352d55}
+\-Terminates all the calls.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & \-The \-Linphone\-Core \\
+\hline
+\end{DoxyParams}
+\index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-get\-\_\-calls@{linphone\-\_\-core\-\_\-get\-\_\-calls}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-calls@{linphone\-\_\-core\-\_\-get\-\_\-calls}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-calls}]{\setlength{\rightskip}{0pt plus 5cm}const \-M\-S\-List$\ast$ linphone\-\_\-core\-\_\-get\-\_\-calls (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gaf1f76b5a5d62e8bef5e1ad60e4f7b042}
+\-Returns the current list of calls.
+
+\-Note that this list is read-\/only and might be changed by the core after a function call to \doxyref{linphone\-\_\-core\-\_\-iterate()}{p.}{group__initializing_ga7bdac8ac386483fc4e0876e4c5d13755}. \-Similarly the \-Linphone\-Call objects inside it might be destroyed without prior notice. \-To hold references to \-Linphone\-Call object into your program, you must use \doxyref{linphone\-\_\-call\-\_\-ref()}{p.}{group__call__control_gae89a66b64e8767ef72d3691743e35c43}. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-in\-\_\-call@{linphone\-\_\-core\-\_\-in\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-in\-\_\-call@{linphone\-\_\-core\-\_\-in\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-in\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-core\-\_\-in\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga5e616f59100b1ad675920b7374ea44c2}
+\-Returns \-T\-R\-U\-E if there is a call running. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-get\-\_\-current\-\_\-call@{linphone\-\_\-core\-\_\-get\-\_\-current\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-current\-\_\-call@{linphone\-\_\-core\-\_\-get\-\_\-current\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-current\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}\-Linphone\-Call$\ast$ linphone\-\_\-core\-\_\-get\-\_\-current\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gac268a222347024ad7adb4eaf1fd27241}
+\-Returns \-The \-\_\-\-Linphone\-Call struct of the current call if one is in call \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-pause\-\_\-call@{linphone\-\_\-core\-\_\-pause\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-pause\-\_\-call@{linphone\-\_\-core\-\_\-pause\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-pause\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-pause\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{\-Linphone\-Call $\ast$}]{call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga8cdae37a26ba7633067ea03bc43bd887}
+\-Pauses the call. \-If a music file has been setup using linphone\-\_\-core\-\_\-set\-\_\-play\-\_\-file(), this file will be played to the remote user. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-resume\-\_\-call@{linphone\-\_\-core\-\_\-resume\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-resume\-\_\-call@{linphone\-\_\-core\-\_\-resume\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-resume\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-resume\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{\-Linphone\-Call $\ast$}]{the\-\_\-call}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga3897c517486091f71e38986912bbecf5}
+\-Resumes the call. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout@{linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout@{linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{int}]{seconds}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga3b0c027024f929ab7545cd645a438699}
+\-Set the incoming call timeout in seconds.
+
+\-If an incoming call isn't answered for this timeout period, it is automatically declined. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-get\-\_\-inc\-\_\-timeout@{linphone\-\_\-core\-\_\-get\-\_\-inc\-\_\-timeout}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-inc\-\_\-timeout@{linphone\-\_\-core\-\_\-get\-\_\-inc\-\_\-timeout}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-inc\-\_\-timeout}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-get\-\_\-inc\-\_\-timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gab9bf2ca040dd1c9ff988eec29f54a6b6}
+\-Returns the incoming call timeout
+
+\-See \doxyref{linphone\-\_\-core\-\_\-set\-\_\-inc\-\_\-timeout()}{p.}{group__call__control_ga3b0c027024f929ab7545cd645a438699} for details. \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-get\-\_\-calls\-\_\-nb@{linphone\-\_\-core\-\_\-get\-\_\-calls\-\_\-nb}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-calls\-\_\-nb@{linphone\-\_\-core\-\_\-get\-\_\-calls\-\_\-nb}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-calls\-\_\-nb}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-get\-\_\-calls\-\_\-nb (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gafbe6f21493edec8598ae2ddda5bd552d}
+\-Get the number of \-Call \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-can\-\_\-we\-\_\-add\-\_\-call@{linphone\-\_\-core\-\_\-can\-\_\-we\-\_\-add\-\_\-call}}
+\index{linphone\-\_\-core\-\_\-can\-\_\-we\-\_\-add\-\_\-call@{linphone\-\_\-core\-\_\-can\-\_\-we\-\_\-add\-\_\-call}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-can\-\_\-we\-\_\-add\-\_\-call}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-core\-\_\-can\-\_\-we\-\_\-add\-\_\-call (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_ga617649e37b3b4b2d8323746da33c10e0}
+\-Check if we do not have exceed the number of simultaneous call \index{\-Placing and receiving calls@{\-Placing and receiving calls}!linphone\-\_\-core\-\_\-sound\-\_\-resources\-\_\-locked@{linphone\-\_\-core\-\_\-sound\-\_\-resources\-\_\-locked}}
+\index{linphone\-\_\-core\-\_\-sound\-\_\-resources\-\_\-locked@{linphone\-\_\-core\-\_\-sound\-\_\-resources\-\_\-locked}!Placing and receiving calls@{\-Placing and receiving calls}}
+\subsubsection[{linphone\-\_\-core\-\_\-sound\-\_\-resources\-\_\-locked}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-core\-\_\-sound\-\_\-resources\-\_\-locked (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__control_gaddcb4be3bee7cc9e89330541a176b106}
+\-Check if a call will need the sound resources.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em lc} & \-The \-Linphone\-Core \\
+\hline
+\end{DoxyParams}

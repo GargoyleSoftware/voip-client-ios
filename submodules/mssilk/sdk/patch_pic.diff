@@ -1,0 +1,11 @@
+--- Makefile	2011-10-25 16:28:07.222705066 +0200
++++ Makefile.new	2011-10-25 16:26:22.933690420 +0200
+@@ -26,7 +26,7 @@
+ ldflags-from-ldlibdirs = $(addprefix -L,$(1))
+ ldlibs-from-libs       = $(addprefix -l,$(1))
+ 
+-CFLAGS	+= -Wall -enable-threads -O3
++CFLAGS	+= -Wall -enable-threads -O3 -fPIC
+ 
+ CFLAGS  += $(call cflags-from-defines,$(CDEFINES))
+ CFLAGS  += $(call cflags-from-defines,$(ADDED_DEFINES))

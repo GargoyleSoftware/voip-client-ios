@@ -1,0 +1,82 @@
+Source: srtp
+Priority: optional
+Maintainer: Jonas Smedegaard <dr@jones.dk>
+Build-Depends: autotools-dev,
+ debhelper (>= 6),
+ devscripts (>= 2.10.7~),
+ dh-buildinfo,
+ cdbs (>= 0.4.70~),
+ doxygen,
+ texlive-latex-recommended,
+ texlive-fonts-recommended,
+ procps,
+ miscfiles,
+ d-shlibs
+Standards-Version: 3.8.4
+Section: libs
+Vcs-Git: git://git.debian.org/git/collab-maint/srtp.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/srtp.git;a=summary
+Homepage: http://srtp.sourceforge.net/srtp.html
+
+Package: libsrtp0-dev
+Section: libdevel
+Depends: ${devlibs:Depends}, ${misc:Depends}, libsrtp0 (= ${binary:Version})
+Provides: libsrtp-dev
+Conflicts: libsrtp-dev, libsrtp1-dev (<= 1.4.4)
+Replaces: libsrtp1-dev (<= 1.4.4)
+Architecture: any
+Description: Secure RTP (SRTP) and UST Reference Implementations - development files
+ SRTP is a security profile for RTP that adds confidentiality, message
+ authentication, and replay protection to that protocol. It is specified
+ in RFC 3711.
+ .
+ LibSRTP provides an implementation of the Secure Real-time Transport
+ Protocol (SRTP), the Universal Security Transform (UST), and a
+ supporting cryptographic kernel.
+ .
+ This package contains the development headers and static libraries.
+
+Package: libsrtp0
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: srtp-utils
+Architecture: any
+Description: Secure RTP (SRTP) and UST Reference Implementations - shared library
+ SRTP is a security profile for RTP that adds confidentiality, message
+ authentication, and replay protection to that protocol. It is specified
+ in RFC 3711.
+ .
+ LibSRTP provides an implementation of the Secure Real-time Transport
+ Protocol (SRTP), the Universal Security Transform (UST), and a
+ supporting cryptographic kernel.
+ .
+ This package contains the shared libraries.
+
+Package: srtp-docs
+Section: doc
+Depends: ${misc:Depends}
+Architecture: all
+Description: Secure RTP (SRTP) and UST Reference Implementations - documentation
+ SRTP is a security profile for RTP that adds confidentiality, message
+ authentication, and replay protection to that protocol. It is specified
+ in RFC 3711.
+ .
+ LibSRTP provides an implementation of the Secure Real-time Transport
+ Protocol (SRTP), the Universal Security Transform (UST), and a
+ supporting cryptographic kernel.
+ .
+ This package contains API documentation.
+
+Package: srtp-utils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Secure RTP (SRTP) and UST Reference Implementations - utilities
+ SRTP is a security profile for RTP that adds confidentiality, message
+ authentication, and replay protection to that protocol. It is specified
+ in RFC 3711.
+ .
+ LibSRTP provides an implementation of the Secure Real-time Transport
+ Protocol (SRTP), the Universal Security Transform (UST), and a
+ supporting cryptographic kernel.
+ .
+ This package contains a few simple binaries using libsrtp.

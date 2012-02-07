@@ -1,0 +1,109 @@
+mediastreamer2-2.8.0: December 22, 2011
+	* audio conferencing
+	* mac os X video support
+	* new adaptive audio & video bitrate control api
+	* new call quality indicator api
+
+mediastreamer-2.7.3: March 28, 2011
+	* major rework of the Mac OS X Audio Unit sound filter (macsnd.c)
+	* compilation fix for FreeBSD
+
+mediastreamer-2.7.2: March 3rd, 2011
+	* fix windows crashes with some webcam outputing rgb
+
+mediastreamer-2.7.1:  February 17th, 2011
+	* enhance build for visual studio
+	* fix configure bugs
+
+mediastreamer-2.7.0: February 7th, 2011
+	* add android video capture filter
+	* add android video display filters: one for 2.1 and one for 2.2+
+	* tune video encoder parameters for android
+	* new scaler/colorspace conversion abstraction, with native ARM-optimized implementation
+	* new X11+XvXshm display filter, deprecating SDL display filter.
+	* add custom tone generation (in MSDtmfGen filter)
+	* add custom tone detection in new filter MSToneDetector
+	* rework the echo canceller to work with much less latency
+	* adapt the OSS filter to OSS4 standard.
+
+mediastreamer-2.6.0: July 1st, 2010
+	* android sound capture optimisations
+	* optional "threaded" v4l2 capture
+	* fix crash when video window is closed on windows
+	* move H264 decoder from msx264 to mediastreamer2
+	* MSVolume improvements and cleanup, with native AGC support.
+	* Echo canceller reworked: use soundcard stream to synchronise far-end stream.
+	* fix segfault in ALSA support when capturing a stereo stream.
+	* H263 RFC2190 support improvements
+
+mediastreamer-2.5.0: June 3, 2010
+	* fix regression with speex decoder at 16 and 32khz.
+	* uses less memory for speex decoding.
+	* added an event queue for notifications of MSFilters
+	* add stereo support to resampler
+	* add new MSFilter to convert from mono to stereo and vice versa
+	* add Inter Ticker Communication filter (ITC) so that graphs running
+		on different MSTicker can exchange data.
+	* add an audio mixer to mix down audio streams. This is not suitable
+		for conferencing, use MSConf instead.
+
+mediastreamer-2.4.0: May 19, 2010
+	* use libv4l2 when possible to benefit from hardware pixel conversion
+	* added jpeg over RTP support
+	* added PulseAudio support
+	* add a new MSDrawDibDisplay video output filter with new layout features.
+	* enhance performance of SDL video output
+	* improve MacOS sound support
+
+mediastreamer-2.3.1: October 5, 2009
+	* preserve ratio in windows video display (not yet implemented for linux/SDL)
+
+mediastreamer-2.3.0: September 17, 2009
+	* integrate directshow capture filter for mingw (was a plugin before)
+	* builds on windows with mingw/msys using ./configure && make (see linphone's README.mingw)
+	* new parametric equalizer filter (to modify gains per frequency bands), working with natural curves
+	* new noise-gate feature added to MSVolume
+	* list of soundcard dynamically updates on windows upon device plugs/unplugs
+	* MSVolume echo limiter feature improved
+
+mediastreamer-2.2.4: May 4, 2009
+	* fix crash during video window resizing on windows
+	* improve documentation
+	* various little improvements
+
+mediastreamer-2.2.3: 21, January 2009
+	* rfc3984 support improved 
+	* webcam support on windows largely improved (vfw mode)
+	* support for configuring video size up to svga
+	* video output can automatically resize to the size of received video stream
+	* fix crash when resizing video window
+	* new MSWebcam object to provide Webcam management and MSFilter instantiation
+	* alsa bugfixes
+
+mediastreamer-2.2.2: 6, october 2008
+	* new winsnd3.c file for support of soundcard under windows (seems to work a bit better)
+	* bugfixes
+
+mediastreamer-2.2.1: 25, january 2008
+	* video output resizing
+	* 4CIF and VGA support
+	* bugfixes
+	* added snow codec (experimental)
+	* enable setting of max rtp payload size for all encoders
+
+mediastreamer-2.2.0: 19, November 2007
+	* new "no webcam" screen
+	* bandwidth settings improvements
+	* new REQ_VFU command to request a video encoder to send an I-frame
+		(implemented for ffmpeg based encoders)
+	* contributed macosx sound support
+	* new MSVolume filter to make sound power measurements
+	* rate control of ffmpeg video codecs
+
+mediastreamer-2.1.0: 23, January 2007
+	* add support for Video4Linux V2 cameras
+	* support for mpjeg cameras
+	* webcam support on windows operational
+	* video window display ok on windows
+	* fix bug with quickcam driver on linux
+	* bandwidth setting improvements.

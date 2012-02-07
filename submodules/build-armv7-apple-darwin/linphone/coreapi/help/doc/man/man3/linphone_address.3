@@ -1,0 +1,101 @@
+.TH "SIP address parser API." 3 "Mon Feb 6 2012" "Version 3.5.0" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SIP address parser API. \- 
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct SalAddress \fBLinphoneAddress\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinphoneAddress\fP * \fBlinphone_address_new\fP (const char *addr)"
+.br
+.ti -1c
+.RI "\fBLinphoneAddress\fP * \fBlinphone_address_clone\fP (const \fBLinphoneAddress\fP *addr)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_address_get_scheme\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_address_get_display_name\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_address_get_username\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_address_get_domain\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "void \fBlinphone_address_set_display_name\fP (\fBLinphoneAddress\fP *u, const char *display_name)"
+.br
+.ti -1c
+.RI "void \fBlinphone_address_set_username\fP (\fBLinphoneAddress\fP *uri, const char *username)"
+.br
+.ti -1c
+.RI "void \fBlinphone_address_set_domain\fP (\fBLinphoneAddress\fP *uri, const char *host)"
+.br
+.ti -1c
+.RI "void \fBlinphone_address_set_port\fP (\fBLinphoneAddress\fP *uri, const char *port)"
+.br
+.ti -1c
+.RI "void \fBlinphone_address_set_port_int\fP (\fBLinphoneAddress\fP *uri, int port)"
+.br
+.ti -1c
+.RI "void \fBlinphone_address_clean\fP (\fBLinphoneAddress\fP *uri)"
+.br
+.ti -1c
+.RI "char * \fBlinphone_address_as_string\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "char * \fBlinphone_address_as_string_uri_only\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_address_weak_equal\fP (const \fBLinphoneAddress\fP *a1, const \fBLinphoneAddress\fP *a2)"
+.br
+.ti -1c
+.RI "void \fBlinphone_address_destroy\fP (\fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "int \fBlinphone_address_get_port_int\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_address_get_port\fP (const \fBLinphoneAddress\fP *u)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This api is useful for manipulating SIP addresses ('from' or 'to' headers)'\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "\fBLinphoneAddress\fP"Object that represents a SIP address'\&.
+.PP
+The LinphoneAddress is an opaque object to represents SIP addresses, ie the content of SIP's 'from' and 'to' headers'\&. A SIP address is made of display name, username, domain name, port, and various uri headers (such as tags)'\&. It looks like 'Alice <sip:alice@example.net>''\&. The LinphoneAddress has methods to extract and manipulate all parts of the address'\&. When some part of the address (for example the username) is empty, the accessor methods return NULL'\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBLinphoneAddress\fP* linphone_address_new (const char *addr)"Constructs a LinphoneAddress object by parsing the user supplied address, given as a string'\&. 
+.SS "\fBLinphoneAddress\fP* linphone_address_clone (const \fBLinphoneAddress\fP *addr)"Clones a LinphoneAddress object'\&. 
+.SS "const char* linphone_address_get_scheme (const \fBLinphoneAddress\fP *u)"Returns the address scheme, normally 'sip''\&. 
+.SS "const char* linphone_address_get_display_name (const \fBLinphoneAddress\fP *u)"Returns the display name'\&. 
+.SS "const char* linphone_address_get_username (const \fBLinphoneAddress\fP *u)"Returns the username'\&. 
+.SS "const char* linphone_address_get_domain (const \fBLinphoneAddress\fP *u)"Returns the domain name'\&. 
+.SS "void linphone_address_set_display_name (\fBLinphoneAddress\fP *u, const char *display_name)"Sets the display name'\&. 
+.SS "void linphone_address_set_username (\fBLinphoneAddress\fP *uri, const char *username)"Sets the username'\&. 
+.SS "void linphone_address_set_domain (\fBLinphoneAddress\fP *uri, const char *host)"Sets the domain'\&. 
+.SS "void linphone_address_set_port (\fBLinphoneAddress\fP *uri, const char *port)"Sets the port number'\&. 
+.SS "void linphone_address_set_port_int (\fBLinphoneAddress\fP *uri, intport)"Sets the port number'\&. 
+.SS "void linphone_address_clean (\fBLinphoneAddress\fP *uri)"Removes address's tags and uri headers so that it is displayable to the user'\&. 
+.SS "char* linphone_address_as_string (const \fBLinphoneAddress\fP *u)"Returns the address as a string'\&. The returned char * must be freed by the application'\&. Use ms_free()'\&. 
+.SS "char* linphone_address_as_string_uri_only (const \fBLinphoneAddress\fP *u)"Returns the SIP uri only as a string, that is display name is removed'\&. The returned char * must be freed by the application'\&. Use ms_free()'\&. 
+.SS "bool_t linphone_address_weak_equal (const \fBLinphoneAddress\fP *a1, const \fBLinphoneAddress\fP *a2)"Compare two LinphoneAddress ignoring tags and headers, basically just domain, username, and port'\&. Returns TRUE if they are equal'\&. 
+.SS "void linphone_address_destroy (\fBLinphoneAddress\fP *u)"Destroys a LinphoneAddress object'\&. 
+.SS "int linphone_address_get_port_int (const \fBLinphoneAddress\fP *u)"Get port number as an integer value'\&. 
+.SS "const char* linphone_address_get_port (const \fBLinphoneAddress\fP *u)"Get port number, null if not present'\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code'\&.

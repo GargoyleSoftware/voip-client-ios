@@ -1,0 +1,71 @@
+window.lo window.o:  \
+ /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/window.c \
+  ../config.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/arch.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/../include/speex/speex_types.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/types.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/appleapiopts.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/cdefs.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_symbol_aliasing.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_posix_availability.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/machine/types.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/types.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/_types.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_types.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/machine/_types.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/machine/endian.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/endian.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_endian.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/libkern/_OSByteOrder.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/libkern/arm/OSByteOrder.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/stdint.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/arch.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_structs.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/fixed_generic.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/fixed_arm5e.h
+
+../config.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/arch.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/../include/speex/speex_types.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/types.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/appleapiopts.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/cdefs.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_symbol_aliasing.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_posix_availability.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/machine/types.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/types.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/_types.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_types.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/machine/_types.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/machine/endian.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/endian.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_endian.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/libkern/_OSByteOrder.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/libkern/arm/OSByteOrder.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/stdint.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/arm/arch.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/sys/_structs.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/fixed_generic.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/speex/libspeex/fixed_arm5e.h:

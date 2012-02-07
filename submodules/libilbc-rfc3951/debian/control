@@ -1,0 +1,69 @@
+Source: libilbc0-rfc3951
+Priority: extra
+Maintainer: Not Available <none@none.net>
+Build-Depends: quilt, debhelper (>= 7), autotools-dev, wget, gawk, fakeroot
+Standards-Version: 3.8.3
+Section: non-free/libs
+Homepage: http://www.ilbcfreeware.org
+
+Package: libilbc0-rfc3951
+Section: non-free/libs
+Architecture: any
+Pre-Depends: debconf (>= 0.2.17)
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libilbc0, libilbc
+Description: iLBC codec for voice communication
+ iLBC (internet Low Bitrate Codec) is a FREE speech codec suitable
+ for robust voice communication over IP.
+ .
+ The license for this software does not comply with the Debian Free
+ Software Guidelines for free software.
+ .
+ Please note that personal, non-commercial use of this software is
+ generally permitted.  Commercialization is permitted with certain
+ limitations BUT REQUIRES REGISTRATION WITH LICENSOR PRIOR TO ANY
+ COMMERCIAL DEPLOYMENT.
+ .
+ Very importantly, use of this software in an individual’s capacity
+ as an officer, employee, member, independent contractor, or agent
+ of a corporation, business, or organization (commercial or
+ non-commercial) does not qualify as personal use.
+ .
+ You should not rely on this synopsis. Please consult the license
+ document for complete, accurate and definitive information.
+ .
+ The license should have been included as the file
+ /usr/share/doc/libilbc0-rfc3951/gips_iLBClicense.pdf
+ and at the time of writing was also available for download from
+ http://www.ilbcfreeware.org/documentation/gips_iLBClicense.pdf and
+ http://gipscorp.com/files/english/gips_iLBClicense.pdf.
+ .
+ Global IP Solutions and iLBC are trademarks of Global IP Solutions.
+ .
+ For more information please visit http://www.ilbcfreeware.org.
+
+Package: libilbc0-rfc3951-dev
+Section: non-free/libdevel
+Architecture: any
+Depends: libilbc0-rfc3951 (= ${binary:Version}), ${misc:Depends}
+Provides: libilbc0-dev, libilbc-dev
+Description: iLBC codec for voice communication (development files)
+ iLBC (internet Low Bitrate Codec) is a FREE speech codec suitable
+ for robust voice communication over IP.
+ .
+ The license for this software does not comply with the Debian Free
+ Software Guidelines for free software.  Please consult the license
+ document for complete, accurate and definitive information.
+ .
+ The license should have been included as the file
+ /usr/share/doc/libilbc0-rfc3951/gips_iLBClicense.pdf
+ and at the time of writing was also available for download from
+ http://www.ilbcfreeware.org/documentation/gips_iLBClicense.pdf and
+ http://gipscorp.com/files/english/gips_iLBClicense.pdf.
+ .
+ Global IP Solutions and iLBC are trademarks of Global IP Solutions.
+ .
+ For more information please visit http://www.ilbcfreeware.org.
+ .
+ This package contains the header and development files.
+

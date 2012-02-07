@@ -1,0 +1,87 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+# Copyright © 2007-2008,2010 Jonas Smedegaard <dr@jones.dk>
+# Description: Main Debian packaging script for libSRTP
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2, or (at
+# your option) any later version.
+#
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/utils.mk
+include /usr/share/cdbs/1/rules/upstream-tarball.mk
+
+# Update this checksum when new releases occur, to catch silent server side file content forges
+DEB_UPSTREAM_TARBALL_MD5 = 9b449edb011c934ca97009e7e0566d22
+
+DEB_UPSTREAM_URL = http://switch.dl.sourceforge.net/sourceforge/srtp
+DEB_UPSTREAM_TARBALL_EXTENSION = tgz
+DEB_UPSTREAM_TARBALL_SRCDIR = $(DEB_UPSTREAM_PACKAGE)
+
+DEB_UPSTREAM_REPACKAGE_EXCLUDE = CVS .cvsignore doc/rfc*.txt doc/draft*.txt doc/*.pdf
+
+DEB_CONFIGURE_EXTRA_FLAGS = --disable-stdout --enable-syslog
+ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-debug
+else
+DEB_CONFIGURE_EXTRA_FLAGS += --disable-debug
+endif
+
+CFLAGS += -D_REENTRANT
+
+DEB_MAKE_CLEAN_TARGET = superclean
+DEB_MAKE_CHECK_TARGET = runtest
+
+DEB_INSTALL_DOCS_srtp-docs += doc/*.txt doc/*.pdf
+DEB_COMPRESS_EXCLUDE += .pdf
+build/srtp-docs::
+	[ -f debian/stamp-make-docs ] || $(DEB_MAKE_INVOKE) libsrtpdoc
+	touch debian/stamp-make-docs
+
+# put aside stray upstream-shipped automade files during build
+upstreamtmpfiles = doc/Makefile crypto/Makefile
+pre-build:: debian/stamp-upstreamtmpstuff
+debian/stamp-upstreamtmpstuff: debian/stamp-copyright-check
+	for file in $(upstreamtmpfiles); do \
+		[ ! -e $$file ] || [ -e $$file.upstream ] || mv $$file $$file.upstream; \
+	done
+	touch $@
+clean::
+	for file in $(upstreamtmpfiles); do \
+		[ ! -e $$file.upstream ] || mv -f $$file.upstream $$file; \
+	done
+	rm -f debian/stamp-upstreamtmpstuff
+
+clean::
+	rm -f doc/*.pdf
+	rm -f debian/stamp-make-docs
+
+# Ensure test script is executable
+post-patches::
+	chmod +x test/rtpw_test.sh
+
+# Let d-shlibs calculate development package dependencies
+#  and handle shared library install
+binary-post-install/libsrtp0::
+	d-shlibmove --commit \
+		--movedev "debian/tmp/usr/include/srtp/*" usr/include/srtp/ \
+		debian/tmp/usr/lib/libsrtp.so
+
+# Needed by upstream build
+CDBS_BUILD_DEPENDS += , doxygen, texlive-latex-recommended, texlive-fonts-recommended
+
+# Needed by upstream build tests
+CDBS_BUILD_DEPENDS += , procps, miscfiles
+
+# Needed for our packaging
+CDBS_BUILD_DEPENDS += , d-shlibs

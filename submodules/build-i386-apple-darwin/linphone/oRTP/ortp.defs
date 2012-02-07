@@ -1,0 +1,1 @@
+ -D_REENTRANT  -DORTP_INET6 -I/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//../liblinphone-sdk/i386-apple-darwin/include -I/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//../liblinphone-sdk/i386-apple-darwin/include/srtp

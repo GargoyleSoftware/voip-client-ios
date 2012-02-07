@@ -1,0 +1,20 @@
+libilbc0-rfc3951 (0.6-2) karmic; urgency=low
+
+  * Provided libilbc and libilbc-dev in addition to libilbc0 and
+  libilbc0-dev
+
+ -- Not Available <none@none.net>  Tue, 30 Mar 2010 21:30:01 -0700
+
+libilbc0-rfc3951 (0.6-1) karmic; urgency=low
+
+  * New release
+
+  * Scripts now look in ./downloads before getting files from network
+
+ -- Not Available <none@none.net>  Wed, 17 Mar 2010 19:46:57 -0700
+
+libilbc0-rfc3951 (0.5-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Not Available <none@none.net>  Sun, 31 Jan 2010 16:14:01 +0800

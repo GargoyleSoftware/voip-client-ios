@@ -1,0 +1,215 @@
+.TH "Initializing liblinphone" 3 "Mon Feb 6 2012" "Version 3.5.0" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Initializing liblinphone \- 
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_LinphoneVTable\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _LinphoneCore \fBLinphoneCore\fP"
+.br
+.ti -1c
+.RI "typedef enum \fB_LinphoneGlobalState\fP \fBLinphoneGlobalState\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneGlobalStateCb\fP )(struct _LinphoneCore *lc, \fBLinphoneGlobalState\fP gstate, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCallStateCb\fP )(struct _LinphoneCore *lc, LinphoneCall *call, \fBLinphoneCallState\fP cstate, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBCallEncryptionChangedCb\fP )(struct _LinphoneCore *lc, LinphoneCall *call, bool_t on, const char *authentication_token)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneRegistrationStateCb\fP )(struct _LinphoneCore *lc, \fBLinphoneProxyConfig\fP *cfg, \fBLinphoneRegistrationState\fP cstate, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBShowInterfaceCb\fP )(struct _LinphoneCore *lc)"
+.br
+.ti -1c
+.RI "typedef void(* \fBDisplayStatusCb\fP )(struct _LinphoneCore *lc, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBDisplayMessageCb\fP )(struct _LinphoneCore *lc, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBDisplayUrlCb\fP )(struct _LinphoneCore *lc, const char *message, const char *url)"
+.br
+.ti -1c
+.RI "typedef void(* \fBLinphoneCoreCbFunc\fP )(struct _LinphoneCore *lc, void *user_data)"
+.br
+.ti -1c
+.RI "typedef void(* \fBNotifyReceivedCb\fP )(struct _LinphoneCore *lc, LinphoneCall *call, const char *from, const char *event)"
+.br
+.ti -1c
+.RI "typedef void(* \fBNotifyPresenceReceivedCb\fP )(struct _LinphoneCore *lc, \fBLinphoneFriend\fP *lf)"
+.br
+.ti -1c
+.RI "typedef void(* \fBNewSubscribtionRequestCb\fP )(struct _LinphoneCore *lc, \fBLinphoneFriend\fP *lf, const char *url)"
+.br
+.ti -1c
+.RI "typedef void(* \fBAuthInfoRequested\fP )(struct _LinphoneCore *lc, const char *realm, const char *username)"
+.br
+.ti -1c
+.RI "typedef void(* \fBCallLogUpdated\fP )(struct _LinphoneCore *lc, struct \fB_LinphoneCallLog\fP *newcl)"
+.br
+.ti -1c
+.RI "typedef void(* \fBTextMessageReceived\fP )(\fBLinphoneCore\fP *lc, \fBLinphoneChatRoom\fP *room, const \fBLinphoneAddress\fP *from, const char *message)"
+.br
+.ti -1c
+.RI "typedef void(* \fBDtmfReceived\fP )(struct _LinphoneCore *lc, LinphoneCall *call, int dtmf)"
+.br
+.ti -1c
+.RI "typedef void(* \fBReferReceived\fP )(struct _LinphoneCore *lc, const char *refer_to)"
+.br
+.ti -1c
+.RI "typedef void(* \fBBuddyInfoUpdated\fP )(struct _LinphoneCore *lc, \fBLinphoneFriend\fP *lf)"
+.br
+.ti -1c
+.RI "typedef struct \fB_LinphoneVTable\fP \fBLinphoneCoreVTable\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB_LinphoneReason\fP { , \fBLinphoneReasonNoResponse\fP, \fBLinphoneReasonBadCredentials\fP, \fBLinphoneReasonDeclined\fP }"
+.br
+.ti -1c
+.RI "enum \fB_LinphoneGlobalState\fP "
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLinphoneCore\fP * \fBlinphone_core_new\fP (const \fBLinphoneCoreVTable\fP *vtable, const char *config_path, const char *factory_config_path, void *userdata)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_iterate\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void * \fBlinphone_core_get_user_data\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_destroy\fP (\fBLinphoneCore\fP *lc)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct _LinphoneCore \fBLinphoneCore\fP"Linphone core main object created by function \fBlinphone_core_new()\fP '\&. 
+.SS "typedef enum \fB_LinphoneGlobalState\fP \fBLinphoneGlobalState\fP"LinphoneGlobalState describes the global state of the LinphoneCore object'\&. It is notified via the \fBLinphoneCoreVTable::global_state_changed\fP 
+.SS "typedef void(* \fBLinphoneGlobalStateCb\fP)(struct _LinphoneCore *lc, \fBLinphoneGlobalState\fP gstate, const char *message)"Call state notification callback prototype 
+.SS "typedef void(* \fBLinphoneCallStateCb\fP)(struct _LinphoneCore *lc, LinphoneCall *call, \fBLinphoneCallState\fP cstate, const char *message)"Call state notification callback prototype 
+.SS "typedef void(* \fBCallEncryptionChangedCb\fP)(struct _LinphoneCore *lc, LinphoneCall *call, bool_t on, const char *authentication_token)"Call encryption changed callback prototype 
+.SS "typedef void(* \fBLinphoneRegistrationStateCb\fP)(struct _LinphoneCore *lc, \fBLinphoneProxyConfig\fP *cfg, \fBLinphoneRegistrationState\fP cstate, const char *message)"Registration state notification callback prototype 
+.SS "typedef void(* \fBShowInterfaceCb\fP)(struct _LinphoneCore *lc)"Callback prototype 
+.SS "typedef void(* \fBDisplayStatusCb\fP)(struct _LinphoneCore *lc, const char *message)"Callback prototype 
+.SS "typedef void(* \fBDisplayMessageCb\fP)(struct _LinphoneCore *lc, const char *message)"Callback prototype 
+.SS "typedef void(* \fBDisplayUrlCb\fP)(struct _LinphoneCore *lc, const char *message, const char *url)"Callback prototype 
+.SS "typedef void(* \fBLinphoneCoreCbFunc\fP)(struct _LinphoneCore *lc, void *user_data)"Callback prototype 
+.SS "typedef void(* \fBNotifyReceivedCb\fP)(struct _LinphoneCore *lc, LinphoneCall *call, const char *from, const char *event)"Callback prototype 
+.SS "typedef void(* \fBNotifyPresenceReceivedCb\fP)(struct _LinphoneCore *lc, \fBLinphoneFriend\fP *lf)"Report status change for a friend previously \fBadded \fP to \fBLinphoneCore\fP'\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object '\&. 
+.br
+\fIlf\fP Updated \fBLinphoneFriend\fP '\&. 
+.RE
+.PP
+
+.SS "typedef void(* \fBNewSubscribtionRequestCb\fP)(struct _LinphoneCore *lc, \fBLinphoneFriend\fP *lf, const char *url)"Reports that a new subscription request has been received and wait for a decision'\&. 
+.br
+ Status on this subscription request is notified by \fBchanging policy \fP for this friend 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.br
+\fIlf\fP \fBLinphoneFriend\fP corresponding to the subscriber 
+.br
+\fIurl\fP of the subscriber Callback prototype 
+.RE
+.PP
+
+.SS "typedef void(* \fBAuthInfoRequested\fP)(struct _LinphoneCore *lc, const char *realm, const char *username)"Callback prototype 
+.SS "typedef void(* \fBCallLogUpdated\fP)(struct _LinphoneCore *lc, struct \fB_LinphoneCallLog\fP *newcl)"Callback prototype 
+.SS "typedef void(* \fBTextMessageReceived\fP)(\fBLinphoneCore\fP *lc, \fBLinphoneChatRoom\fP *room, const \fBLinphoneAddress\fP *from, const char *message)"Callback prototype
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP \fBLinphoneCore\fP object 
+.br
+\fIroom\fP \fBLinphoneChatRoom\fP involved in this conversation'\&. Can be be created by the framework in case \fBthe from \fP is not present in any chat room'\&. 
+.br
+\fIfrom\fP \fBLinphoneAddress\fP from 
+.br
+\fImessage\fP incoming message 
+.RE
+.PP
+
+.SS "typedef void(* \fBDtmfReceived\fP)(struct _LinphoneCore *lc, LinphoneCall *call, int dtmf)"Callback prototype 
+.SS "typedef void(* \fBReferReceived\fP)(struct _LinphoneCore *lc, const char *refer_to)"Callback prototype 
+.SS "typedef void(* \fBBuddyInfoUpdated\fP)(struct _LinphoneCore *lc, \fBLinphoneFriend\fP *lf)"Callback prototype 
+.SS "typedef struct \fB_LinphoneVTable\fP  \fBLinphoneCoreVTable\fP"This structure holds all callbacks that the application should implement'\&. None is mandatory'\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fB_LinphoneReason\fP"Enum describing failure reasons'\&. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fILinphoneReasonNoResponse \fP\fP
+No response received from remote 
+.TP
+\fB\fILinphoneReasonBadCredentials \fP\fP
+Authentication failed due to bad or missing credentials 
+.TP
+\fB\fILinphoneReasonDeclined \fP\fP
+The call has been declined 
+.SS "enum \fB_LinphoneGlobalState\fP"LinphoneGlobalState describes the global state of the LinphoneCore object'\&. It is notified via the \fBLinphoneCoreVTable::global_state_changed\fP 
+.SH "Function Documentation"
+.PP 
+.SS "\fBLinphoneCore\fP* linphone_core_new (const \fBLinphoneCoreVTable\fP *vtable, const char *config_path, const char *factory_config_path, void *userdata)"Instanciates a LinphoneCore object'\&.
+.PP
+The LinphoneCore object is the primary handle for doing all phone actions'\&. It should be unique within your application'\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvtable\fP a LinphoneCoreVTable structure holding your application callbacks 
+.br
+\fIconfig_path\fP a path to a config file'\&. If it does not exists it will be created'\&. The config file is used to store all settings, call logs, friends, proxies'\&.'\&.'\&. so that all these settings become persistent over the life of the LinphoneCore object'\&. It is allowed to set a NULL config file'\&. In that case LinphoneCore will not store any settings'\&. 
+.br
+\fIfactory_config_path\fP a path to a read-only config file that can be used to to store hard-coded preference such as proxy settings or internal preferences'\&. The settings in this factory file always override the one in the normal config file'\&. It is OPTIONAL, use NULL if unneeded'\&. 
+.br
+\fIuserdata\fP an opaque user pointer that can be retrieved at any time (for example in callbacks) using \fBlinphone_core_get_user_data()\fP'\&. 
+.RE
+.PP
+
+.SS "void linphone_core_iterate (\fBLinphoneCore\fP *lc)"Main loop function'\&. It is crucial that your application call it periodically'\&.
+.PP
+\fBlinphone_core_iterate()\fP performs various backgrounds tasks:
+.IP "\(bu" 2
+receiving of SIP messages
+.IP "\(bu" 2
+handles timers and timeout
+.IP "\(bu" 2
+performs registration to proxies
+.IP "\(bu" 2
+authentication retries The application MUST call this function periodically, in its main loop'\&. Be careful that this function must be called from the same thread as other liblinphone methods'\&. If it is not the case make sure all liblinphone calls are serialized with a mutex'\&. 
+.PP
+
+.SS "void* linphone_core_get_user_data (\fBLinphoneCore\fP *lc)"Retrieves the user pointer that was given to \fBlinphone_core_new()\fP 
+.SS "void linphone_core_destroy (\fBLinphoneCore\fP *lc)"Destroys a LinphoneCore 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code'\&.

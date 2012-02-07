@@ -1,0 +1,9 @@
+mssilk - mediastreamer2 (linphone) plugin for SILK codec.
+
+This package downloads and builds the SILK codec from Skype.
+
+By default, the upstream package installs into /usr/local.  Please use
+'./configure --prefix' to change it
+
+To prevent executing unknown scripts or code, the downloaded files are checked
+against their known MD5 checksums.

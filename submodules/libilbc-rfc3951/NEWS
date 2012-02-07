@@ -1,0 +1,8 @@
+Version 0.6 allows to avoid the download of the RFC, the extract script
+and the license by placing copies in the ./downloads/ directory.
+
+Now package maintainers can import existing files if they were installed
+in the share or doc hierarchies.  That reduces the danger of losing
+access to the source code in case the website disappears.
+
+It also saves network bandwidth by avoiding unnecessary downloads.

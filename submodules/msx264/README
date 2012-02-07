@@ -1,0 +1,9 @@
+msx264 - a GPL plugin to bring video H264 encoding/decoding capabilities to mediastreamer2 applications.
+It is based on ffmpeg for decoding and x264 for encoding.
+
+It works with x264 version later to september 2009. 
+So:
+
+* compile msx264 with ./configure && make && make install
+
+

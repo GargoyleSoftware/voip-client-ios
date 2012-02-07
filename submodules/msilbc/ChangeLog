@@ -1,0 +1,39 @@
+2010-03-25  Not Available  <none@none.net>
+
+	* Made 20 frames the standard and changed the defined name to
+	USE_20MS_FRAMES.  Also changed the documentation.
+
+	* Added the option '--enable-20ms-frames' to configure.ac
+
+	* Changed version number to 2.0.3
+
+2010-03-22  Not Available  <(none)>
+
+	* Made using 30ms packages optional in enc_init() with
+	-DUSE_30MS_PACKAGES=1.  To that end, MSILBC_CFLAGS is now a
+	precious variable in autoconf that is used in Makefile.am.
+
+	* Deleted the old tarball for the ilbc codec that was included
+	with this package.  The codec should be installed using the
+	package libilbc0-rfc3951.  The dependency is being checked with
+	PKG_CHECK_MODULES in configure.ac.
+
+	* Target location for the mediastreamer plugin directory is now
+	set in Makefile.am
+
+	* Removed many older parts of configure.ac that seemed outdated,
+	including machine-specific edits that are hopefully not needed
+	anymore.
+
+	* Moved m4 and build-aux helper files to subdirectories, as
+	suggested by autoreconf.
+
+	* Updated autoconf to version 2.64
+
+	* Changed version number to 2.0.2
+
+
+Copyright 2010 Free Software Foundation, Inc.
+Copying and distribution of this file, with or without modification, are
+permitted provided the copyright notice and this notice are preserved.
+	

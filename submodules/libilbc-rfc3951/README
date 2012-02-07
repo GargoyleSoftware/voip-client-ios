@@ -1,0 +1,26 @@
+This package downloads and builds the iLBC codec as published in IETF
+RFC 3951.
+
+By default, the upstream package installs into /usr/local.  Please use
+'./configure --prefix' to change it.  If the package you are using was
+prepared for your distribution, your maintainer will have adjusted the
+install location for your system.
+
+Because of potential licensing issues this package downloads the
+sources for the iLBC codec from IETF, extracts them using a script that
+is also downloaded and subsequently compiles them.
+
+Since one should be concerned about executing unknown scripts or code,
+the downloaded files and the resulting extracted sources are checked
+against their known MD5 checksums.
+
+This package also downloads the license and creates a pkg-config file
+for easier use of the shared library.  They are not automatically
+installed by this upstream package but may have been included for
+your system by the maintainer for your distribution.
+
+The use of this codec is covered by a license that does not comply
+with the standards for free software as established by the Debian
+Free Software Guidelines.
+
+iLBC and Global IP Solutions are trademarks of Global IP Solutions.

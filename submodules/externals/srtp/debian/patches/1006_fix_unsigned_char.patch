@@ -1,0 +1,39 @@
+Description: Fix replace ambiguous unsigned char with int in test driver
+Author: "Martin Guy" <martinwguy@yahoo.it>
+Origin: vendor, http://bugs.debian.org/cgi-bin/bugreport.cgi?msg=5;bug=470506
+Bug: http://sourceforge.net/tracker/index.php?func=detail&aid=1911854&group_id=38894&atid=423799
+Bug-Debian: http://bugs.debian.org/470506
+Last-Update: 2010-02-28
+--- a/test/dtls_srtp_driver.c
++++ b/test/dtls_srtp_driver.c
+@@ -63,7 +63,7 @@
+ int
+ main(int argc, char *argv[]) {
+   unsigned do_list_mods      = 0;
+-  char q;
++  int q;
+   err_status_t err;
+ 
+   printf("dtls_srtp_driver\n");
+--- a/test/rdbx_driver.c
++++ b/test/rdbx_driver.c
+@@ -70,7 +70,7 @@
+ main (int argc, char *argv[]) {
+   double rate;
+   err_status_t status;
+-  char q;
++  int q;
+   unsigned do_timing_test = 0;
+   unsigned do_validation = 0;
+ 
+--- a/test/srtp_driver.c
++++ b/test/srtp_driver.c
+@@ -138,7 +138,7 @@
+ 
+ int
+ main (int argc, char *argv[]) {
+-  char q;
++  int q;
+   unsigned do_timing_test    = 0;
+   unsigned do_rejection_test = 0;
+   unsigned do_codec_timing   = 0;

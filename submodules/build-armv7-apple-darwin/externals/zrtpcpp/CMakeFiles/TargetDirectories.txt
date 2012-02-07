@@ -1,0 +1,5 @@
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build-armv7-apple-darwin/externals/zrtpcpp/CMakeFiles/srcpackage.dir
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build-armv7-apple-darwin/externals/zrtpcpp/CMakeFiles/srcpackage_local.dir
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build-armv7-apple-darwin/externals/zrtpcpp/CMakeFiles/svncheck.dir
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build-armv7-apple-darwin/externals/zrtpcpp/CMakeFiles/uninstall.dir
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build-armv7-apple-darwin/externals/zrtpcpp/src/CMakeFiles/zrtpcpp.dir

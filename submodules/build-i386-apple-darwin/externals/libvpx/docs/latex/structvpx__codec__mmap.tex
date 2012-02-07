@@ -1,0 +1,78 @@
+\hypertarget{structvpx__codec__mmap}{
+\subsection{vpx\-\_\-codec\-\_\-mmap \-Struct \-Reference}
+\label{structvpx__codec__mmap}\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}}
+}
+
+
+\-Memory \-Map \-Entry.  
+
+
+
+
+{\ttfamily \#include $<$vpx\-\_\-codec.\-h$>$}
+
+\subsubsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \hyperlink{structvpx__codec__mmap_a83f482a223678a60c22362f44e36e8c8}{id}
+\item 
+unsigned long \hyperlink{structvpx__codec__mmap_ae6822e6985cef61d2341a8d429bea079}{sz}
+\item 
+unsigned int \hyperlink{structvpx__codec__mmap_a7875d3878f1d58c205f396c1f696987b}{align}
+\item 
+unsigned int \hyperlink{structvpx__codec__mmap_afd7f8fed412b7bb524bed8e6ed14400d}{flags}
+\item 
+void $\ast$ \hyperlink{structvpx__codec__mmap_a0f7580ef4f5680df53c1ef3bd5f66d01}{base}
+\item 
+void($\ast$ \hyperlink{structvpx__codec__mmap_a39476b4d60e41d0867e0966f09dc1e45}{dtor} )(struct \hyperlink{structvpx__codec__mmap}{vpx\-\_\-codec\-\_\-mmap} $\ast$map)
+\item 
+void $\ast$ \hyperlink{structvpx__codec__mmap_ac2be21bb5e6d94332fff9c5f1263224f}{priv}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{\-Detailed \-Description}
+\-Memory \-Map \-Entry. 
+
+\-This structure is used to contain the properties of a memory segment. \-It is populated by the codec in the request phase, and by the calling application once the requested allocation has been performed. 
+
+\subsubsection{\-Field \-Documentation}
+\hypertarget{structvpx__codec__mmap_a83f482a223678a60c22362f44e36e8c8}{
+\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}!id@{id}}
+\index{id@{id}!vpx_codec_mmap@{vpx\-\_\-codec\-\_\-mmap}}
+\paragraph[{id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-mmap\-::id}}}
+\label{structvpx__codec__mmap_a83f482a223678a60c22362f44e36e8c8}
+identifier for the segment's contents \hypertarget{structvpx__codec__mmap_ae6822e6985cef61d2341a8d429bea079}{
+\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}!sz@{sz}}
+\index{sz@{sz}!vpx_codec_mmap@{vpx\-\_\-codec\-\_\-mmap}}
+\paragraph[{sz}]{\setlength{\rightskip}{0pt plus 5cm}unsigned long {\bf vpx\-\_\-codec\-\_\-mmap\-::sz}}}
+\label{structvpx__codec__mmap_ae6822e6985cef61d2341a8d429bea079}
+size of the segment, in bytes \hypertarget{structvpx__codec__mmap_a7875d3878f1d58c205f396c1f696987b}{
+\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}!align@{align}}
+\index{align@{align}!vpx_codec_mmap@{vpx\-\_\-codec\-\_\-mmap}}
+\paragraph[{align}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-mmap\-::align}}}
+\label{structvpx__codec__mmap_a7875d3878f1d58c205f396c1f696987b}
+required alignment of the segment, in bytes \hypertarget{structvpx__codec__mmap_afd7f8fed412b7bb524bed8e6ed14400d}{
+\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}!flags@{flags}}
+\index{flags@{flags}!vpx_codec_mmap@{vpx\-\_\-codec\-\_\-mmap}}
+\paragraph[{flags}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int {\bf vpx\-\_\-codec\-\_\-mmap\-::flags}}}
+\label{structvpx__codec__mmap_afd7f8fed412b7bb524bed8e6ed14400d}
+bitfield containing segment properties \hypertarget{structvpx__codec__mmap_a0f7580ef4f5680df53c1ef3bd5f66d01}{
+\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}!base@{base}}
+\index{base@{base}!vpx_codec_mmap@{vpx\-\_\-codec\-\_\-mmap}}
+\paragraph[{base}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf vpx\-\_\-codec\-\_\-mmap\-::base}}}
+\label{structvpx__codec__mmap_a0f7580ef4f5680df53c1ef3bd5f66d01}
+pointer to the allocated segment \hypertarget{structvpx__codec__mmap_a39476b4d60e41d0867e0966f09dc1e45}{
+\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}!dtor@{dtor}}
+\index{dtor@{dtor}!vpx_codec_mmap@{vpx\-\_\-codec\-\_\-mmap}}
+\paragraph[{dtor}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ {\bf vpx\-\_\-codec\-\_\-mmap\-::dtor})(struct {\bf vpx\-\_\-codec\-\_\-mmap} $\ast$map)}}
+\label{structvpx__codec__mmap_a39476b4d60e41d0867e0966f09dc1e45}
+destructor to call \hypertarget{structvpx__codec__mmap_ac2be21bb5e6d94332fff9c5f1263224f}{
+\index{vpx\-\_\-codec\-\_\-mmap@{vpx\-\_\-codec\-\_\-mmap}!priv@{priv}}
+\index{priv@{priv}!vpx_codec_mmap@{vpx\-\_\-codec\-\_\-mmap}}
+\paragraph[{priv}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ {\bf vpx\-\_\-codec\-\_\-mmap\-::priv}}}
+\label{structvpx__codec__mmap_ac2be21bb5e6d94332fff9c5f1263224f}
+allocator private storage 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+vpx/\hyperlink{vpx__codec_8h}{vpx\-\_\-codec.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,127 @@
+.TH "Miscenalleous: logs, version strings, config storage" 3 "Mon Feb 6 2012" "Version 3.5.0" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Miscenalleous: logs, version strings, config storage \- 
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct _LpConfig \fBLpConfig\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBlinphone_core_enable_logs\fP (FILE *file)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_enable_logs_with_cb\fP (OrtpLogFunc logfunc)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_disable_logs\fP ()"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_core_get_version\fP (void)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_user_agent\fP (const char *name, const char *ver)"
+.br
+.ti -1c
+.RI "\fBLpConfig\fP * \fBlinphone_core_get_config\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "const char * \fBlp_config_get_string\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *default_string)"
+.br
+.ti -1c
+.RI "int \fBlp_config_get_int\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, int default_value)"
+.br
+.ti -1c
+.RI "float \fBlp_config_get_float\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, float default_value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_string\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_int\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, int value)"
+.br
+.ti -1c
+.RI "void \fBlp_config_set_float\fP (\fBLpConfig\fP *lpconfig, const char *section, const char *key, float value)"
+.br
+.ti -1c
+.RI "int \fBlp_config_sync\fP (\fBLpConfig\fP *lpconfig)"
+.br
+.ti -1c
+.RI "int \fBlp_config_has_section\fP (\fBLpConfig\fP *lpconfig, const char *section)"
+.br
+.ti -1c
+.RI "void \fBlp_config_clean_section\fP (\fBLpConfig\fP *lpconfig, const char *section)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct _LpConfig \fBLpConfig\fP"The LpConfig object is used to manipulate a configuration file'\&.
+.PP
+The format of the configuration file is a '\&.ini like format:
+.IP "\(bu" 2
+sections are defined in []
+.IP "\(bu" 2
+each section contains a sequence of key=value pairs'\&.
+.PP
+.PP
+Example: 
+.PP
+.nf
+ [sound]
+ echocanceler=1
+ playback_dev=ALSA: Default device
+
+ [video]
+ enabled=1
+
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "void linphone_core_enable_logs (FILE *file)"Enable logs in supplied FILE*'\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfile\fP a C FILE* where to fprintf logs'\&. If null stdout is used'\&. 
+.RE
+.PP
+
+.SS "void linphone_core_enable_logs_with_cb (OrtpLogFunclogfunc)"Enable logs through the user's supplied log callback'\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlogfunc\fP The address of a OrtpLogFunc callback whose protoype is typedef void (*OrtpLogFunc)(OrtpLogLevel lev, const char *fmt, va_list args); 
+.RE
+.PP
+
+.SS "void linphone_core_disable_logs (void)"Entirely disable logging'\&. 
+.SS "const char* linphone_core_get_version (void)"Returns liblinphone's version as a string'\&. 
+.SS "void linphone_core_set_user_agent (const char *name, const char *ver)"Sets the user agent string used in SIP messages'\&. 
+.SS "\fBLpConfig\fP* linphone_core_get_config (\fBLinphoneCore\fP *lc)\fC [read]\fP"Returns the LpConfig object used to manage the storage (config) file'\&.
+.PP
+The application can use the LpConfig object to insert its own private sections and pairs of key=value in the configuration file'\&. 
+.SS "const char* lp_config_get_string (\fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *default_string)"Retrieves a configuration item as a string, given its section, key, and default value'\&.
+.PP
+The default value string is returned if the config item isn't found'\&. 
+.SS "int lp_config_get_int (\fBLpConfig\fP *lpconfig, const char *section, const char *key, intdefault_value)"Retrieves a configuration item as an integer, given its section, key, and default value'\&.
+.PP
+The default integer value is returned if the config item isn't found'\&. 
+.SS "float lp_config_get_float (\fBLpConfig\fP *lpconfig, const char *section, const char *key, floatdefault_value)"Retrieves a configuration item as a float, given its section, key, and default value'\&.
+.PP
+The default float value is returned if the config item isn't found'\&. 
+.SS "void lp_config_set_string (\fBLpConfig\fP *lpconfig, const char *section, const char *key, const char *value)"Sets a string config item 
+.SS "void lp_config_set_int (\fBLpConfig\fP *lpconfig, const char *section, const char *key, intvalue)"Sets an integer config item 
+.SS "void lp_config_set_float (\fBLpConfig\fP *lpconfig, const char *section, const char *key, floatvalue)"Sets a float config item 
+.SS "int lp_config_sync (\fBLpConfig\fP *lpconfig)"Writes the config file to disk'\&. 
+.SS "int lp_config_has_section (\fBLpConfig\fP *lpconfig, const char *section)"Returns 1 if a given section is present in the configuration'\&. 
+.SS "void lp_config_clean_section (\fBLpConfig\fP *lpconfig, const char *section)"Removes every pair of key,value in a section and remove the section'\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code'\&.

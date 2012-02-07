@@ -1,0 +1,165 @@
+\section{\-Managing call logs}
+\label{group__call__logs}\index{\-Managing call logs@{\-Managing call logs}}
+\subsection*{\-Data \-Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \-\_\-\-Linphone\-Call\-Log}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum {\bf \-\_\-\-Linphone\-Call\-Dir} {\bf \-Linphone\-Call\-Dir}
+\item 
+typedef enum {\bf \-\_\-\-Linphone\-Call\-Status} {\bf \-Linphone\-Call\-Status}
+\item 
+typedef struct {\bf \-\_\-\-Linphone\-Call\-Log} {\bf \-Linphone\-Call\-Log}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf \-\_\-\-Linphone\-Call\-Dir} \{ \*
+{\bf \-Linphone\-Call\-Outgoing}, 
+\*
+{\bf \-Linphone\-Call\-Incoming}
+ \}
+\item 
+enum {\bf \-\_\-\-Linphone\-Call\-Status} \{ \*
+{\bf \-Linphone\-Call\-Success}, 
+\*
+{\bf \-Linphone\-Call\-Aborted}, 
+\*
+{\bf \-Linphone\-Call\-Missed}, 
+\*
+{\bf \-Linphone\-Call\-Declined}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf linphone\-\_\-call\-\_\-log\-\_\-to\-\_\-str} ({\bf \-Linphone\-Call\-Log} $\ast$cl)
+\item 
+const rtp\-\_\-stats\-\_\-t $\ast$ {\bf linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-local\-\_\-stats} (const {\bf \-Linphone\-Call\-Log} $\ast$cl)
+\item 
+const rtp\-\_\-stats\-\_\-t $\ast$ {\bf linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-remote\-\_\-stats} (const {\bf \-Linphone\-Call\-Log} $\ast$cl)
+\item 
+void {\bf linphone\-\_\-call\-\_\-log\-\_\-set\-\_\-ref\-\_\-key} ({\bf \-Linphone\-Call\-Log} $\ast$cl, const char $\ast$refkey)
+\item 
+const char $\ast$ {\bf linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-ref\-\_\-key} (const {\bf \-Linphone\-Call\-Log} $\ast$cl)
+\item 
+const \-M\-S\-List $\ast$ {\bf linphone\-\_\-core\-\_\-get\-\_\-call\-\_\-logs} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-clear\-\_\-call\-\_\-logs} ({\bf \-Linphone\-Core} $\ast$lc)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Typedef \-Documentation}
+\index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Dir@{\-Linphone\-Call\-Dir}}
+\index{\-Linphone\-Call\-Dir@{\-Linphone\-Call\-Dir}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{\-Linphone\-Call\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Call\-Dir} {\bf \-Linphone\-Call\-Dir}}\label{group__call__logs_ga779ac636d8b652c5130da18827c13e5a}
+\-Typedef for enum \index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Status@{\-Linphone\-Call\-Status}}
+\index{\-Linphone\-Call\-Status@{\-Linphone\-Call\-Status}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{\-Linphone\-Call\-Status}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf \-\_\-\-Linphone\-Call\-Status}  {\bf \-Linphone\-Call\-Status}}\label{group__call__logs_gafd125fb704d3254856f4a826a6e60a11}
+\-Enum representing the status of a call \index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Log@{\-Linphone\-Call\-Log}}
+\index{\-Linphone\-Call\-Log@{\-Linphone\-Call\-Log}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{\-Linphone\-Call\-Log}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \-\_\-\-Linphone\-Call\-Log}  {\bf \-Linphone\-Call\-Log}}\label{group__call__logs_ga433d2f298adacb9142954f926408f78a}
+\-Structure representing a call log. 
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\index{\-Managing call logs@{\-Managing call logs}!\-\_\-\-Linphone\-Call\-Dir@{\-\_\-\-Linphone\-Call\-Dir}}
+\index{\-\_\-\-Linphone\-Call\-Dir@{\-\_\-\-Linphone\-Call\-Dir}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{\-\_\-\-Linphone\-Call\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Call\-Dir}}\label{group__call__logs_gaa3077de7d4214529094998ce441f61e1}
+\-Enum representing the direction of a call. \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-Linphone\-Call\-Outgoing@{\-Linphone\-Call\-Outgoing}!\-Managing call logs@{\-Managing call logs}}\index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Outgoing@{\-Linphone\-Call\-Outgoing}}\item[{\em 
+\-Linphone\-Call\-Outgoing\label{group__call__logs_ggaa3077de7d4214529094998ce441f61e1a4856091c25d200b11669efdbc6abb4ed}
+}]outgoing calls \index{\-Linphone\-Call\-Incoming@{\-Linphone\-Call\-Incoming}!\-Managing call logs@{\-Managing call logs}}\index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Incoming@{\-Linphone\-Call\-Incoming}}\item[{\em 
+\-Linphone\-Call\-Incoming\label{group__call__logs_ggaa3077de7d4214529094998ce441f61e1aa4030176bbddea10e361ce320946e202}
+}]incoming calls \end{description}
+\end{Desc}
+
+\index{\-Managing call logs@{\-Managing call logs}!\-\_\-\-Linphone\-Call\-Status@{\-\_\-\-Linphone\-Call\-Status}}
+\index{\-\_\-\-Linphone\-Call\-Status@{\-\_\-\-Linphone\-Call\-Status}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{\-\_\-\-Linphone\-Call\-Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-\_\-\-Linphone\-Call\-Status}}\label{group__call__logs_ga0896daf3cb167a43e357c3955ab33f3f}
+\-Enum representing the status of a call \begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-Linphone\-Call\-Success@{\-Linphone\-Call\-Success}!\-Managing call logs@{\-Managing call logs}}\index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Success@{\-Linphone\-Call\-Success}}\item[{\em 
+\-Linphone\-Call\-Success\label{group__call__logs_gga0896daf3cb167a43e357c3955ab33f3fa998fe35d090ed76fb89b23b3a8dfb0ff}
+}]\-The call was sucessful \index{\-Linphone\-Call\-Aborted@{\-Linphone\-Call\-Aborted}!\-Managing call logs@{\-Managing call logs}}\index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Aborted@{\-Linphone\-Call\-Aborted}}\item[{\em 
+\-Linphone\-Call\-Aborted\label{group__call__logs_gga0896daf3cb167a43e357c3955ab33f3faeff436dddb49d4bf17d2e05a94b5bd59}
+}]\-The call was aborted \index{\-Linphone\-Call\-Missed@{\-Linphone\-Call\-Missed}!\-Managing call logs@{\-Managing call logs}}\index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Missed@{\-Linphone\-Call\-Missed}}\item[{\em 
+\-Linphone\-Call\-Missed\label{group__call__logs_gga0896daf3cb167a43e357c3955ab33f3fad26e9035dad755590a5a724c7ba69656}
+}]\-The call was missed (unanswered) \index{\-Linphone\-Call\-Declined@{\-Linphone\-Call\-Declined}!\-Managing call logs@{\-Managing call logs}}\index{\-Managing call logs@{\-Managing call logs}!\-Linphone\-Call\-Declined@{\-Linphone\-Call\-Declined}}\item[{\em 
+\-Linphone\-Call\-Declined\label{group__call__logs_gga0896daf3cb167a43e357c3955ab33f3fad6711031d964a7d56f10c07ac239a102}
+}]\-The call was declined, either locally or by remote end \end{description}
+\end{Desc}
+
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Managing call logs@{\-Managing call logs}!linphone\-\_\-call\-\_\-log\-\_\-to\-\_\-str@{linphone\-\_\-call\-\_\-log\-\_\-to\-\_\-str}}
+\index{linphone\-\_\-call\-\_\-log\-\_\-to\-\_\-str@{linphone\-\_\-call\-\_\-log\-\_\-to\-\_\-str}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{linphone\-\_\-call\-\_\-log\-\_\-to\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ linphone\-\_\-call\-\_\-log\-\_\-to\-\_\-str (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Call\-Log} $\ast$}]{cl}
+\end{DoxyParamCaption}
+)}\label{group__call__logs_ga0710ace4194a6a8923014922c5f93b3d}
+\-Returns a human readable string describing the call.
+
+\begin{DoxyNote}{\-Note}
+\-: the returned char$\ast$ must be freed by the application (use ms\-\_\-free()). 
+\end{DoxyNote}
+\index{\-Managing call logs@{\-Managing call logs}!linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-local\-\_\-stats@{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-local\-\_\-stats}}
+\index{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-local\-\_\-stats@{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-local\-\_\-stats}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-local\-\_\-stats}]{\setlength{\rightskip}{0pt plus 5cm}const rtp\-\_\-stats\-\_\-t$\ast$ linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-local\-\_\-stats (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Call\-Log} $\ast$}]{cl}
+\end{DoxyParamCaption}
+)}\label{group__call__logs_gafc32d586c890fb39c5486586366376e7}
+\-Returns \-R\-T\-P statistics computed locally regarding the call. \index{\-Managing call logs@{\-Managing call logs}!linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-remote\-\_\-stats@{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-remote\-\_\-stats}}
+\index{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-remote\-\_\-stats@{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-remote\-\_\-stats}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-remote\-\_\-stats}]{\setlength{\rightskip}{0pt plus 5cm}const rtp\-\_\-stats\-\_\-t$\ast$ linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-remote\-\_\-stats (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Call\-Log} $\ast$}]{cl}
+\end{DoxyParamCaption}
+)}\label{group__call__logs_gaebb6a63bab5d3271107227acae94d531}
+\-Returns \-R\-T\-P statistics computed by remote end and sent back via \-R\-T\-C\-P.
+
+\begin{DoxyNote}{\-Note}
+\-Not implemented yet. 
+\end{DoxyNote}
+\index{\-Managing call logs@{\-Managing call logs}!linphone\-\_\-call\-\_\-log\-\_\-set\-\_\-ref\-\_\-key@{linphone\-\_\-call\-\_\-log\-\_\-set\-\_\-ref\-\_\-key}}
+\index{linphone\-\_\-call\-\_\-log\-\_\-set\-\_\-ref\-\_\-key@{linphone\-\_\-call\-\_\-log\-\_\-set\-\_\-ref\-\_\-key}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{linphone\-\_\-call\-\_\-log\-\_\-set\-\_\-ref\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-call\-\_\-log\-\_\-set\-\_\-ref\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Call\-Log} $\ast$}]{cl, }
+\item[{const char $\ast$}]{refkey}
+\end{DoxyParamCaption}
+)}\label{group__call__logs_gac12aee1a611bcb6a899582a8d4705be1}
+\-Associate a persistent reference key to the call log.
+
+\-The reference key can be for example an id to an external database. \-It is stored in the config file, thus can survive to process exits/restarts. \index{\-Managing call logs@{\-Managing call logs}!linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-ref\-\_\-key@{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-ref\-\_\-key}}
+\index{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-ref\-\_\-key@{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-ref\-\_\-key}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-ref\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ linphone\-\_\-call\-\_\-log\-\_\-get\-\_\-ref\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Call\-Log} $\ast$}]{cl}
+\end{DoxyParamCaption}
+)}\label{group__call__logs_ga5f7543296ee65b188d1fbf8b534ebff3}
+\-Get the persistent reference key associated to the call log.
+
+\-The reference key can be for example an id to an external database. \-It is stored in the config file, thus can survive to process exits/restarts. \index{\-Managing call logs@{\-Managing call logs}!linphone\-\_\-core\-\_\-get\-\_\-call\-\_\-logs@{linphone\-\_\-core\-\_\-get\-\_\-call\-\_\-logs}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-call\-\_\-logs@{linphone\-\_\-core\-\_\-get\-\_\-call\-\_\-logs}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-call\-\_\-logs}]{\setlength{\rightskip}{0pt plus 5cm}const \-M\-S\-List$\ast$ linphone\-\_\-core\-\_\-get\-\_\-call\-\_\-logs (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__logs_gac40929365adb3c774c4f00b7ba449af1}
+\-Get the list of call logs (past calls). \index{\-Managing call logs@{\-Managing call logs}!linphone\-\_\-core\-\_\-clear\-\_\-call\-\_\-logs@{linphone\-\_\-core\-\_\-clear\-\_\-call\-\_\-logs}}
+\index{linphone\-\_\-core\-\_\-clear\-\_\-call\-\_\-logs@{linphone\-\_\-core\-\_\-clear\-\_\-call\-\_\-logs}!Managing call logs@{\-Managing call logs}}
+\subsubsection[{linphone\-\_\-core\-\_\-clear\-\_\-call\-\_\-logs}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-clear\-\_\-call\-\_\-logs (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__call__logs_ga76fb517665122b63136ccc673d431b34}
+\-Erase the call log. 

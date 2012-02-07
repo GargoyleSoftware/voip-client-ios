@@ -1,0 +1,4 @@
+  * Generate html documentation
+  * Register with doc-base
+  * Hack Makefile to build a shared library
+  * Have asterisk package use http://www.e164.org/wiki/AsteriskSRTP

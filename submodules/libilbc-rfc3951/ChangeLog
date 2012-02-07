@@ -1,0 +1,21 @@
+2010-03-17  Not Available  <none@none.net>
+
+	* changed version number to 0.6
+	
+	* build scripts now check if the codec source documents, i.e.
+	the RFC, the extract script, or the license are already present
+	in the ./downloads/ directory.  If so, they are used instead of
+	downloading them.
+
+2010-03-14  Not Available  <(none)>
+
+	* added error messages in configure.a when required programs are
+	not found
+
+	* modified shared library version in ilbc.pc.in to 0.0.0
+
+	* changed version number to 0.5
+
+Copyright 2010 Free Software Foundation, Inc.
+Copying and distribution of this file, with or without modification, are
+permitted provided the copyright notice and this notice are preserved.

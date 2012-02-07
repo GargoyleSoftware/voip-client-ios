@@ -1,0 +1,236 @@
+srtp (1.4.4~dfsg-6) unstable; urgency=low
+
+  * Add patch 1008 from Gentoo to hack build routines into compiling
+    shared library.
+  * Refresh patches.
+  * Add new binary package libsrtp0. Install library-related files and
+    resolve dependencies using d-shlibs. Build-depend on d-shlibs.
+  * Drop local CDBS snippets (included in main cdbs package now).
+  * Tighten build-dependency on cdbs, due to above.
+  * Adjust a year in copyright file.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 29 Mar 2010 12:00:01 +0200
+
+srtp (1.4.4~dfsg-5) unstable; urgency=low
+
+  * [not oficially released]
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 19 Mar 2010 01:50:22 +0100
+
+srtp (1.4.4~dfsg-4) unstable; urgency=low
+
+  * Maintain package alone again (VOIP team clearly don't care: recently
+    dropped the package from Debian with only few days notice).
+  * Add README.source.  Drop custom hints about CDBS.
+  * Update local CDBS snippets:
+    + Consistently use underscore (not dash) in variables.
+    + Bump copyright years.
+    + package-relations.mk:
+      - Merge mixture of versioned and unversioned dependencies
+      - Use unversioned dependencies when satisfied in oldstable
+      - Improve whitespace cleanup
+      - Rewrite and silence applying dependencies
+      - Handle cdbs 0.4.53 dependency (needed when using debhelper v7)
+    + upstream-tarball.mk:
+      - Implement fail-source-not-repackaged rule
+      - Depend unversioned on cdbs (the needed 0.4.39 is in oldstable)
+      - Preserve bzip2 tarballs with source format '3.0 (quilt)'.
+    + copyright-check.mk:
+      - Adjust to closer match new proposed copyright format
+      - Ignore no files by default
+      - More aggressive scanning (check top 99999 lines, not just 60)
+      - Simplify more licensing notices and preserve non-ASCII chars
+      - Group hints by sorted owner list (ignoring years)
+      - Limit console output both horisontally and vertically
+      - Use rev123 of draft DEP5 for hints file
+    + Add and use new local package-relations.mk to resolve, cleanup and
+      apply CDBS-declared (build-)dependencies.
+  * Add git-buildpackage config, enabling pristine-tar and signed tags.
+  * Rewrite copyright file using draft DEP5 rev. 135 format.
+  * Fix tighten build-dependency on debhelper to at least 6.
+  * Relax build-dependency on cdbs to be unversioned.
+  * Use source format '3.0 "quilt"'. Stop including patchsys-quilt.mk.
+    Stop build-depending on quilt or patchutils.
+  * Bump Standards-Version to 3.8.4.
+  * Have all packages depend on ${misc:Depends}, thanks to lintian.
+  * Add proper license header to debian/rules.
+  * Put aside stray upstream-shipped automade files during build.
+  * Add patch 1007 updating Doxyfile, as requested by doxygen.
+  * Refresh patches and add DEP3 proposed headers.
+  * Fix comment out non-existing *.so from debhelper install file.
+  * Rename libsrtp1-dev → libsrtp0-dev: Old number was wrongly resolved
+    from major version. Have new package conflict/replace old one.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 28 Feb 2010 03:08:52 +0100
+
+srtp (1.4.4~dfsg-3) unstable; urgency=low
+
+  * Update cdbs tweaks:
+    + Strip any non-printable characters in copyright-check.mk.
+    + Relax copyright-check.mk to only warn about its discoveries.
+      Closes: bug#487070, thanks to Lucas Nussbaum.
+    + Correct abbreviation of BSD licenses in copyright-check.mk.
+    + Update dependency cleanup to strip cdbs 0.4.27 (not 0.4.27-1).
+  * Update debian/copyright-hints.
+  * Bump debhelper compatibility level to 6 (was 4).
+  * Semi-auto-update debian/control due to above changes:
+    DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 29 jun 2008 17:16:16 +0200
+
+srtp (1.4.4~dfsg-2) unstable; urgency=low
+
+  [ Jonas Smedegaard ]
+  * Add patch 1003 to avoid the symbol "mips" clashing with builtin
+    symbol on MIPS GCC compiler. Closes: bug#439976.
+  * Add patch 1005 to fix tests by restricting to 32bit alignment.
+    Closes: bug#470505, thanks to Martin Guy.
+  * Add patch 1006 to fix unsigned chars in test driver. Closes:
+    bug#470506, thanks to Martin Guy.
+  * Packaging moved to collab-maint Git at Alioth. Update VCS-* hints.
+  * Make sure docs is built only once.
+  * Change libsrtp1-dev to section libdevel (from devel), thanks to
+    lintian.
+  * Update local cdbs snippets:
+    + Major improvements to copyright-check, including new versioned
+      build-dependency on devscripts.  Update debian/copyright_hints.
+    + Various improvements to update-tarball.mk.
+    + Drop buildcore.mk wrapper (set DEB_AUTO_UPDATE_DEBIAN_CONTROL
+      manually when needed instead)
+    + Update debian/README.cdbs-tweaks.
+  * Semi-auto-update debian/control to apply changes contained in the above:
+    DEB_AUTO_UPDATE_DEBIAN_CONTROL=yes fakeroot debian/rules clean
+
+  [ Victor Seva ]
+  * Add patch 1004 to add verbose to make runtest. Make FTBFS easier
+    to debug. (Closes: #460534)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 15 Apr 2008 17:48:39 +0200
+
+srtp (1.4.4~dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+    + Drop patch 0001 superceded by new release.
+
+  [ Jonas Smedegaard ]
+  * Move Homepage to own field (from pseudo-field in long description).
+  * Move X-Vcs-* control fields to Vcs-*.
+  * Rewrite debian/copyright:
+    + Restructure to conform to proposed new format at
+      http://wiki.debian.org/Proposals/CopyrightFormat
+    + Drop unneeded triling disclaimers from verbatim licensing texts.
+
+  [ Kilian Krause ]
+  * Switch from .dfsg to ~dfsg to allow shipping even a 1.4.4.1 in case it
+    might happen.
+  * Update debian/watch to point directly to SF.NET download area.
+
+  [ Jonas Smedegaard ]
+  * Update debian/copyright:
+    + Bump up Cisco copyright to include the year 2006
+    + Fix cut'n'paste error in Ingate copyright
+    + Fix syntactical error in packaging license hint
+    + Advertise Debian-distributed GPL file (thanks to lintian)
+    + Declare VOIP team as copyright holder in 2007
+    + Update copyright-hints
+  * Standards-version 3.7.3 (no changes needed).
+  * Drop "bts" cdbs tweak: We want all bugreports, even for unofficial
+    builds. Also, lintian now dislikes the empty bts dirs left in
+    official builds.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 07 Dec 2007 23:03:05 +0100
+
+srtp (1.4.2.dfsg-5) unstable; urgency=low
+
+  * Add patch 0001 to bring in sync with upstream CVS as of 20070616.
+    + This hopefully closes: bug#438792, #439976, thanks to Kilian
+      Krause.
+  * Set executable bit on patched-in test.
+  * Add patch 1002 to use explicit path in rtpw_test.sh script.
+  * Disable (but keep with source) patch 1001 fixed upstream it seems.
+  * Fix XS-Vcs-Svn and XS-Vcs-Browser fields in debian/control.
+  * Update cdbs tweaks:
+    + Various improvements to update-tarball.
+  * Better duplicate build-dependency cleanup in debian/rules, and semi-
+    auto-update debian/control:
+      DEB_BUILD_OPTIONS=cdbs-autoupdate fakeroot debian/rules pre-build
+
+ -- Jonas Smedegaard <dr@jones.dk>  Mon, 03 Sep 2007 01:01:50 +0200
+
+srtp (1.4.2.dfsg-4) unstable; urgency=low
+
+  * Clean PDF files to not fail in repetitive builds. Closes:
+    bug#424238.
+  * Improved cdbs tweaks:
+    + Move build-dependency hints ro debian/rules.
+    + Cleanup duplicate build-dependencies, to please lintian.
+    + Minor update to upstream-tarball.mk.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 17 May 2007 22:15:24 +0200
+
+srtp (1.4.2.dfsg-3) unstable; urgency=low
+
+  * Avoid useless Build-Depends-Indep (use Build-Depends always).
+    Closes: bug#420517, thanks to Kurt Roeckx.
+  * Update local cdbs snippets.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 21 Mar 2007 14:57:31 +0100
+
+srtp (1.4.2.dfsg-2) unstable; urgency=low
+
+  * Move example binaries to /usr/lib/srtp, and only symlink them at
+    /usr/share/doc/srtp-utils, to comply with policy regarding FHS.
+  * Update cdbs tweaks:
+    + Replace vcs.mk with new and improved upstream-tarball.mk.
+    + List matching non-binaries when copyright changes are found.
+    + Check copyrights in pre-build (in clean we cannot be sure that all
+      actual cleanup has finished first).
+    + Add new tweak bts.mk redirecting bugreports for unofficial builds
+      to the email-adress $DEB_BTS_EMAIL if defined.
+    + Update notes in README.cdbs-tweaks.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 21 Mar 2007 10:48:59 +0100
+
+srtp (1.4.2.dfsg-1) unstable; urgency=low
+
+  [ Mikael Magnusson ]
+  * Initial release. (Closes: #375047: ITP: srtp -- Secure RTP (SRTP)
+    and UST Reference Implementations - Debian Bug report logs)
+  * Merged srtp/srtp.c
+  * Use orig Makefile.in
+  * Remove packaging example files
+  * Cleanup debian/rules
+  * Include -D_REENTRANT in CFLAGS
+  * Add print-version and get-orig-source targets to debian/rules based
+    on kiax/debian/rules
+  * Remove doc/rfc3711.txt, CVS directories and .cvsignore files from
+    dfsg tarball
+  * Bump Standards-Version to 3.7.2.2. No changes required.
+
+  [ Jonas Smedegaard ]
+  * Repackage using CDBS.
+  * "Lower" standards-version to 3.7.2 (4th digit is insignificant).
+  * Separate print-version and get-orig-source into a CDBS snippet based
+    on sofia-sip packaging.
+  * More DFSG tarball massage:
+    + Strip doc/draft-irtf-cfrg-icm-00.txt (just in case it matters).
+    + Strip doc/libsrtp.pdf (and build it from the sources instead).
+    + Instruct get-orig-source to strip all PDFs, RFCs and drafts.
+  * Include test binaries and documentation in new binary packages
+    rtsp-utils and rtsp-docs.
+  * Rename binary package librtsp-dev to librtsp1-dev.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 30 Jan 2007 14:00:19 +0100
+
+srtp (1.4.1-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Mikael Magnusson <mikma@users.sourceforge.net>  Tue,  4 Oct 2005 15:53:10 +0200
+
+srtp (1.3.20-1) experimental; urgency=low
+
+  * Initial Release.
+
+ -- Mikael Magnusson <mikma@users.sourceforge.net>  Sun, 10 Jul 2005 11:18:39 +0200
+
