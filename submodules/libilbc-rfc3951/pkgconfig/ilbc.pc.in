@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: ilbc
+Description: iLBC codec for voice communication
+Version: 0.0.0
+Libs: -L${libdir} -lilbc
+Libs.private: -lm
+Cflags: -I${includedir}/ilbc
+
+# iLBC is a trademark of Global IP Solutions

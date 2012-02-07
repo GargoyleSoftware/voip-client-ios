@@ -1,0 +1,23 @@
+This package was debianized by Not Available <none@none.net> on
+Mon, 15 Mar 2010 09:29:14 -0700.
+
+It was downloaded from <http://www.linphone.com>
+
+Upstream Author:
+
+    Simon Morlat <simon.morlat@linphone.org>
+
+Copyright:
+
+    Copyright (C) 2010 Simon Morlat
+
+License:
+
+    This package is licensed under GPL version 2.
+
+The Debian packaging is:
+
+    Copyright (C) 2010 Not Available <none@none.net>
+
+and is licensed under the GPL version 3, 
+see `/usr/share/common-licenses/GPL-3'.

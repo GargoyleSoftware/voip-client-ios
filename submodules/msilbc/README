@@ -1,0 +1,15 @@
+This package supplies the mediastreamer plugin for the iLBC audio
+codec, which is necessary to use the codec with Linphone.  The package
+does not contain the codec, which must be obtained separately.  One
+way to get the codec is to also install libilb0-rfc3951, which
+provides a codec using the source code published in IETF RFC 3951.
+
+You can configure this package to use 20ms frames instead of 30ms
+frames.  Please #define USE_20MS_FRAMES=1 at compile time.  An easy
+way to do that is to define MSILBC_CFLAGS="-DUSE_20MS_FRAMES=1" in
+the environment when configuring.  Please see INSTALL for details.
+
+Some VOIP providers such as Gizmo5 (aka Sipphone) require the codec
+to be compiled with the 30ms setting.
+
+iLBC and Global IP Solutions are trademarks of Global IP Solutions.

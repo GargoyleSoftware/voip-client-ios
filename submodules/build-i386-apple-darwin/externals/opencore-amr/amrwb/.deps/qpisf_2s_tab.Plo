@@ -1,0 +1,17 @@
+qpisf_2s_tab.lo qpisf_2s_tab.o:  \
+ /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/qpisf_2s_tab.cpp \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/qisf_ns.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h \
+  /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/stdint.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/qpisf_2s.h
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/qisf_ns.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h:
+
+/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.0.sdk/usr/include/stdint.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/qpisf_2s.h:

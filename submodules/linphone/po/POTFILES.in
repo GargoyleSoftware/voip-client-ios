@@ -1,0 +1,36 @@
+# List of source files containing translatable strings.
+gtk/tunnel_config.ui
+gtk/calllogs.c
+gtk/conference.c
+gtk/logging.c
+gtk/support.c
+gtk/chat.c
+gtk/main.c
+gtk/friendlist.c
+gtk/propertybox.c
+gtk/update.c
+gtk/buddylookup.c
+gtk/setupwizard.c
+gtk/incall_view.c
+gtk/loginframe.c
+[type: gettext/glade]gtk/main.ui
+[type: gettext/glade]gtk/about.ui
+[type: gettext/glade]gtk/contact.ui
+[type: gettext/glade]gtk/log.ui
+[type: gettext/glade]gtk/password.ui
+[type: gettext/glade]gtk/call_logs.ui
+[type: gettext/glade]gtk/main.ui
+[type: gettext/glade]gtk/sip_account.ui
+[type: gettext/glade]gtk/chatroom.ui
+[type: gettext/glade]gtk/parameters.ui
+[type: gettext/glade]gtk/buddylookup.ui
+[type: gettext/glade]gtk/waiting.ui
+coreapi/linphonecore.c
+coreapi/misc.c
+coreapi/presence.c
+coreapi/friend.c
+coreapi/proxy.c
+coreapi/callbacks.c
+coreapi/sal_eXosip2.c
+coreapi/linphonecall.c
+

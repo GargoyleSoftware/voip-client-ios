@@ -1,0 +1,43 @@
+Template: libilbc0-rfc3951/agree_to_license
+Type: boolean
+Default:false
+_Description: Do you agree to abide by the terms of the iLBC codec license?
+ The license for this software does not comply with the Debian
+ Free Software Guidelines for free software.  Please confirm
+ that you have read the license for the ilBC codec and agree to
+ abide by its terms.
+ .
+ The iLBC codec is covered by the document: "Global IP Solutions
+ iLBC Public License, v3.0, IETF Version - Limited Commercial Use."
+ .
+ Please note that personal, non-commercial use is generally
+ permitted. Commercialization is permitted with certain
+ limitations BUT REQUIRES REGISTRATION WITH LICENSOR PRIOR TO
+ ANY COMMERCIAL DEPLOYMENT.
+ .
+ Very importantly, use of this software in an individual’s
+ capacity as an officer, employee, member, independent
+ contractor, or agent of a corporation, business, or
+ organization (commercial or non-commercial) does not qualify
+ as personal use.
+ .
+ You should not rely on this synopsis.  Please consult the
+ license document for complete, accurate and definitive
+ information.  The license should be available in
+ in /usr/share/doc/libilbc0-rfc3951 as gips_iLBClicense.pdf, and
+ at the time of writing could be downloaded
+ from http://www.ilbcfreeware.org/documentation/gips_iLBClicense.pdf.
+ .
+ Global IP Solutions and iLBC are trademarks of Global IP Solutions.
+ For more information, please visit http://www.ilbcfreeware.org.
+
+Template: libilbc0-rfc3951/thank_you
+Type: note
+_Description: Thank you for accepting the iLBC codec license
+ Hopefully you enjoy the use of this software.
+
+Template: libilbc0-rfc3951/installation_aborted
+Type: note
+_Description: The installation of the iLBC codec was aborted
+ You must accept the license terms to install this software.
+

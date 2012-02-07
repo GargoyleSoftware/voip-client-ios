@@ -1,0 +1,11 @@
+prefix=/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//../liblinphone-sdk/armv6-apple-darwin
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libosip2
+Description: GNU osip2 core library for sip protocol
+Version: 3.6.0
+Libs: -L${libdir} -losipparser2 -losip2
+Cflags:  -I${includedir} -DOSIP_MT
+	 

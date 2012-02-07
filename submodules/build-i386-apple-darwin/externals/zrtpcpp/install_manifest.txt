@@ -1,0 +1,6 @@
+/Users/chris/Code/Gargoyle/linphone-iphone/liblinphone-sdk/i386-apple-darwin/lib/pkgconfig/libzrtpcpp.pc
+/Users/chris/Code/Gargoyle/linphone-iphone/liblinphone-sdk/i386-apple-darwin/lib/libzrtpcpp.a
+/Users/chris/Code/Gargoyle/linphone-iphone/liblinphone-sdk/i386-apple-darwin/include/libzrtpcpp/ZrtpCodes.h
+/Users/chris/Code/Gargoyle/linphone-iphone/liblinphone-sdk/i386-apple-darwin/include/libzrtpcpp/ZrtpConfigure.h
+/Users/chris/Code/Gargoyle/linphone-iphone/liblinphone-sdk/i386-apple-darwin/include/libzrtpcpp/ZrtpCallback.h
+/Users/chris/Code/Gargoyle/linphone-iphone/liblinphone-sdk/i386-apple-darwin/include/libzrtpcpp/ZrtpCWrapper.h

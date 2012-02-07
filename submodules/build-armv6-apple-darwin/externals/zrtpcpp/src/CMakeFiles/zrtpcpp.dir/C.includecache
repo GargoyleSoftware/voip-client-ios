@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/externals/zrtpcpp/src/libzrtpcpp/crypto/twofish.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+twofish.h
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/externals/zrtpcpp/src/libzrtpcpp/crypto/twofish.h
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/externals/zrtpcpp/src/libzrtpcpp/crypto/twofish.h
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/externals/zrtpcpp/src/libzrtpcpp/crypto/twofish_cfb.c
+stdint.h
+-
+stdlib.h
+-
+twofish.h
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/externals/zrtpcpp/src/libzrtpcpp/crypto/twofish.h
+

@@ -1,0 +1,160 @@
+\section{\-Controlling network parameters (ports, mtu...)}
+\label{group__network__parameters}\index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf linphone\-\_\-core\-\_\-get\-\_\-audio\-\_\-port} (const {\bf \-Linphone\-Core} $\ast$lc)
+\item 
+int {\bf linphone\-\_\-core\-\_\-get\-\_\-video\-\_\-port} (const {\bf \-Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-audio\-\_\-port} ({\bf \-Linphone\-Core} $\ast$lc, int port)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-video\-\_\-port} ({\bf \-Linphone\-Core} $\ast$lc, int port)
+\item 
+int {\bf linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-port} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+int {\bf linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports} ({\bf \-Linphone\-Core} $\ast$lc, const \-L\-C\-Sip\-Transports $\ast$tr)
+\item 
+int {\bf linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports} ({\bf \-Linphone\-Core} $\ast$lc, \-L\-C\-Sip\-Transports $\ast$tr)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-port} ({\bf \-Linphone\-Core} $\ast$lc, int port)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-core\-\_\-ipv6\-\_\-enabled} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-enable\-\_\-ipv6} ({\bf \-Linphone\-Core} $\ast$lc, bool\-\_\-t val)
+\item 
+void {\bf linphone\-\_\-core\-\_\-set\-\_\-network\-\_\-reachable} ({\bf \-Linphone\-Core} $\ast$lc, bool\-\_\-t value)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-core\-\_\-is\-\_\-network\-\_\-reachabled} ({\bf \-Linphone\-Core} $\ast$lc)
+\item 
+void {\bf linphone\-\_\-core\-\_\-enable\-\_\-keep\-\_\-alive} ({\bf \-Linphone\-Core} $\ast$lc, bool\-\_\-t enable)
+\item 
+bool\-\_\-t {\bf linphone\-\_\-core\-\_\-keep\-\_\-alive\-\_\-enabled} ({\bf \-Linphone\-Core} $\ast$lc)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Function \-Documentation}
+\index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-get\-\_\-audio\-\_\-port@{linphone\-\_\-core\-\_\-get\-\_\-audio\-\_\-port}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-audio\-\_\-port@{linphone\-\_\-core\-\_\-get\-\_\-audio\-\_\-port}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-audio\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-get\-\_\-audio\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga6edfbe884d0767c1ee82ce57da659c7b}
+\-Returns the \-U\-D\-P port used for audio streaming. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-get\-\_\-video\-\_\-port@{linphone\-\_\-core\-\_\-get\-\_\-video\-\_\-port}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-video\-\_\-port@{linphone\-\_\-core\-\_\-get\-\_\-video\-\_\-port}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-video\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-get\-\_\-video\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga3ec39e1205197d41e9862008f24f521c}
+\-Returns the \-U\-D\-P port used for video streaming. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-set\-\_\-audio\-\_\-port@{linphone\-\_\-core\-\_\-set\-\_\-audio\-\_\-port}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-audio\-\_\-port@{linphone\-\_\-core\-\_\-set\-\_\-audio\-\_\-port}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-audio\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-audio\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga886e1f383c93ef3c031622bf612cdcd4}
+\-Sets the \-U\-D\-P port used for audio streaming. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-set\-\_\-video\-\_\-port@{linphone\-\_\-core\-\_\-set\-\_\-video\-\_\-port}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-video\-\_\-port@{linphone\-\_\-core\-\_\-set\-\_\-video\-\_\-port}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-video\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-video\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga7c3341cec359dfffb671f68653fd151e}
+\-Sets the \-U\-D\-P port used for video streaming. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-port@{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-port}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-port@{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-port}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga8d1bfaa5da13e6c1ef60f30498e8dddd}
+\-Returns the \-U\-D\-P port used by \-S\-I\-P.
+
+\-Deprecated\-: use \doxyref{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports()}{p.}{group__network__parameters_gaf13b4063c40e63acd25a5cc52f486842} instead. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports@{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports@{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{const \-L\-C\-Sip\-Transports $\ast$}]{tr}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_gade2c1adae9dbb3c0c5a710001c42fb97}
+\-Sets the ports to be used for each of transport (\-U\-D\-P or \-T\-C\-P)
+
+\-A zero value port for a given transport means the transport is not used. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports@{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports}}
+\index{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports@{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports}]{\setlength{\rightskip}{0pt plus 5cm}int linphone\-\_\-core\-\_\-get\-\_\-sip\-\_\-transports (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{\-L\-C\-Sip\-Transports $\ast$}]{tr}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_gaf13b4063c40e63acd25a5cc52f486842}
+\-Retrieves the ports used for each transport (udp, tcp). \-A zero value port for a given transport means the transport is not used. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-port@{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-port}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-port@{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-port}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-port}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-port (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_gac6891ac20bdf7f8556cd6a107c19db65}
+\-Sets the \-U\-D\-P port to be used by \-S\-I\-P.
+
+\-Deprecated\-: use \doxyref{linphone\-\_\-core\-\_\-set\-\_\-sip\-\_\-transports()}{p.}{group__network__parameters_gade2c1adae9dbb3c0c5a710001c42fb97} instead. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-ipv6\-\_\-enabled@{linphone\-\_\-core\-\_\-ipv6\-\_\-enabled}}
+\index{linphone\-\_\-core\-\_\-ipv6\-\_\-enabled@{linphone\-\_\-core\-\_\-ipv6\-\_\-enabled}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-ipv6\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-core\-\_\-ipv6\-\_\-enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga91804b8cf92f310c0d4cc8a4259ba917}
+\-Returns \-T\-R\-U\-E if \-I\-Pv6 is enabled.
+
+\-See \doxyref{linphone\-\_\-core\-\_\-enable\-\_\-ipv6()}{p.}{group__network__parameters_gab6f8e740064dad20c530770ea51982d4} for more details on how \-I\-Pv6 is supported in liblinphone. \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-enable\-\_\-ipv6@{linphone\-\_\-core\-\_\-enable\-\_\-ipv6}}
+\index{linphone\-\_\-core\-\_\-enable\-\_\-ipv6@{linphone\-\_\-core\-\_\-enable\-\_\-ipv6}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-enable\-\_\-ipv6}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-enable\-\_\-ipv6 (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{bool\-\_\-t}]{val}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_gab6f8e740064dad20c530770ea51982d4}
+\-Turns \-I\-Pv6 support on or off.
+
+\begin{DoxyNote}{\-Note}
+\-I\-Pv6 support is exclusive with \-I\-Pv4 in liblinphone\-: when \-I\-Pv6 is turned on, \-I\-Pv4 calls won't be possible anymore. \-By default \-I\-Pv6 support is off. 
+\end{DoxyNote}
+\index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-set\-\_\-network\-\_\-reachable@{linphone\-\_\-core\-\_\-set\-\_\-network\-\_\-reachable}}
+\index{linphone\-\_\-core\-\_\-set\-\_\-network\-\_\-reachable@{linphone\-\_\-core\-\_\-set\-\_\-network\-\_\-reachable}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-set\-\_\-network\-\_\-reachable}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-set\-\_\-network\-\_\-reachable (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{bool\-\_\-t}]{value}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga50986600d8f528e083a2c8e6269734e3}
+\-This method is called by the application to notify the linphone core library when network is reachable. \-Calling this method with true trigger linphone to initiate a registration process for all proxy configuration with parameter register set to enable. \-This method disable the automatic registration mode. \-It means you must call this method after each network state changes \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-is\-\_\-network\-\_\-reachabled@{linphone\-\_\-core\-\_\-is\-\_\-network\-\_\-reachabled}}
+\index{linphone\-\_\-core\-\_\-is\-\_\-network\-\_\-reachabled@{linphone\-\_\-core\-\_\-is\-\_\-network\-\_\-reachabled}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-is\-\_\-network\-\_\-reachabled}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-core\-\_\-is\-\_\-network\-\_\-reachabled (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga52254fd97039f25f6df9ffffd00e5878}
+return network state either as positioned by the application or by linphone \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-enable\-\_\-keep\-\_\-alive@{linphone\-\_\-core\-\_\-enable\-\_\-keep\-\_\-alive}}
+\index{linphone\-\_\-core\-\_\-enable\-\_\-keep\-\_\-alive@{linphone\-\_\-core\-\_\-enable\-\_\-keep\-\_\-alive}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-enable\-\_\-keep\-\_\-alive}]{\setlength{\rightskip}{0pt plus 5cm}void linphone\-\_\-core\-\_\-enable\-\_\-keep\-\_\-alive (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc, }
+\item[{bool\-\_\-t}]{enable}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_ga29ecb77c4dbd33b4827e39e9aed846ec}
+enable signaling keep alive. small udp packet sent periodically to keep udp \-N\-A\-T association
+
+\-Enables signaling keep alive \index{\-Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}!linphone\-\_\-core\-\_\-keep\-\_\-alive\-\_\-enabled@{linphone\-\_\-core\-\_\-keep\-\_\-alive\-\_\-enabled}}
+\index{linphone\-\_\-core\-\_\-keep\-\_\-alive\-\_\-enabled@{linphone\-\_\-core\-\_\-keep\-\_\-alive\-\_\-enabled}!Controlling network parameters (ports, mtu...)@{\-Controlling network parameters (ports, mtu...)}}
+\subsubsection[{linphone\-\_\-core\-\_\-keep\-\_\-alive\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool\-\_\-t linphone\-\_\-core\-\_\-keep\-\_\-alive\-\_\-enabled (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Linphone\-Core} $\ast$}]{lc}
+\end{DoxyParamCaption}
+)}\label{group__network__parameters_gac02dfe51519ae8a5550f0b1b4233c460}
+\-Is signaling keep alive
+
+\-Is signaling keep alive enabled 

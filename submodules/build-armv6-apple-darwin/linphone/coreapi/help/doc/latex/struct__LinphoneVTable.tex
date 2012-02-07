@@ -1,0 +1,105 @@
+\section{\-\_\-\-Linphone\-V\-Table \-Struct \-Reference}
+\label{struct__LinphoneVTable}\index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}}
+
+
+{\ttfamily \#include $<$linphonecore.\-h$>$}
+
+\subsection*{\-Data \-Fields}
+\begin{DoxyCompactItemize}
+\item 
+{\bf \-Linphone\-Global\-State\-Cb} {\bf global\-\_\-state\-\_\-changed}
+\item 
+{\bf \-Linphone\-Registration\-State\-Cb} {\bf registration\-\_\-state\-\_\-changed}
+\item 
+{\bf \-Linphone\-Call\-State\-Cb} {\bf call\-\_\-state\-\_\-changed}
+\item 
+{\bf \-Notify\-Presence\-Received\-Cb} {\bf notify\-\_\-presence\-\_\-recv}
+\item 
+{\bf \-New\-Subscribtion\-Request\-Cb} {\bf new\-\_\-subscription\-\_\-request}
+\item 
+{\bf \-Auth\-Info\-Requested} {\bf auth\-\_\-info\-\_\-requested}
+\item 
+{\bf \-Call\-Log\-Updated} {\bf call\-\_\-log\-\_\-updated}
+\item 
+{\bf \-Text\-Message\-Received} {\bf text\-\_\-received}
+\item 
+{\bf \-Dtmf\-Received} {\bf dtmf\-\_\-received}
+\item 
+{\bf \-Refer\-Received} {\bf refer\-\_\-received}
+\item 
+{\bf \-Buddy\-Info\-Updated} {\bf buddy\-\_\-info\-\_\-updated}
+\item 
+{\bf \-Notify\-Received\-Cb} {\bf notify\-\_\-recv}
+\item 
+{\bf \-Display\-Status\-Cb} {\bf display\-\_\-status}
+\item 
+{\bf \-Display\-Message\-Cb} {\bf display\-\_\-message}
+\item 
+{\bf \-Display\-Url\-Cb} {\bf display\-\_\-url}
+\item 
+{\bf \-Show\-Interface\-Cb} {\bf show}
+\item 
+{\bf \-Call\-Encryption\-Changed\-Cb} {\bf call\-\_\-encryption\-\_\-changed}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This structure holds all callbacks that the application should implement. \-None is mandatory. 
+
+\subsection{\-Field \-Documentation}
+\index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!global\-\_\-state\-\_\-changed@{global\-\_\-state\-\_\-changed}}
+\index{global\-\_\-state\-\_\-changed@{global\-\_\-state\-\_\-changed}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{global\-\_\-state\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linphone\-Global\-State\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::global\-\_\-state\-\_\-changed}}\label{struct__LinphoneVTable_a96effce0671ecb15f6e8ee693632e29b}
+\-Notifies globlal state changes \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!registration\-\_\-state\-\_\-changed@{registration\-\_\-state\-\_\-changed}}
+\index{registration\-\_\-state\-\_\-changed@{registration\-\_\-state\-\_\-changed}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{registration\-\_\-state\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linphone\-Registration\-State\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::registration\-\_\-state\-\_\-changed}}\label{struct__LinphoneVTable_a0f6a6182f6b98b2eef7e0dc9507f7647}
+\-Notifies registration state changes \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!call\-\_\-state\-\_\-changed@{call\-\_\-state\-\_\-changed}}
+\index{call\-\_\-state\-\_\-changed@{call\-\_\-state\-\_\-changed}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{call\-\_\-state\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Linphone\-Call\-State\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::call\-\_\-state\-\_\-changed}}\label{struct__LinphoneVTable_aeceb506ab2f449d04705d7289b067ced}
+\-Notifies call state changes \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!notify\-\_\-presence\-\_\-recv@{notify\-\_\-presence\-\_\-recv}}
+\index{notify\-\_\-presence\-\_\-recv@{notify\-\_\-presence\-\_\-recv}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{notify\-\_\-presence\-\_\-recv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Notify\-Presence\-Received\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::notify\-\_\-presence\-\_\-recv}}\label{struct__LinphoneVTable_afedfc364c5b5193f10473cd47524400f}
+\-Notify received presence events \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!new\-\_\-subscription\-\_\-request@{new\-\_\-subscription\-\_\-request}}
+\index{new\-\_\-subscription\-\_\-request@{new\-\_\-subscription\-\_\-request}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{new\-\_\-subscription\-\_\-request}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-New\-Subscribtion\-Request\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::new\-\_\-subscription\-\_\-request}}\label{struct__LinphoneVTable_ae66dffa2d5e6b3be881552cab3024ec2}
+\-Notify about pending subscription request \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!auth\-\_\-info\-\_\-requested@{auth\-\_\-info\-\_\-requested}}
+\index{auth\-\_\-info\-\_\-requested@{auth\-\_\-info\-\_\-requested}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{auth\-\_\-info\-\_\-requested}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Auth\-Info\-Requested} {\bf \-\_\-\-Linphone\-V\-Table\-::auth\-\_\-info\-\_\-requested}}\label{struct__LinphoneVTable_a8dd520f66e9d1fbee61fc62b2b5a8d6b}
+\-Ask the application some authentication information \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!call\-\_\-log\-\_\-updated@{call\-\_\-log\-\_\-updated}}
+\index{call\-\_\-log\-\_\-updated@{call\-\_\-log\-\_\-updated}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{call\-\_\-log\-\_\-updated}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Call\-Log\-Updated} {\bf \-\_\-\-Linphone\-V\-Table\-::call\-\_\-log\-\_\-updated}}\label{struct__LinphoneVTable_a34cd9448bc1a428f968772350b37e13b}
+\-Notifies that call log list has been updated \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!text\-\_\-received@{text\-\_\-received}}
+\index{text\-\_\-received@{text\-\_\-received}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{text\-\_\-received}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Text\-Message\-Received} {\bf \-\_\-\-Linphone\-V\-Table\-::text\-\_\-received}}\label{struct__LinphoneVTable_aa2d467de0d6fcf1ca5c74b55b14da44e}
+\-A text message has been received \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!dtmf\-\_\-received@{dtmf\-\_\-received}}
+\index{dtmf\-\_\-received@{dtmf\-\_\-received}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{dtmf\-\_\-received}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Dtmf\-Received} {\bf \-\_\-\-Linphone\-V\-Table\-::dtmf\-\_\-received}}\label{struct__LinphoneVTable_a63ea1c6026f275449920b4c6323ca425}
+\-A dtmf has been received received \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!refer\-\_\-received@{refer\-\_\-received}}
+\index{refer\-\_\-received@{refer\-\_\-received}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{refer\-\_\-received}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Refer\-Received} {\bf \-\_\-\-Linphone\-V\-Table\-::refer\-\_\-received}}\label{struct__LinphoneVTable_a3c968ad492e4888bafe223ad98cadfb0}
+\-An out of call refer was received \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!buddy\-\_\-info\-\_\-updated@{buddy\-\_\-info\-\_\-updated}}
+\index{buddy\-\_\-info\-\_\-updated@{buddy\-\_\-info\-\_\-updated}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{buddy\-\_\-info\-\_\-updated}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Buddy\-Info\-Updated} {\bf \-\_\-\-Linphone\-V\-Table\-::buddy\-\_\-info\-\_\-updated}}\label{struct__LinphoneVTable_a99502cd9fe1b139f56b949270b89f7e9}
+a \-Linphone\-Friend's \-Buddy\-Info has changed \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!notify\-\_\-recv@{notify\-\_\-recv}}
+\index{notify\-\_\-recv@{notify\-\_\-recv}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{notify\-\_\-recv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Notify\-Received\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::notify\-\_\-recv}}\label{struct__LinphoneVTable_ac5979c202f48ce1dd670bfe65aa8571d}
+\-Other notifications \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!display\-\_\-status@{display\-\_\-status}}
+\index{display\-\_\-status@{display\-\_\-status}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{display\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Display\-Status\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::display\-\_\-status}}\label{struct__LinphoneVTable_a159387507fc3312f7bba2e738e745ced}
+\-Callback that notifies various events with human readable text. \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!display\-\_\-message@{display\-\_\-message}}
+\index{display\-\_\-message@{display\-\_\-message}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{display\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Display\-Message\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::display\-\_\-message}}\label{struct__LinphoneVTable_ae4efb39479925ffc84c82b9e3754ae81}
+\-Callback to display a message to the user \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!display\-\_\-url@{display\-\_\-url}}
+\index{display\-\_\-url@{display\-\_\-url}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{display\-\_\-url}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Display\-Url\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::display\-\_\-url}}\label{struct__LinphoneVTable_a311647b225c3c2defbe3fb87d7ce371c}
+\-Callback to display a warning to the user \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!show@{show}}
+\index{show@{show}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{show}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Show\-Interface\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::show}}\label{struct__LinphoneVTable_aeee04a1e163e352b8c730a934ebeff5a}
+\-Notifies the application that it should show up \index{\-\_\-\-Linphone\-V\-Table@{\-\_\-\-Linphone\-V\-Table}!call\-\_\-encryption\-\_\-changed@{call\-\_\-encryption\-\_\-changed}}
+\index{call\-\_\-encryption\-\_\-changed@{call\-\_\-encryption\-\_\-changed}!_LinphoneVTable@{\-\_\-\-Linphone\-V\-Table}}
+\subsubsection[{call\-\_\-encryption\-\_\-changed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Call\-Encryption\-Changed\-Cb} {\bf \-\_\-\-Linphone\-V\-Table\-::call\-\_\-encryption\-\_\-changed}}\label{struct__LinphoneVTable_a472f1875e68f3f536681281bf0deb4bd}
+\-Notifies on change in the encryption of call streams 
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+linphonecore.\-h\end{DoxyCompactItemize}

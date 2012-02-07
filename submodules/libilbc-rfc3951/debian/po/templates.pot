@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: libilbc0-rfc3951@packages.debian.org\n"
+"POT-Creation-Date: 2010-02-04 05:37+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: boolean
+#. Description
+#: ../libilbc0-rfc3951.templates:1001
+msgid "Do you agree to abide by the terms of the iLBC codec license?"
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../libilbc0-rfc3951.templates:1001
+msgid ""
+"The license for this software does not comply with the Debian Free Software "
+"Guidelines for free software.  Please confirm that you have read the license "
+"for the ilBC codec and agree to abide by its terms."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../libilbc0-rfc3951.templates:1001
+msgid ""
+"The iLBC codec is covered by the document: \"Global IP Solutions iLBC Public "
+"License, v3.0, IETF Version - Limited Commercial Use.\""
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../libilbc0-rfc3951.templates:1001
+msgid ""
+"Please note that personal, non-commercial use is generally permitted. "
+"Commercialization is permitted with certain limitations BUT REQUIRES "
+"REGISTRATION WITH LICENSOR PRIOR TO ANY COMMERCIAL DEPLOYMENT."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../libilbc0-rfc3951.templates:1001
+msgid ""
+"Very importantly, use of this software in an individual’s capacity as an "
+"officer, employee, member, independent contractor, or agent of a "
+"corporation, business, or organization (commercial or non-commercial) does "
+"not qualify as personal use."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../libilbc0-rfc3951.templates:1001
+msgid ""
+"You should not rely on this synopsis.  Please consult the license document "
+"for complete, accurate and definitive information.  The license should be "
+"available in in /usr/share/doc/libilbc0-rfc3951 as gips_iLBClicense.pdf, and "
+"at the time of writing could be downloaded from http://www.ilbcfreeware.org/"
+"documentation/gips_iLBClicense.pdf."
+msgstr ""
+
+#. Type: boolean
+#. Description
+#: ../libilbc0-rfc3951.templates:1001
+msgid ""
+"Global IP Solutions and iLBC are trademarks of Global IP Solutions. For more "
+"information, please visit http://www.ilbcfreeware.org."
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../libilbc0-rfc3951.templates:2001
+msgid "Thank you for accepting the iLBC codec license"
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../libilbc0-rfc3951.templates:2001
+msgid "Hopefully you enjoy the use of this software."
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../libilbc0-rfc3951.templates:3001
+msgid "The installation of the iLBC codec was aborted"
+msgstr ""
+
+#. Type: note
+#. Description
+#: ../libilbc0-rfc3951.templates:3001
+msgid "You must accept the license terms to install this software."
+msgstr ""

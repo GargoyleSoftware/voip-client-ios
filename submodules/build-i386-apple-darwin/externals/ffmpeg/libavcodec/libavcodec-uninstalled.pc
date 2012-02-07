@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}
+includedir=/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/ffmpeg
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 52.115.0
+Requires: 
+Conflicts:
+Libs: ${libdir}/libavcodec.a -lm -lbz2 -lz 
+Cflags: -I${includedir}

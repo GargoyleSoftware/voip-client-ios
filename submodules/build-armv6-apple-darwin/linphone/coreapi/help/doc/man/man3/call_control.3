@@ -1,0 +1,397 @@
+.TH "Placing and receiving calls" 3 "Mon Feb 6 2012" "Version 3.5.0" "liblinphone" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Placing and receiving calls \- 
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fB_LinphoneCallState\fP \fBLinphoneCallState\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fB_LinphoneCallState\fP { \fBLinphoneCallIdle\fP, \fBLinphoneCallIncomingReceived\fP, \fBLinphoneCallOutgoingInit\fP, \fBLinphoneCallOutgoingProgress\fP, \fBLinphoneCallOutgoingRinging\fP, \fBLinphoneCallOutgoingEarlyMedia\fP, \fBLinphoneCallConnected\fP, \fBLinphoneCallStreamsRunning\fP, \fBLinphoneCallPausing\fP, \fBLinphoneCallPaused\fP, \fBLinphoneCallResuming\fP, \fBLinphoneCallRefered\fP, \fBLinphoneCallError\fP, \fBLinphoneCallEnd\fP, \fBLinphoneCallPausedByRemote\fP, \fBLinphoneCallUpdatedByRemote\fP, \fBLinphoneCallIncomingEarlyMedia\fP, \fBLinphoneCallUpdated\fP, \fBLinphoneCallReleased\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "LinphoneCall * \fBlinphone_call_ref\fP (LinphoneCall *obj)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_unref\fP (LinphoneCall *obj)"
+.br
+.ti -1c
+.RI "const LinphoneCallParams * \fBlinphone_call_get_current_params\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "const \fBLinphoneAddress\fP * \fBlinphone_call_get_remote_address\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "char * \fBlinphone_call_get_remote_address_as_string\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "\fBLinphoneCallState\fP \fBlinphone_call_get_state\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "LinphoneReason \fBlinphone_call_get_reason\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "void * \fBlinphone_call_get_user_pointer\fP (LinphoneCall *call)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_set_user_pointer\fP (LinphoneCall *call, void *user_pointer)"
+.br
+.ti -1c
+.RI "\fBLinphoneCallLog\fP * \fBlinphone_call_get_call_log\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_call_get_refer_to\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "\fBLinphoneCallDir\fP \fBlinphone_call_get_dir\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "const char * \fBlinphone_call_get_remote_user_agent\fP (LinphoneCall *call)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_call_has_transfer_pending\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "int \fBlinphone_call_get_duration\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "LinphoneCall * \fBlinphone_call_get_replaced_call\fP (LinphoneCall *call)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_enable_camera\fP (LinphoneCall *call, bool_t enable)"
+.br
+.ti -1c
+.RI "int \fBlinphone_call_take_video_snapshot\fP (LinphoneCall *call, const char *file)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_call_camera_enabled\fP (const LinphoneCall *call)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_params_enable_video\fP (LinphoneCallParams *cp, bool_t enabled)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_call_params_video_enabled\fP (const LinphoneCallParams *cp)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_params_enable_early_media_sending\fP (LinphoneCallParams *cp, bool_t enabled)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_call_params_local_conference_mode\fP (const LinphoneCallParams *cp)"
+.br
+.ti -1c
+.RI "void \fBlinphone_call_params_set_audio_bandwidth_limit\fP (LinphoneCallParams *cp, int bandwidth)"
+.br
+.ti -1c
+.RI "LinphoneCall * \fBlinphone_core_invite\fP (\fBLinphoneCore\fP *lc, const char *url)"
+.br
+.ti -1c
+.RI "LinphoneCall * \fBlinphone_core_invite_with_params\fP (\fBLinphoneCore\fP *lc, const char *url, const LinphoneCallParams *p)"
+.br
+.ti -1c
+.RI "LinphoneCall * \fBlinphone_core_invite_address\fP (\fBLinphoneCore\fP *lc, const \fBLinphoneAddress\fP *addr)"
+.br
+.ti -1c
+.RI "LinphoneCall * \fBlinphone_core_invite_address_with_params\fP (\fBLinphoneCore\fP *lc, const \fBLinphoneAddress\fP *addr, const LinphoneCallParams *params)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_update_call\fP (\fBLinphoneCore\fP *lc, LinphoneCall *call, const LinphoneCallParams *params)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_accept_call\fP (\fBLinphoneCore\fP *lc, LinphoneCall *call)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_terminate_call\fP (\fBLinphoneCore\fP *lc, LinphoneCall *the_call)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_terminate_all_calls\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "const MSList * \fBlinphone_core_get_calls\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_core_in_call\fP (const \fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "LinphoneCall * \fBlinphone_core_get_current_call\fP (const \fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_pause_call\fP (\fBLinphoneCore\fP *lc, LinphoneCall *call)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_resume_call\fP (\fBLinphoneCore\fP *lc, LinphoneCall *the_call)"
+.br
+.ti -1c
+.RI "void \fBlinphone_core_set_inc_timeout\fP (\fBLinphoneCore\fP *lc, int seconds)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_get_inc_timeout\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "int \fBlinphone_core_get_calls_nb\fP (const \fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_core_can_we_add_call\fP (\fBLinphoneCore\fP *lc)"
+.br
+.ti -1c
+.RI "bool_t \fBlinphone_core_sound_resources_locked\fP (\fBLinphoneCore\fP *lc)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The #LinphoneCall object represents an incoming or outgoing call managed by the \fBLinphoneCore\fP'\&. Outgoing calls can be created using \fBlinphone_core_invite()\fP or \fBlinphone_core_invite_address()\fP, while incoming calls are notified to the application through the \fBLinphoneCoreVTable::call_state_changed\fP callback'\&.
+.PP
+See the basic call \fBtutorial\fP'\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fB_LinphoneCallState\fP  \fBLinphoneCallState\fP"LinphoneCallState enum represents the different state a call can reach into'\&. The application is notified of state changes through the \fBLinphoneCoreVTable::call_state_changed\fP callback'\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fB_LinphoneCallState\fP"LinphoneCallState enum represents the different state a call can reach into'\&. The application is notified of state changes through the \fBLinphoneCoreVTable::call_state_changed\fP callback'\&. 
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fILinphoneCallIdle \fP\fP
+Initial call state 
+.TP
+\fB\fILinphoneCallIncomingReceived \fP\fP
+This is a new incoming call 
+.TP
+\fB\fILinphoneCallOutgoingInit \fP\fP
+An outgoing call is started 
+.TP
+\fB\fILinphoneCallOutgoingProgress \fP\fP
+An outgoing call is in progress 
+.TP
+\fB\fILinphoneCallOutgoingRinging \fP\fP
+An outgoing call is ringing at remote end 
+.TP
+\fB\fILinphoneCallOutgoingEarlyMedia \fP\fP
+An outgoing call is proposed early media 
+.TP
+\fB\fILinphoneCallConnected \fP\fP
+Connected, the call is answered 
+.TP
+\fB\fILinphoneCallStreamsRunning \fP\fP
+The media streams are established and running 
+.TP
+\fB\fILinphoneCallPausing \fP\fP
+The call is pausing at the initiative of local end 
+.TP
+\fB\fILinphoneCallPaused \fP\fP
+The call is paused, remote end has accepted the pause 
+.TP
+\fB\fILinphoneCallResuming \fP\fP
+The call is being resumed by local end 
+.TP
+\fB\fILinphoneCallRefered \fP\fP
+The call is being transfered to another party, resulting in a new outgoing call to follow immediately 
+.TP
+\fB\fILinphoneCallError \fP\fP
+The call encountered an error 
+.TP
+\fB\fILinphoneCallEnd \fP\fP
+The call ended normally 
+.TP
+\fB\fILinphoneCallPausedByRemote \fP\fP
+The call is paused by remote end 
+.TP
+\fB\fILinphoneCallUpdatedByRemote \fP\fP
+The call's parameters are updated, used for example when video is asked by remote 
+.TP
+\fB\fILinphoneCallIncomingEarlyMedia \fP\fP
+We are proposing early media to an incoming call 
+.TP
+\fB\fILinphoneCallUpdated \fP\fP
+The remote accepted the call update initiated by us 
+.TP
+\fB\fILinphoneCallReleased \fP\fP
+The call object is no more retained by the core 
+.SH "Function Documentation"
+.PP 
+.SS "LinphoneCall* linphone_call_ref (LinphoneCall *obj)"Increments the call 's reference count'\&. An application that wishes to retain a pointer to call object must use this function to unsure the pointer remains valid'\&. Once the application no more needs this pointer, it must call \fBlinphone_call_unref()\fP'\&. 
+.SS "void linphone_call_unref (LinphoneCall *obj)"Decrements the call object reference count'\&. See \fBlinphone_call_ref()\fP'\&. 
+.SS "const LinphoneCallParams* linphone_call_get_current_params (const LinphoneCall *call)"Returns current parameters associated to the call'\&. 
+.SS "const \fBLinphoneAddress\fP* linphone_call_get_remote_address (const LinphoneCall *call)"Returns the remote address associated to this call 
+.SS "char* linphone_call_get_remote_address_as_string (const LinphoneCall *call)"Returns the remote address associated to this call as a string'\&.
+.PP
+The result string must be freed by user using ms_free()'\&. 
+.SS "\fBLinphoneCallState\fP linphone_call_get_state (const LinphoneCall *call)"Retrieves the call's current state'\&. 
+.SS "LinphoneReason linphone_call_get_reason (const LinphoneCall *call)"Returns the reason for a call termination (either error or normal termination) 
+.SS "void* linphone_call_get_user_pointer (LinphoneCall *call)"Get the user_pointer in the LinphoneCall
+.PP
+return user_pointer an opaque user pointer that can be retrieved at any time 
+.SS "void linphone_call_set_user_pointer (LinphoneCall *call, void *user_pointer)"Set the user_pointer in the LinphoneCall
+.PP
+the user_pointer is an opaque user pointer that can be retrieved at any time in the LinphoneCall 
+.SS "\fBLinphoneCallLog\fP* linphone_call_get_call_log (const LinphoneCall *call)"Returns the call log associated to this call'\&. 
+.SS "const char* linphone_call_get_refer_to (const LinphoneCall *call)"Returns the refer-to uri (if the call was transfered)'\&. 
+.SS "\fBLinphoneCallDir\fP linphone_call_get_dir (const LinphoneCall *call)"Returns direction of the call (incoming or outgoing)'\&. 
+.SS "const char* linphone_call_get_remote_user_agent (LinphoneCall *call)"Returns the far end's user agent description string, if available'\&. 
+.SS "bool_t linphone_call_has_transfer_pending (const LinphoneCall *call)"Returns true if this calls has received a transfer that has not been executed yet'\&. Pending transfers are executed when this call is being paused or closed, locally or by remote endpoint'\&. If the call is already paused while receiving the transfer request, the transfer immediately occurs'\&. 
+.SS "int linphone_call_get_duration (const LinphoneCall *call)"Returns call's duration in seconds'\&. 
+.SS "LinphoneCall* linphone_call_get_replaced_call (LinphoneCall *call)"Returns the call object this call is replacing, if any'\&. Call replacement can occur during call transfers'\&. By default, the core automatically terminates the replaced call and accept the new one'\&. This function allows the application to know whether a new incoming call is a one that replaces another one'\&. 
+.SS "void linphone_call_enable_camera (LinphoneCall *call, bool_tenable)"Indicate whether camera input should be sent to remote end'\&. 
+.SS "int linphone_call_take_video_snapshot (LinphoneCall *call, const char *file)"Take a photo of currently received video and write it into a jpeg file'\&. 
+.SS "bool_t linphone_call_camera_enabled (const LinphoneCall *call)"Returns TRUE if camera pictures are sent to the remote party'\&. 
+.SS "void linphone_call_params_enable_video (LinphoneCallParams *cp, bool_tenabled)"Enable video stream'\&. 
+.SS "bool_t linphone_call_params_video_enabled (const LinphoneCallParams *cp)"Returns whether video is enabled'\&. 
+.SS "void linphone_call_params_enable_early_media_sending (LinphoneCallParams *cp, bool_tenabled)"Enable sending of real early media (during outgoing calls)'\&. 
+.SS "bool_t linphone_call_params_local_conference_mode (const LinphoneCallParams *cp)"Returns true if the call is part of the locally managed conference'\&. 
+.SS "void linphone_call_params_set_audio_bandwidth_limit (LinphoneCallParams *cp, intbandwidth)"Refine bandwidth settings for this call by setting a bandwidth limit for audio streams'\&. As a consequence, codecs whose bitrates are not compatible with this limit won't be used'\&. 
+.SS "LinphoneCall* linphone_core_invite (\fBLinphoneCore\fP *lc, const char *url)"Initiates an outgoing call
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore object 
+.br
+\fIurl\fP the destination of the call (sip address, or phone number)'\&.
+.RE
+.PP
+The application doesn't own a reference to the returned LinphoneCall object'\&. Use \fBlinphone_call_ref()\fP to safely keep the LinphoneCall pointer valid within your application'\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a LinphoneCall object or NULL in case of failure 
+.RE
+.PP
+
+.SS "LinphoneCall* linphone_core_invite_with_params (\fBLinphoneCore\fP *lc, const char *url, const LinphoneCallParams *p)"Initiates an outgoing call according to supplied call parameters
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore object 
+.br
+\fIurl\fP the destination of the call (sip address, or phone number)'\&. 
+.br
+\fIp\fP call parameters
+.RE
+.PP
+The application doesn't own a reference to the returned LinphoneCall object'\&. Use \fBlinphone_call_ref()\fP to safely keep the LinphoneCall pointer valid within your application'\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a LinphoneCall object or NULL in case of failure 
+.RE
+.PP
+
+.SS "LinphoneCall* linphone_core_invite_address (\fBLinphoneCore\fP *lc, const \fBLinphoneAddress\fP *addr)"Initiates an outgoing call given a destination LinphoneAddress
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore object 
+.br
+\fIaddr\fP the destination of the call (sip address)'\&.
+.RE
+.PP
+The LinphoneAddress can be constructed directly using \fBlinphone_address_new()\fP, or created by linphone_core_interpret_url()'\&. The application doesn't own a reference to the returned LinphoneCall object'\&. Use \fBlinphone_call_ref()\fP to safely keep the LinphoneCall pointer valid within your application'\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a LinphoneCall object or NULL in case of failure 
+.RE
+.PP
+
+.SS "LinphoneCall* linphone_core_invite_address_with_params (\fBLinphoneCore\fP *lc, const \fBLinphoneAddress\fP *addr, const LinphoneCallParams *params)"Initiates an outgoing call given a destination LinphoneAddress
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore object 
+.br
+\fIaddr\fP the destination of the call (sip address)'\&. 
+.br
+\fIparams\fP call parameters
+.RE
+.PP
+The LinphoneAddress can be constructed directly using \fBlinphone_address_new()\fP, or created by linphone_core_interpret_url()'\&. The application doesn't own a reference to the returned LinphoneCall object'\&. Use \fBlinphone_call_ref()\fP to safely keep the LinphoneCall pointer valid within your application'\&.
+.PP
+\fBReturns:\fP
+.RS 4
+a LinphoneCall object or NULL in case of failure 
+.RE
+.PP
+
+.SS "int linphone_core_update_call (\fBLinphoneCore\fP *lc, LinphoneCall *call, const LinphoneCallParams *params)"Updates a running call according to supplied call parameters or parameters changed in the LinphoneCore'\&.
+.PP
+In this version this is limited to the following use cases:
+.IP "\(bu" 2
+setting up/down the video stream according to the video parameter of the LinphoneCallParams (see \fBlinphone_call_params_enable_video()\fP )'\&.
+.IP "\(bu" 2
+changing the size of the transmitted video after calling \fBlinphone_core_set_preferred_video_size()\fP
+.PP
+.PP
+In case no changes are requested through the LinphoneCallParams argument, then this argument can be omitted and set to NULL'\&.
+.PP
+\fBReturns:\fP
+.RS 4
+0 if successful, -1 otherwise'\&. 
+.RE
+.PP
+
+.SS "int linphone_core_accept_call (\fBLinphoneCore\fP *lc, LinphoneCall *call)"Accept an incoming call'\&.
+.PP
+Basically the application is notified of incoming calls within the call_state_changed callback of the \fBLinphoneCoreVTable\fP structure, where it will receive a LinphoneCallIncoming event with the associated LinphoneCall object'\&. The application can later accept the call using this method'\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore object 
+.br
+\fIcall\fP the LinphoneCall object representing the call to be answered'\&. 
+.RE
+.PP
+
+.SS "int linphone_core_terminate_call (\fBLinphoneCore\fP *lc, LinphoneCall *the_call)"Terminates a call'\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP the LinphoneCore 
+.br
+\fIthe_call\fP the LinphoneCall object representing the call to be terminated'\&. 
+.RE
+.PP
+
+.SS "int linphone_core_terminate_all_calls (\fBLinphoneCore\fP *lc)"Terminates all the calls'\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP The LinphoneCore 
+.RE
+.PP
+
+.SS "const MSList* linphone_core_get_calls (\fBLinphoneCore\fP *lc)"Returns the current list of calls'\&.
+.PP
+Note that this list is read-only and might be changed by the core after a function call to \fBlinphone_core_iterate()\fP'\&. Similarly the LinphoneCall objects inside it might be destroyed without prior notice'\&. To hold references to LinphoneCall object into your program, you must use \fBlinphone_call_ref()\fP'\&. 
+.SS "bool_t linphone_core_in_call (const \fBLinphoneCore\fP *lc)"Returns TRUE if there is a call running'\&. 
+.SS "LinphoneCall* linphone_core_get_current_call (const \fBLinphoneCore\fP *lc)"Returns The _LinphoneCall struct of the current call if one is in call 
+.SS "int linphone_core_pause_call (\fBLinphoneCore\fP *lc, LinphoneCall *call)"Pauses the call'\&. If a music file has been setup using linphone_core_set_play_file(), this file will be played to the remote user'\&. 
+.SS "int linphone_core_resume_call (\fBLinphoneCore\fP *lc, LinphoneCall *the_call)"Resumes the call'\&. 
+.SS "void linphone_core_set_inc_timeout (\fBLinphoneCore\fP *lc, intseconds)"Set the incoming call timeout in seconds'\&.
+.PP
+If an incoming call isn't answered for this timeout period, it is automatically declined'\&. 
+.SS "int linphone_core_get_inc_timeout (\fBLinphoneCore\fP *lc)"Returns the incoming call timeout
+.PP
+See \fBlinphone_core_set_inc_timeout()\fP for details'\&. 
+.SS "int linphone_core_get_calls_nb (const \fBLinphoneCore\fP *lc)"Get the number of Call 
+.SS "bool_t linphone_core_can_we_add_call (\fBLinphoneCore\fP *lc)"Check if we do not have exceed the number of simultaneous call 
+.SS "bool_t linphone_core_sound_resources_locked (\fBLinphoneCore\fP *lc)"Check if a call will need the sound resources'\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlc\fP The LinphoneCore 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for liblinphone from the source code'\&.

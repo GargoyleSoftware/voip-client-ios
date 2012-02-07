@@ -1,0 +1,41 @@
+homing_amr_wb_dec.lo homing_amr_wb_dec.o:  \
+ /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/homing_amr_wb_dec.cpp \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h \
+  /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/stdint.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder_cnst.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/include/pvamrwbdecoder_api.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/common/dec/include/pvgsmamrdecoderinterface.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder_basic_op.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/normalize_amr_wb.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder_basic_op_cequivalent.h \
+  /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/get_amr_wb_bits.h
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pv_amr_wb_type_defs.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h:
+
+/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/include/stdint.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder_cnst.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/include/pvamrwbdecoder_api.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/common/dec/include/pvgsmamrdecoderinterface.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/oscl/oscl_base.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder_basic_op.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/normalize_amr_wb.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/pvamrwbdecoder_basic_op_cequivalent.h:
+
+/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/opencore-amr/opencore/codecs_v2/audio/gsm_amr/amr_wb/dec/src/get_amr_wb_bits.h:

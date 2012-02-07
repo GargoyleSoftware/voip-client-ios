@@ -1,0 +1,74 @@
+This package was debianized by Not Available <(none)> on
+Sun, 31 Jan 2010 16:14:01 +0800.
+
+It was downloaded from http://www.ietf.org/rfc/rfc3951.txt and
+extracted from the document using the awk script provided at
+http://www.ilbcfreeware.org/documentation/extract-cfile.awk.
+
+Upstream Authors:
+
+    S. Andersen
+    Aalborg University
+    A. Duric
+    Telio
+    H. Astrom
+    R. Hagen
+    W. Kleijn
+    J. Linden
+    Global IP Sound
+
+    Global IP Solutions (GIPS) AB
+    Magnus Ladulåsgatan 63B
+    SE-118 27, Stockholm, Sweden
+    +46.8.545.5.30.40 tel
+    +46.8.545.5.30.49 fax
+    info@gipscorp.com
+
+Copyright:
+
+    Copyright (C) 2004 The Internet Society
+
+License:
+
+    "Global IP Solutions iLBC Public License, v3.0
+    IETF Version - Limited Commercial Use"
+
+    This package will attempt to download the license from
+    publicly available sources.  Unfortunately, some of the
+    links provided in various documentation are no longer
+    alive.  The file is	named gips_iLBClicense.pdf.
+
+    At the time of writing the license was available at
+    http://www.ilbcfreeware.org/documentation/gips_iLBClicense.pdf
+    and http://gipscorp.com/files/english/gips_iLBClicense.pdf.
+
+    The license for this software does not comply with the
+    Debian Free Software Guidelines for free software.
+
+    Please note that personal, non-commercial use is
+    generally permitted. Commercialization is permitted
+    with certain limitations BUT REQUIRES REGISTRATION
+    WITH LICENSOR PRIOR TO ANY COMMERCIAL DEPLOYMENT.
+
+    Very importantly, use of this software in an individual’s
+    capacity as an officer, employee, member, independent
+    contractor, or agent of a corporation, business, or
+    organization (commercial or non-commercial) does not
+    qualify as personal use.
+
+    You should not rely on this synopsis. Please consult the
+    license document for complete, accurate and definitive
+    information.
+
+    iLBC and Global IP Solutions are trademarks of Global IP
+    Solutions.
+
+    For more information please visit http://www.ilbcfreeware.org.
+
+
+The Debian packaging is:
+
+    Copyright (C) 2010 Not Available <none@none.net>
+
+and is licensed under the LGPL version 3, 
+see `/usr/share/common-licenses/LGPL-3'.

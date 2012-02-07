@@ -1,0 +1,14 @@
+prefix=/Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//../liblinphone-sdk/armv6-apple-darwin
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 52.115.0
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir} -lavcodec -lm -lbz2 -lz
+Libs.private: 
+Cflags: -I${includedir}

@@ -1,0 +1,22 @@
+Source: msilbc
+Priority: extra
+Maintainer: Not Available <none@none.net>
+Build-Depends: quilt, debhelper (>= 7), autotools-dev, libilbc0-dev, libmediastreamer-dev, libortp-dev, libtheora-dev, libsdl1.2-dev
+Standards-Version: 3.8.3
+Section: sound
+Homepage: http://www.linphone.org
+
+Package: msilbc
+Section: sound
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libilbc0
+Description: mediastreamer plugin for libilbc0-rfc3951
+ This package contains the iLBC plugin for mediastreamer, which is part
+ of the linphone suite.
+ .
+ For the plugin to work, please note that you must have the additional
+ shared library libilbc0 installed.  One way to do install
+ libilbc0-rfc3951, which uses the source code submitted with
+ IETF RFC 3951 to implement the iLBC codec.
+ .
+ iLBC and Global IP Solutions are trademarks of Global IP Solutions.

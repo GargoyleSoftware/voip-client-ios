@@ -1,0 +1,78 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH ILBC 7 "January 31, 2010"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+ilbc \- iLBC codec for voice communication (RFC 3951 version)
+.SH SYNOPSIS
+.B libilbc.so
+.SH DESCRIPTION
+This manual page documents briefly the
+.B libilbc
+library.
+.PP
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+\fBiLBC (internet Low Bitrate Codec)\fP is a FREE speech codec suitable
+for robust voice communication over IP.
+.PP
+The codec is designed for narrow band speech and results in a payload
+bit rate of 13.33 kbit/s with an encoding frame length of 30 ms and
+15.20 kbps with an encoding length of 20 ms. The iLBC codec enables
+graceful speech quality degradation in the case of lost frames, which
+occurs in connection with lost or delayed IP packets.
+.SH SOURCE CODE
+The source code was downloaded from http://www.ietf.org/rfc/rfc3951.txt
+and extracted from the document using the awk script provided at
+http://www.ilbcfreeware.org/documentation/extract-cfile.awk.
+.PP
+For more information, please visit http://www.ilbcfreeware.org.
+.SH LICENSE
+This software is subject to a license which does not comply with the
+Debian Free Software Guidelines for free software.
+.PP
+The iLBC codec is covered by the document: "Global IP Solutions iLBC
+Public License, v3.0, IETF Version - Limited Commercial Use."
+.PP
+Please note that personal, non-commercial use of this software is
+generally permitted.  Commercialization is permitted with certain
+limitations BUT REQUIRES REGISTRATION WITH LICENSOR PRIOR TO ANY
+COMMERCIAL DEPLOYMENT.
+.PP
+Very importantly, use of this software in an individual’s capacity as
+an officer, employee, member, independent contractor, or agent of a
+corporation, business, or organization (commercial or non-commercial)
+does not qualify as personal use.
+.PP
+The license should be included somewhere on your sytem as a file named
+gips_iLBClicense.pdf. At the time of writing the license was also
+available for download from:
+.PP
+http://www.ilbcfreeware.org/documentation/gips_iLBClicense.pdf and
+.br
+http://gipscorp.com/files/english/gips_iLBClicense.pdf.
+.PP
+You should not rely on this synopsis. Please consult the license
+document for complete, accurate and definitive information.
+.SH TRADEMARKS
+iLBC and Global IP Solutions are trademarks of Global IP Solutions.
+.SH AUTHOR
+This version of libilbc was written by S. Andersen, Aalborg University,
+A. Duric, Telio, H. Astrom, R. Hagen, W. Kleijn, J. Linden and
+Global IP Sound.
+.PP
+This manual page was written by Not Available <(none)>.

@@ -1,0 +1,11 @@
+The license for this software does not comply with the Debian Free
+Software Guidelines for free software.
+
+Please consult the included license and copyright files for more
+information.
+
+To install the binary, please rebuild the package from source.
+
+If you ever need to extract the sources yourself, please locate
+rfc3951.txt and extract-cfile.awk in /usr/share/doc/libilbc0-rfc3951-dev
+and run awk -f extract-cfile.awk rfc3951.txt

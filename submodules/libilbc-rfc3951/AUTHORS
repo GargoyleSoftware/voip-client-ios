@@ -1,0 +1,26 @@
+For the updated information please see http://www.webrtc.org/
+
+The upstream authors are:
+
+    S. Andersen
+    Aalborg University
+    A. Duric
+    Telio
+    H. Astrom
+    R. Hagen
+    W. Kleijn
+    J. Linden
+    Global IP Sound
+
+
+The copyright of the downloaded IETF paper is held by:
+
+    Copyright (C) 2004 The Internet Society
+
+Global IP Solutions, the creator of iLBC, was acquired by Google in January 2011. Google continues to support the iLBC effort and is offering it as part of it's WebRTC open source effort. iLBC is now available under the same license as the WebRTC project. 
+
+The 'awk' script to extract the source code was written by Wenyu Jiang
+at Columbia University.
+
+An earlier version of this package was prepared by Simon Morlat
+< simon dot morlat at linphone dot org > for use with linphone.
