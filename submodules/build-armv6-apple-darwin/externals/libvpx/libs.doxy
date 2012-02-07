@@ -1,4 +1,0 @@
-INPUT += /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/libvpx/vpx/vp8.h /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/libvpx/vpx/vp8cx.h /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/libvpx/vpx/vp8dx.h /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/libvpx/vpx/vpx_codec.h /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/libvpx/vpx/vpx_decoder.h /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/libvpx/vpx/vpx_encoder.h /Users/chris/Code/Gargoyle/linphone-iphone/submodules/build/..//externals/libvpx/vpx/vpx_image.h
-PREDEFINED = VPX_CODEC_DISABLE_COMPAT
-INCLUDE_PATH += .
-ENABLED_SECTIONS += decoder encoder vp8 vp8_decoder vp8_encoder
